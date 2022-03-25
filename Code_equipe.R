@@ -36,3 +36,12 @@ collaborations_martineau<-read.table("collaborations_martineau.txt",header = T,s
 collaborations_alexis<-read.table("collaboration_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")
 collaborations_ilmdph<-read.table("collaborations_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")
 
+##### Enlever les colonnes en trop pour certains ####
+
+cours_amelie<-cours_amelie[,-c(6:7)]
+cours_anthonystp<-cours_anthonystp[,-5]
+collaborations_ilmdph<-collaborations_ilmdph[,-5]
+
+
+
+
