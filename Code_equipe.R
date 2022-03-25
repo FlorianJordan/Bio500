@@ -3,7 +3,7 @@
 #setwd()
 
 #pour flo # setwd("~/Desktop/dossier_mere/universite/Session_6/method_comp/Bio500/donnees_BIO500")
-
+library(dplyr)
 ##### Chercher les données #####
 
 noeuds_amelie<-read.csv("noeuds_amelie.csv", sep=";")
@@ -41,7 +41,24 @@ collaborations_ilmdph<-read.table("collaborations_IL_MDH_ASP_MB_OL.txt",header =
 cours_amelie<-cours_amelie[,-c(6:7)]
 cours_anthonystp<-cours_anthonystp[,-5]
 collaborations_ilmdph<-collaborations_ilmdph[,-5]
+collaborations_dp<-collaborations_dp[,-5]
+noeuds_cvl<-noeuds_cvl[,-1]
+
+##### Corretion nom de colonne #####
+
+cours_cvl<-rename(cours_cvl,sigle=Sigle)
+collaborations_amelie<-rename(collaborations_amelie,sigle=cours)
+collaborations_anthonystp<-rename(collaborations_anthonystp,sigle=cours)
+collaborations_cvl<-rename(collaborations_cvl,sigle=cours)
+collaborations_dp<-rename(collaborations_dp,sigle=cours)
+collaborations_martineau<-rename(collaborations_martineau,sigle=cours)
+##### Fusionner les fichiers ####
 
 
-
+data_noeuds<-bind_rows(noeuds_amelie,noeuds_anthonystp,noeuds_cvl,noeuds_dp,noeuds_fxc,noeuds_jbca,noeuds_martineau,noeuds_alexis,noeuds_ilmdph)
+data_noeuds
+data_cours<-bind_rows(cours_amelie,cours_anthonystp,cours_cvl,cours_dp,cours_fxc,cours_jbca,cours_martineau,cours_alexis,cours_ilmdph)
+data_cours
+data_collaborations<-bind_rows(collaborations_amelie,collaborations_anthonystp,collaborations_cvl,collaborations_dp,collaborations_fxc,collaborations_jbca,collaborations_martineau,collaborations_alexis,collaborations_ilmdph)
+data_collaborations
 
