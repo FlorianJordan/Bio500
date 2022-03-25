@@ -47,13 +47,14 @@ noeuds_cvl<-noeuds_cvl[,-1]
 ##### Corretion nom de colonne #####
 
 cours_cvl<-rename(cours_cvl,sigle=Sigle)
+cours_fxc<-rename(cours_fxc,credits=credit)
 collaborations_amelie<-rename(collaborations_amelie,sigle=cours)
 collaborations_anthonystp<-rename(collaborations_anthonystp,sigle=cours)
 collaborations_cvl<-rename(collaborations_cvl,sigle=cours)
 collaborations_dp<-rename(collaborations_dp,sigle=cours)
 collaborations_martineau<-rename(collaborations_martineau,sigle=cours)
-##### Fusionner les fichiers ####
 
+##### Fusionner les fichiers ####
 
 data_noeuds<-bind_rows(noeuds_amelie,noeuds_anthonystp,noeuds_cvl,noeuds_dp,noeuds_fxc,noeuds_jbca,noeuds_martineau,noeuds_alexis,noeuds_ilmdph)
 data_noeuds
