@@ -65,3 +65,4 @@ data_cours
 data_collaborations<-bind_rows(collaborations_amelie,collaborations_anthonystp,collaborations_cvl,collaborations_dp,collaborations_fxc,collaborations_jbca,collaborations_martineau,collaborations_alexis,collaborations_ilmdph)
 data_collaborations
 
+#### Enlever les doublons ####
