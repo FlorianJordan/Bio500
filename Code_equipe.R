@@ -87,7 +87,7 @@ noeuds
 #### Enlever les anciennes tables SQL ####
 
 con<-dbConnect(SQLite(),dbname="attributs.db")
-dbSendQuery(con,"DROP TABLE cours;")
+dbSendQuery(con,"DROP TABLE noeuds;")
 
 #### Creation des tables SQL ####
 
@@ -147,7 +147,7 @@ sql_requete2 <- "
 SELECT etudiant1, etudiant2, count(sigle) as liens
 FROM collaborations
 GROUP BY etudiant1, etudiant2
-ORDER BY liens
+ORDER BY liens DESC
 "
 liens_paire <- dbGetQuery(con,sql_requete2)
 liens_paire
