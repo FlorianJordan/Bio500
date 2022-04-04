@@ -5,6 +5,7 @@
 #pour flo # setwd("~/Desktop/dossier_mere/universite/Session_6/method_comp/Bio500/donnees_BIO500")
 #Modif
 #Pour frank; setwd("C:/Users/Francis/Desktop/BIO500/Bio500/donnees_BIO500")
+sdgdfg
 
 #install.packages("dyplr")
 library(dplyr)
