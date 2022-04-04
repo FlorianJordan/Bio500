@@ -157,3 +157,4 @@ liens_paire
 mean(liens$liens)
 var(liens$liens)
 
+tt
