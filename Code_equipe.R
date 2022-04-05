@@ -12,6 +12,7 @@ library(dplyr)
 library(RSQLite)
 #install.packages("targets")
 library(targets)
+
 ##### Chercher les données #####
 
 noeuds_amelie<-read.csv("noeuds_amelie.csv", sep=";")
