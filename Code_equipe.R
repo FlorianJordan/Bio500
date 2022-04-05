@@ -165,3 +165,7 @@ var(liens$liens)
 
 #### Essaie target pour cours ####
 
+#### matrice adjacence ####
+
+m_adj<-table(collaborations$etudiant1,collaborations$etudiant2)
+m_adj
