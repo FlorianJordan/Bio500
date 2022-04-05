@@ -6,7 +6,7 @@
 #Pour frank; setwd("C:/Users/Francis/Desktop/BIO500/Bio500/donnees_BIO500")
 #pour marge : setwd("C:\Users\margu\Documents\Bio500\donnees_BIO500")
 
-#install.packages("dyplr")
+#install.packages("dplyr")
 library(dplyr)
 #install.packages("RSQLite")
 library(RSQLite)
