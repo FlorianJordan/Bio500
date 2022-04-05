@@ -164,5 +164,4 @@ mean(liens$liens)
 var(liens$liens)
 
 #### Essaie target pour cours ####
-# _targets.R file
-tar_script()
+
