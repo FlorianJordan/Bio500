@@ -3,9 +3,8 @@
 #setwd()
 
 #pour flo # setwd("~/Desktop/dossier_mere/universite/Session_6/method_comp/Bio500/donnees_BIO500")
-#Modif
 #Pour frank; setwd("C:/Users/Francis/Desktop/BIO500/Bio500/donnees_BIO500")
-sdgdfg
+#pour marge : setwd("C:\Users\margu\Documents\Bio500\donnees_BIO500")
 
 #install.packages("dyplr")
 library(dplyr)
@@ -90,7 +89,7 @@ noeuds
 #### Enlever les anciennes tables SQL ####
 
 con<-dbConnect(SQLite(),dbname="attributs.db")
-dbSendQuery(con,"DROP TABLE noeuds;")
+dbSendQuery(con,"DROP TABLE cours;")
 
 #### Creation des tables SQL ####
 
@@ -159,5 +158,3 @@ liens_paire
 
 mean(liens$liens)
 var(liens$liens)
-
-tt
