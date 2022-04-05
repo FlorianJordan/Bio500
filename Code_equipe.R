@@ -83,6 +83,7 @@ cours
 collaborations<-distinct(data_collaborations)
 collaborations
 
+data_noeuds<-data_noeuds %>% arrange(rowSums(is.na(data_noeuds)))
 noeuds<-data_noeuds[!duplicated(data_noeuds$nom_prenom),]
 noeuds
 
