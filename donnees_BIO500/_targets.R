@@ -21,3 +21,4 @@ list(
   tar_target(data, data.frame(x = sample.int(100), y = sample.int(100))),
   tar_target(summary, summ(data)) # Call your custom functions as needed.
 )
+
