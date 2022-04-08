@@ -19,6 +19,11 @@ library(targets)
 #Pour la question précédente, on pourrait éliminer les travaux à 15 personnes vu que l'effort n'est pas vraiment comparable
 #Est-ce que les élèves changent d'équipe plus le bac avance ou ils ont tendance à conserver leurs collaboration?
 
+#Est-ce que les étudiants ont plus tendance à faire des collab ensemble lorsqu'ils sont dans le même programme?
+#Est-ce que les étudiants ont plus tendance à faire des collab ensemble lorsqu'ils proviennent de la même cohorte?
+#Est-ce que les étudiants ont plus tendance à faire des collab ensemble lorsqu'ils sont en programme coop?
+#Est-ce que les étudiants ont plus tendance à garder les mêmes équipes lorsque le choix des coéquipiers est libre?
+
 ##### Chercher les données #####
 
 noeuds_amelie<-read.csv("noeuds_amelie.csv", sep=";")
