@@ -18,6 +18,8 @@ library(targets)
 #Combien de collaborations différentes par élèves/La moyenne de collaboration par élève
 #Pour la question précédente, on pourrait éliminer les travaux à 15 personnes vu que l'effort n'est pas vraiment comparable
 #Est-ce que les élèves changent d'équipe plus le bac avance ou ils ont tendance à conserver leurs collaboration?
+#Quel est le degré le plus élevé entre les élèves? Combien d'élèves ont se degré? Le degré le plus élevé est 
+#induit par combien d'élève?
 
 #Est-ce que les étudiants ont plus tendance à faire des collab ensemble lorsqu'ils sont dans le même programme?
 #Est-ce que les étudiants ont plus tendance à faire des collab ensemble lorsqu'ils proviennent de la même cohorte?
