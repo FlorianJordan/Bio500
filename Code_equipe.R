@@ -6,7 +6,7 @@
 #pour frank: setwd("C:/Users/Francis/Desktop/BIO500/Bio500/donnees_BIO500")
 #pour marge : setwd("C:\Users\margu\Documents\Bio500\donnees_BIO500")
 
-#install.packages("dyplr")
+#install.packages("dplyr")
 library(dplyr)
 #install.packages("RSQLite")
 library(RSQLite)
@@ -18,6 +18,11 @@ library(targets)
 #Combien de collaborations différentes par élèves/La moyenne de collaboration par élève
 #Pour la question précédente, on pourrait éliminer les travaux à 15 personnes vu que l'effort n'est pas vraiment comparable
 #Est-ce que les élèves changent d'équipe plus le bac avance ou ils ont tendance à conserver leurs collaboration?
+
+#Est-ce que les étudiants ont plus tendance à faire des collab ensemble lorsqu'ils sont dans le même programme?
+#Est-ce que les étudiants ont plus tendance à faire des collab ensemble lorsqu'ils proviennent de la même cohorte?
+#Est-ce que les étudiants ont plus tendance à faire des collab ensemble lorsqu'ils sont en programme coop?
+#Est-ce que les étudiants ont plus tendance à garder les mêmes équipes lorsque le choix des coéquipiers est libre?
 
 ##### Chercher les données #####
 
@@ -171,3 +176,7 @@ var(liens$liens)
 
 #### Essaie target pour cours ####
 
+#### matrice adjacence ####
+
+m_adj<-table(collaborations$etudiant1,collaborations$etudiant2)
+m_adj
