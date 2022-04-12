@@ -3,13 +3,22 @@
 #setwd()
 #
 #pour flo # setwd("~/Desktop/dossier_mere/universite/Session_6/method_comp/Bio500/donnees_BIO500")
-#Pour frank; setwd("C:/Users/Francis/Desktop/BIO500/Bio500/donnees_BIO500")
+#pour frank: setwd("C:/Users/Francis/Desktop/BIO500/Bio500/donnees_BIO500")
 #pour marge : setwd("C:\Users\margu\Documents\Bio500\donnees_BIO500")
 
 #install.packages("dyplr")
 library(dplyr)
 #install.packages("RSQLite")
 library(RSQLite)
+#install.packages("targets")
+library(targets)
+
+#### Suggestion de questions ####
+#À quel point les élèves gardent les même équipes?
+#Combien de collaborations différentes par élèves/La moyenne de collaboration par élève
+#Pour la question précédente, on pourrait éliminer les travaux à 15 personnes vu que l'effort n'est pas vraiment comparable
+#Est-ce que les élèves changent d'équipe plus le bac avance ou ils ont tendance à conserver leurs collaboration?
+
 ##### Chercher les données #####
 
 noeuds_amelie<-read.csv("noeuds_amelie.csv", sep=";")
@@ -159,3 +168,6 @@ liens_paire
 
 mean(liens$liens)
 var(liens$liens)
+
+#### Essaie target pour cours ####
+
