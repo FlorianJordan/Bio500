@@ -12,6 +12,8 @@ library(dplyr)
 library(RSQLite)
 #install.packages("targets")
 library(targets)
+#install.packages("igraph")
+library(igraph)
 
 #### Suggestion de questions ####
 #À quel point les élèves gardent les même équipes?
@@ -106,7 +108,8 @@ noeuds
 #### Enlever les anciennes tables SQL ####
 
 con<-dbConnect(SQLite(),dbname="attributs.db")
-dbSendQuery(con,"DROP TABLE cours;")
+dbSendQuery(con,"DROP TABLE collaborations;")
+dbSendQuery(con,"DROP TABLE noeuds;")
 
 #### Creation des tables SQL ####
 
@@ -182,3 +185,19 @@ var(liens$liens)
 
 m_adj<-table(collaborations$etudiant1,collaborations$etudiant2)
 m_adj
+
+adj<-graph.adjacency(m_adj)
+plot(adj,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+
+#### Enlever TSB303 ####
+
+sql_requete3 <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
+"
+collab_nontsb<-dbGetQuery(con,sql_requete3)
+
+m_adj_nontsb<-table(collab_nontsb$etudiant1,collab_nontsb$etudiant2)
+
+adj_nontsb<-graph.adjacency(m_adj_nontsb)
+plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
