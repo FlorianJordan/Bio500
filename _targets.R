@@ -1,6 +1,7 @@
 library(targets)
 library(dplyr)
 tar_option_set(packages = "dplyr")
+source("R/functions.R")
 list(
   tar_target(noeuds_amelie,read.csv("data/noeuds_amelie.csv", sep=";")),
   tar_target(noeuds_anthonystp,read.table("data/noeuds_anthonystp .txt",header = T,sep=";")),
