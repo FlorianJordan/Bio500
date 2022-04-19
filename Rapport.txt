@@ -13,6 +13,9 @@ leurs partenaires.
 
 # Méthode
 
+La classe de BIO500 de la session d'hiver 2022 s'est divisé en 9 (à valider) équipes. Chaque élève de ses équipes a copilé l'ensemble des cours réaliser lors de leur baccalauréat ainsi que les informations considérées pertinentes reliées à ces cours dans une première table commune à l'équipe. Ils ont également copilé dans une seconde table le nom de chaque coéquipier, l'année de début de leur baccalauréat, le nom de leur programme ainsi que les informations considérées pertinentes reliées à chaque individu de l'équipe. Ils ont terminé la copilation des données par une troisième table. Au sein de cette dernière table, se trouve l'ensemble des collaborations, c'est-à-dire l'ensemble des noms avec qui chaque élève a réalisé des travaux d'équipe jusqu'à présent lors de leur baccalauréat. 
+
+Une fois la copilation des données réalisée par chaque équipe, celles-ci furent partagé et mise en commun. Chaque équipe avait alors la tâche de fusionner l'ensemble des données ensemble afin de n'avoir que trois tables contenant l'ensemble des données de la classe. Au préalable, chaque équipe a dû standardiser les données de l'ensemble des équipes afin d'obtenir une unité structurelle au sein des différentes tables. 
 
 ## Première partie
 
