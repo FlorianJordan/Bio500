@@ -148,7 +148,7 @@ CREATE TABLE collaborations (
   etudiant2     VARCHAR(50),
   sigle   CHAR(6),
   date    DATE(3),
-  PRIMARY KEY (etudiant1, etudiant2, sigle,date),
+  PRIMARY KEY (etudiant1, etudiant2, sigle, date),
   FOREIGN KEY (etudiant1) REFERENCES noeuds(nom_prenom),
   FOREIGN KEY (etudiant2) REFERENCES noeuds(nom_prenom),
   FOREIGN KEY (sigle) REFERENCES cours(sigle)
