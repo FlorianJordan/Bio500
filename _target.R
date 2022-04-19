@@ -26,12 +26,4 @@ list(
   )
   
 
-collaborations_amelie<-read.csv("donnees_modifs/collaborations_amelie.csv", sep=";")
-collaborations_anthonystp<-read.table("donnees_modifs/collaborations_anthonystp.txt",header = T,sep=";")
-collaborations_cvl<-read.csv("donnees_modifs/collaborations_cvl_jl_jl_mp_xs.csv", sep=";")
-collaborations_dp<-read.csv("donnees_modifs/collaborations_DP-GL-LB-ML-VQ_txt.csv", sep=";")
-collaborations_fxc<-read.table("donnees_modifs/collaborations_FXC_MF_TC_LRT_WP..txt",header = T,sep="")
-collaborations_jbca<-read.table("donnees_modifs/collaborations_jbcaldlvjlgr.txt",header = T,sep=";")
-collaborations_martineau<-read.table("donnees_modifs/collaborations_martineau.txt",header = T,sep=";")
-collaborations_alexis<-read.table("donnees_modifs/collaboration_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")
-collaborations_ilmdph<-read.table("donnees_modifs/collaborations_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")
+
