@@ -5,39 +5,19 @@ title: Rapport
 author:
   - name: Marguerite Duchesne
     affiliation: a
-    - 
-author:
   - name: Florian Jordan
-    affiliation: b
-    - 
-author:
-  - name: Anthony Saint-Pierre
-    affiliation: c
-    - 
-author:
+    affiliation: a
+  - name: Anthony St-Pierre
+    affiliation: a
   - name: Simon Grégoire
-    affiliation: d
-    - 
-author:
-  - name: Frnacis Lessard
-    affiliation: e
-    -     
+    affiliation: a
+  - name: Francis Lessard
+    affiliation: a
 
-  address:
+address:
   - code: a
     address: Université de Sherbrooke, Départment de biologie, 2500 Boulevard de l'Université, Sherbrooke, Québec, J1K 2R1
-  address:
-  - code: b
-    address: Université de Sherbrooke, Départment de biologie, 2500 Boulevard de l'Université, Sherbrooke, Québec, J1K 2R1
-  address:
-  - code: c
-    address: Université de Sherbrooke, Départment de biologie, 2500 Boulevard de l'Université, Sherbrooke, Québec, J1K 2R1
-  address:
-  - code: d
-    address: Université de Sherbrooke, Départment de biologie, 2500 Boulevard de l'Université, Sherbrooke, Québec, J1K 2R1
-  address:
-  - code: e
-    address: Université de Sherbrooke, Départment de biologie, 2500 Boulevard de l'Université, Sherbrooke, Québec, J1K 2R1
+
 
 abstract: |
   Nous avons voulu nous intérésser aux collaborations des élèves de l'Université de Sherbrooke lors de travaux d'équipe pendant leur parcours 
