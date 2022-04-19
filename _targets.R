@@ -37,22 +37,14 @@ list(
   tar_target(cours_anthonystp_corrige,fonction_cours_anthonystp(cours_anthonystp)),
   tar_target(collaborations_ilmdph_corrige,fonction_collaborations_ilmdph(collaborations_ilmdph)),
   tar_target(collaborations_dp_corrige,fonction_collaborations_dp(collaborations_dp)),
-  tar_target(noeuds_cvl_corrige,fonction_noeuds_cvl(noeuds_cvl))
+  tar_target(noeuds_cvl_corrige,fonction_noeuds_cvl(noeuds_cvl)),
  
-  
-  )
+  tar_target(cours_cvl_corrige,fonction_cours_cvl(cours_cvl)),
+  tar_target(cours_fxc_corrige,fonction_cours_fxc(cours_fxc)),
+  tar_target(collaborations_amelie_corrige,fonction_collaborations_amelie(collaborations_amelie)),
+  tar_target(collaborations_anthonystp_corrige,fonction_collaborations_anthonystp(collaborations_anthonystp)),
+  tar_target(collaborations_cvl_corrige,fonction_collaborations_cvl(collaborations_cvl)),
+  tar_target(collaborations_dp_corrige,fonction_collaborations_dp(collaborations_dp)),
+  tar_target(collaborations_martineau_corrige,fonction_collaborations_martineau(collaborations_martineau))
 
-cours_cvl<-rename(cours_cvl,sigle=Sigle)
-cours_fxc<-rename(cours_fxc,credits=credit)
-
-collaborations_amelie<-rename(collaborations_amelie,sigle=cours)
-collaborations_anthonystp<-rename(collaborations_anthonystp,sigle=cours)
-collaborations_cvl<-rename(collaborations_cvl,sigle=cours)
-collaborations_dp<-rename(collaborations_dp,sigle=cours)
-collaborations_martineau<-rename(collaborations_martineau,sigle=cours)
-
-colnames(noeuds_amelie)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
-colnames(collaborations_amelie)<-c("etudiant1","etudiant2","sigle","date")
-colnames(cours_amelie)<-c("sigle","credits","obligatoire","laboratoire","libre")
-
-
+)
