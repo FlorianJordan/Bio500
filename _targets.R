@@ -44,7 +44,7 @@ list(
   tar_target(collaborations_amelie_corrige,fonction_collaborations_amelie(collaborations_amelie)),
   tar_target(collaborations_anthonystp_corrige,fonction_collaborations_anthonystp(collaborations_anthonystp)),
   tar_target(collaborations_cvl_corrige,fonction_collaborations_cvl(collaborations_cvl)),
-  tar_target(collaborations_dp_corrige,fonction_collaborations_dp(collaborations_dp)),
+  tar_target(collaborations_dp_corrige2,fonction_collaborations_dp(collaborations_dp)),
   tar_target(collaborations_martineau_corrige,fonction_collaborations_martineau(collaborations_martineau))
 
 )
