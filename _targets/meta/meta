@@ -1,7 +1,13 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+collaborations_anthonystp|stem|b100c0b24012bd37|73f372d50e4eceaa|5cb42b57398551be|-1054253271||t19101.577474495s|3e4efbefff0c81f8|1242|rds|local|vector|||0.002||
 collaborations_cvl|stem|a3d4047e92b3a8ad|86b619e30b8061ee|cfcaebb9b7cad818|-86559403||t19101.5736525743s|2266d985519bf438|1420|rds|local|vector|||0.002||
+collaborations_fxc|stem||eb0a592a5b0b88d5|5cb42b57398551be|-534589358||t19101.5774749541s||0|rds|local|vector|||0.011|impossible douvrir le fichier datacollaborations_FXC_MF_TC_LRT_WP.txt  No such file or directory|impossible douvrir la connexion
 collaborations_ilmdph|stem|71f3d6c711898638|6f9a6737c29cd606|5cb42b57398551be|-1315368931||t19101.5736522085s|809f76b9a30d84a1|1565|rds|local|vector|||0.006||
-collaborations_jbca|stem||b990aca6dc2ff0f1|cfcaebb9b7cad818|-1406093207||t19101.5736526983s||0|rds|local|vector|||0.005|impossible douvrir le fichier datacollaborations_jbcaldlvjlgr.csv  No such file or directory|impossible douvrir la connexion
+collaborations_jbca|stem|fb2f70e6687c1eec|c4adb83f587a31b3|5cb42b57398551be|-1406093207||t19101.5774740857s|ab73801c5fe014aa|966|rds|local|vector|||0.005||
+cours_fxc|stem|487e362a9cb0bbb6|74a48c11820d0b20|5cb42b57398551be|1977953316||t19101.577474386s|34fe10b9a860addd|282|rds|local|vector|||0.001||
 data|stem|ae6381a53fd36606|4d28b3ae61066c9f|15669340fa0be499|1588979285||t19101.5625610116s|5a942ec2cdfd51f3|458|rds|local|vector|||0.2||
+noeuds_anthonystp|stem|55ccd9d3e7c30a59|e7d1029196d3e909|5cb42b57398551be|1416868395||t19101.5774742s|14438a794189323e|826|rds|local|vector|||0.002||
+noeuds_jbca|stem|5994f06a557f4052|8e042a2169b68cc4|5cb42b57398551be|292470834||t19101.5774743021s|20798277a5bbdf65|499|rds|local|vector|||0.002||
+noeuds_martineau|stem|05634e9ccf333a92|75c3bb6b02ee0a0b|5cb42b57398551be|-1761149643||t19101.5774747362s|8c95d42e0607dc07|553|rds|local|vector|||0.008||
 summ|function|725b50cbf04a3ed2|||||||||||||||
 summary|stem|42e900285b1c8269|504e748dde9ca536|5ccfd2d0e6974b18|760118442||t19101.562562294s|b6284359ec2a2750|125|rds|local|vector|||0.02||
