@@ -1,0 +1,116 @@
+---
+title: Rapport
+
+# Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
+author:
+  - name: Marguerite Duchesne
+    affiliation: a
+  - name: Florian Jordan
+    affiliation: a
+  - name: Anthony St-Pierre
+    affiliation: a
+  - name: Simon Grégoire
+    affiliation: a
+  - name: Francis Lessard
+    affiliation: a
+
+address:
+  - code: a
+    address: Université de Sherbrooke, Départment de biologie, 2500 Boulevard de l'Université, Sherbrooke, Québec, J1K 2R1
+
+
+abstract: |
+  Nous avons voulu nous intérésser aux collaborations des élèves de l'Université de Sherbrooke lors de travaux d'équipe pendant leur parcours 
+  dans le baccalauréat en biologie. 
+
+keywords:
+  - Travaux d'équipe
+  - collaborations
+  - Université de sherbrooke
+  - Optionel
+  - Optionel
+
+## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)
+pnas_type: pnasresearcharticle
+
+bibliography: pnas-sample.bib
+csl: pnas.csl
+
+## change to true to add optional line numbering
+lineno: false
+
+output: pdf_document
+---
+
+# Introduction
+**Voici un exemple de citation @berard1994embedding, et en voici deux autres [@berard1994embedding;@belkin2002using;@coifman2005geometric].** 
+
+On entend souvent l'expression « ah que le monde est petit ! » lorsque deux personnes se retrouvent à avoir une connexion qu'on ne suspectait pas. Certaines études se sont intéressées à ce principe que par un lien relativement proche, tout le monde se connait. Milgram (1967) s'est penché sur le sujet et à testé cette hypothèse que deux personnes pigées au hasard vont avoir un lien quelconque entre eux [@. Ce principe peut s'appliquer à l'écologie, car d'un point de vu de l'évolution, toutes les espèces sont reliées par un ancêtre commun. Ce modèle de « petit monde » peut donc s'appliquer à grande et petite échelle. Nous avons voulu tester cette théorie à petite échelle. Nous nous sommes donc posés la question si le réseau de collaborations entre les étudiants du bacc en écologie a les mêmes propriétés que les réseaux écologiques. Plus spécifiquement, nous avons étudiés si les élèves en tendances à conserver les mêmes collaborateurs dans tous les travaux ou s'ils avaient plus tendance à diversifier leurs partenaires.
+
+# Méthode
+
+Per recepto pugnes. Soror est adiit nusquam, in arserunt nondum tempore
+bracchia. Pater tempora limen. Falcata parentibus dolor et vobis aranea! Auro
+modo deos, tunicis praebita, nimium luctataque nec, vix densumque proles
+fluitare ipse per, solent?
+Pondera abrumpit cum quaeque iuris. Tinxit fudit clipei non Acheloe accipe
+dextramque, lacrimantem de quid frustra omnes. Indigenae exta quamque modo meae,
+detur idem curas prope erat. Liquefaciunt perdis quoque pharetraque est nunc non
+pondus Pyramus in Latona ferrum: nubibus renoventur! Fallacia sonuit Proreus,
+aurora: omen cur a moenia ore ego narret, ego. Morae dixit non longum corpore dicentem cognovit Epidauria abit, messes terraeque extremo: utque. Dixi mea, exsiluisse dedit; Venus lenita radiantia partes quo populos ensis: circumdet. Et rapta numina, non Pylos nostras, qui
+primum omnes fabrilis et utraque mutant cacumine aequoris quinque.
+
+## Première partie
+
+Lorem markdownum et est, an mane luctu iugis ignibus in hostia peragit dum eadem
+equinis, par gradus ubi! Silet canities sine dedecet, fides virum capro:
+loquuntur ante. Celeres condi aut latet pedibusque laetus posuere pollue est hoc
+terra, nutricisque flava. Eurytus auris. Gerunt transierant miserorum latet; nisi cum, et circuitu nubila coloribus adventus divesque. Loca partibus breve et unum maior stellis inpia et
+luporum. Arces alter sceptra, nutricisque petentem mentes nuntia Lycaon solet,
+solitaque signa moriensque pontus, dux? Corpora testataque, novo tumidum. Eurytus auris. Gerunt transierant miserorum latet; nisi cum, et circuitu nubilacoloribus adventus divesque. Loca partibus breve et unum maior stellis inpia etluporum. Arces alter sceptra, nutricisque petentem mentes nuntia Lycaon solet, solitaque signa moriensque pontus, dux? Corpora testataque, novo tumidum.
+
+## Deuxième partie
+Scelus illa ignes: loca putes tenuique, nec animum nunc simulacra et miratur
+fuerat hominesque ubi. Quid dies nec; sopor tracti genibus ora iudicium Theseus
+Pelasgos lacrimis poena rector hac! Nitidum dextro. Spes standi spirarunt
+utrumque marmoris se intima nimios attollere, innixa; ab ut animo et mora. Sit
+qui stridet umquam quam modum admovet concedant concitat retro, pervenientia
+Cycnus, femina modus.
+
+# Résultats
+
+Fig. 1 : Réseau de collaborations
+
+Fig. 2 : Nombres de collaboration par élève
+
+Fig. 3 : Nombres de collaboration avec chaque partenaire
+
+**Voici comment inclure une figure .pdf préalablement générée et la citer/référencer dans le texte, via son `label`: Figure \ref{fig:plot1}**. 
+
+![Espace pour graphique de régression linéaire. \label{fig:plot1}]("../results/plot_lm.pdf"){ width=50% height=40%}
+
+# Discussion
+
+Per recepto pugnes. Soror est adiit nusquam, in arserunt nondum tempore
+bracchia. Pater tempora limen. Falcata parentibus dolor et vobis aranea! Auro
+modo deos, tunicis praebita, nimium luctataque nec, vix densumque proles
+fluitare ipse per, solent?
+Pondera abrumpit cum quaeque iuris. Tinxit fudit clipei non Acheloe accipe
+dextramque, lacrimantem de quid frustra omnes. Indigenae exta quamque modo meae,
+detur idem curas prope erat. Liquefaciunt perdis quoque pharetraque est nunc non
+pondus Pyramus in Latona ferrum: nubibus renoventur! Fallacia sonuit Proreus,
+aurora: omen cur a moenia ore ego narret, ego. Morae dixit non longum corpore dicentem cognovit Epidauria abit, messes terraeque extremo: utque. Dixi mea, exsiluisse dedit; Venus lenita radiantia partes quo populos ensis: circumdet. Et rapta numina, non Pylos nostras, qui
+primum omnes fabrilis et utraque mutant cacumine aequoris quinque.
+
+
+
+# Conclusion
+
+Ligavit cetera et infelix nescius, sinu timorem admonitu ferrove exspectatas
+fuerant pulcherrime, mea sonum! Formae munera, est trahendo regem supplice.
+Verba lacrimis gradus, verbis iam tempore aratri sed, at imagine momordit. Teque
+esse, ante pariter desere in quae: illa socium inque meae: et ipso canos:
+peteretis? Temptanda Daedalus et palmis incumbere tempora ambit.
+
+\newpage
+# Bibliographie{-}
