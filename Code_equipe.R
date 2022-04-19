@@ -71,6 +71,22 @@ collaborations_ilmdph<-collaborations_ilmdph[,-5]
 collaborations_dp<-collaborations_dp[,-5]
 noeuds_cvl<-noeuds_cvl[,-1]
 
+fonction_cours_amelie<-function(x){
+  x[,-c(6:7)]
+}
+fonction_cours_anthonystp <-function(x){cours_anthonystp[,-5]
+}
+fonction_collaborations_ilmdph <-function(x){
+  collaborations_ilmdph[,-5]
+}
+fonction_collaborations_dp<-function(x){
+  collaborations_dp[,-5]
+}
+fonction_noeuds_cvl<-function(x){
+  noeuds_cvl[,-1]
+}
+
+
 ##### Corretion nom de colonne #####
 
 cours_cvl<-rename(cours_cvl,sigle=Sigle)
