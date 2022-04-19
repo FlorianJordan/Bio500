@@ -1,7 +1,7 @@
 fonction_cours_amelie<-function(x){
-  x[,-c(6:7)]
+  
   colnames(x)<-c("sigle","credits","obligatoire","laboratoire","libre")
-}
+x[,-c(6:7)]}
 fonction_cours_anthonystp <-function(x){x[,-5]
 }
 fonction_collaborations_ilmdph <-function(x){
@@ -16,8 +16,8 @@ fonction_noeuds_cvl<-function(x){
 
 fonction_cours_cvl<-function(x){rename(x,sigle=Sigle)}
 fonction_cours_fxc<-function(x){rename(x,credits=credit)}
-fonction_collaborations_amelie<-function(x){rename(x,sigle=cours)
-  colnames(x)<-c("etudiant1","etudiant2","sigle","date")}
+fonction_collaborations_amelie<-function(x){
+  rename(x,sigle=cours)}
 fonction_collaborations_anthonystp<-function(x){rename(x,sigle=cours)}
 fonction_collaborations_cvl<-function(x){rename(x,sigle=cours)}
 fonction_collaborations_dp<-function(x){rename(x,sigle=cours)}
