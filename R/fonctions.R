@@ -23,3 +23,12 @@ fonction_collaborations_cvl<-function(x){rename(x,sigle=cours)}
 fonction_collaborations_dp<-function(x){rename(x,sigle=cours)}
 fonction_collaborations_martineau<-function(x){rename(x,sigle=cours)}
 
+fonction_doublons_cours<-function(x){x[!duplicated(x$sigle),]}
+
+
+fonction_doublons_collaborations<-function(x){distinct(x)}
+
+fonction_doublons_noeuds<-function(x){x %>% arrange(rowSums(is.na(x)))
+  x[!duplicated(x$nom_prenom),]}
+
+
