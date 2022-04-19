@@ -12,3 +12,4 @@ fonction_collaborations_dp<-function(x){
 fonction_noeuds_cvl<-function(x){
   x[,-1]
 }
+
