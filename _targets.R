@@ -30,7 +30,7 @@ list(
   tar_target(collaborations_jbca,read.csv("data/collaborations_jbcaldlvjlgr.csv", sep=";")),
   tar_target(collaborations_martineau,read.csv("data/collaborations_martineau.csv", sep=";")),
   tar_target(collaborations_alexis,read.csv("data/collaboration_Alexis_Nadya_Edouard_Penelope.csv", sep=";")),
-  tar_target(collaborations_ilmdph,read.csv("data/collaborations_IL_MDH_ASP_MB_OL.csv", sep=";"))
+  tar_target(collaborations_ilmdph,read.table("data/collaborations_IL_MDH_ASP_MB_OL.txt",header = T, sep=";"))
 )
 
 
