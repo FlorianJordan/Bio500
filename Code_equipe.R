@@ -19,14 +19,12 @@ library(igraph)
 #À quel point les élèves gardent les même équipes?
 #Combien de collaborations différentes par élèves/La moyenne de collaboration par élève
 #Pour la question précédente, on pourrait éliminer les travaux à 15 personnes vu que l'effort n'est pas vraiment comparable
-#Est-ce que les élèves changent d'équipe plus le bac avance ou ils ont tendance à conserver leurs collaboration?
 #Quel est le degré le plus élevé entre les élèves? Combien d'élèves ont se degré? Le degré le plus élevé est 
 #induit par combien d'élève?
 
 #Est-ce que les étudiants ont plus tendance à faire des collab ensemble lorsqu'ils sont dans le même programme?
-#Est-ce que les étudiants ont plus tendance à faire des collab ensemble lorsqu'ils proviennent de la même cohorte?
 #Est-ce que les étudiants ont plus tendance à faire des collab ensemble lorsqu'ils sont en programme coop?
-#Est-ce que les étudiants ont plus tendance à garder les mêmes équipes lorsque le choix des coéquipiers est libre?
+
 
 ##### Chercher les données #####
 
@@ -201,3 +199,4 @@ m_adj_nontsb<-table(collab_nontsb$etudiant1,collab_nontsb$etudiant2)
 
 adj_nontsb<-graph.adjacency(m_adj_nontsb)
 plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+
