@@ -5,10 +5,11 @@ On entend souvent l'expression « ah que le monde est petit ! » lorsque deux pe
 suspectait pas. Certaines études se sont intéressées à ce principe que par un lien relativement proche, tout le monde se connait. 
 Milgram (1967) s'est penché sur le sujet et à testé cette hypothèse que deux personnes pigées au hasard vont avoir un lien quelconque 
 entre eux [@milgram1972]. Ce principe peut s'appliquer à l'écologie, car d'un point de vu de l'évolution, toutes les espèces sont reliées 
-par un ancêtre commun et pour étudier les réseaux trophiques [@Montoya&Solé2002]. Ce modèle de « petit monde » peut donc s'appliquer à grande et petite échelle. Nous avons voulu tester cette 
-théorie à petite échelle. Nous nous sommes donc posés la question si le réseau de collaborations entre les étudiants du bacc en écologie 
-a les mêmes propriétés que les réseaux écologiques. Plus spécifiquement, nous avons étudiés si les élèves en tendances à conserver les 
-mêmes collaborateurs dans tous les travaux ou s'ils avaient plus tendance à diversifier leurs partenaires.
+par un ancêtre commun et pour étudier les réseaux trophiques [@Montoya&Solé2002]. Ce modèle de « petit monde » peut donc s'appliquer à 
+grande et petite échelle. Nous avons voulu tester cette théorie à petite échelle. Nous nous sommes donc posés la question si le réseau de 
+collaborations entre les étudiants du bacc en écologie a les mêmes propriétés que les réseaux écologiques. Plus spécifiquement, nous avons 
+étudiés si les élèves en tendances à conserver les mêmes collaborateurs dans tous les travaux ou s'ils avaient plus tendance à diversifier 
+leurs partenaires.
 
 # Méthode
 
