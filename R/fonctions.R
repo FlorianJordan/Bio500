@@ -23,5 +23,3 @@ fonction_collaborations_cvl<-function(x){rename(x,sigle=cours)}
 fonction_collaborations_dp<-function(x){rename(x,sigle=cours)}
 fonction_collaborations_martineau<-function(x){rename(x,sigle=cours)}
 
-fonction_noeuds_amelie<-function(x){colnames(x)<-c("nom_prenom","annee_debut","session_debut","programme","coop")}
-fonction_collaborations_amelie<-function(x){colnames(x)<-c("etudiant1","etudiant2","sigle","date")}
