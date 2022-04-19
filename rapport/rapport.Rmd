@@ -39,7 +39,7 @@ csl: pnas.csl
 ## change to true to add optional line numbering
 lineno: false
 
-output: pdf_document
+output: rticles::pnas_article
 ---
 
 # Introduction
@@ -87,7 +87,6 @@ Fig. 3 : Nombres de collaboration avec chaque partenaire
 
 **Voici comment inclure une figure .pdf préalablement générée et la citer/référencer dans le texte, via son `label`: Figure \ref{fig:plot1}**. 
 
-![Espace pour graphique de régression linéaire. \label{fig:plot1}]("../results/plot_lm.pdf"){ width=50% height=40%}
 
 # Discussion
 
