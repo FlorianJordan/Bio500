@@ -33,35 +33,35 @@ library(igraph)
 
 ##### Chercher les données #####
 
-noeuds_amelie<-read.csv("donnees_modifs/noeuds_amelie.csv", sep=";")
-noeuds_anthonystp<-read.table("donnees_modifs/noeuds_anthonystp .txt",header = T,sep=";")
-noeuds_cvl<-read.csv("donnees_modifs/noeuds_cvl_jl_jl_mp_xs.csv", sep=";")
-noeuds_dp<-read.csv("donnees_modifs/noeuds_DP-GL-LB-ML-VQ_txt.csv", sep=";")
-noeuds_fxc<-read.table("donnees_modifs/noeuds_FXC_MF_TC_LRT_WP.txt",header = T,sep="")
-noeuds_jbca<-read.table("donnees_modifs/noeuds_jbcaldlvjlgr.txt",header = T,sep=";")
-noeuds_martineau<-read.table("donnees_modifs/noeuds_martineau.txt",header = T,sep=";")
-noeuds_alexis<-read.table("donnees_modifs/etudiant_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")
-noeuds_ilmdph<-read.table("donnees_modifs/etudiant_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")
+noeuds_amelie<-read.csv("data/noeuds_amelie.csv", sep=";")
+noeuds_anthonystp<-read.table("data/noeuds_anthonystp .txt",header = T,sep=";")
+noeuds_cvl<-read.csv("data/noeuds_cvl_jl_jl_mp_xs.csv", sep=";")
+noeuds_dp<-read.csv("data/noeuds_DP-GL-LB-ML-VQ_txt.csv", sep=";")
+noeuds_fxc<-read.table("data/noeuds_FXC_MF_TC_LRT_WP.txt",header = T,sep="")
+noeuds_jbca<-read.table("data/noeuds_jbcaldlvjlgr.txt",header = T,sep=";")
+noeuds_martineau<-read.table("data/noeuds_martineau.txt",header = T,sep=";")
+noeuds_alexis<-read.table("data/etudiant_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")
+noeuds_ilmdph<-read.table("data/etudiant_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")
 
-cours_amelie<-read.csv("donnees_BIO500/cours_amelie.csv", sep=";")
-cours_anthonystp<-read.table("donnees_BIO500/cours_anthonystp.txt",header = T,sep=";")
-cours_cvl<-read.csv("donnees_BIO500/cours_cvl_jl_jl_mp_xs.csv", sep=";")
-cours_dp<-read.csv("donnees_BIO500/cours_DP-GL-LB-ML-VQ_txt.csv", sep=";")
-cours_fxc<-read.table("donnees_BIO500/cours_FXC_MF_TC_LRT_WP..txt",header = T,sep="")
-cours_jbca<-read.table("donnees_BIO500/cours_jbcaldlvjlgr.txt",header = T,sep=";")
-cours_martineau<-read.table("donnees_BIO500/cours_martineau.txt",header = T,sep=";")
-cours_alexis<-read.table("donnees_BIO500/Cours_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")
-cours_ilmdph<-read.table("donnees_BIO500/cours_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")
+cours_amelie<-read.csv("data/cours_amelie.csv", sep=";")
+cours_anthonystp<-read.table("data/cours_anthonystp.txt",header = T,sep=";")
+cours_cvl<-read.csv("data/cours_cvl_jl_jl_mp_xs.csv", sep=";")
+cours_dp<-read.csv("data/cours_DP-GL-LB-ML-VQ_txt.csv", sep=";")
+cours_fxc<-read.table("data/cours_FXC_MF_TC_LRT_WP..txt",header = T,sep="")
+cours_jbca<-read.table("data/cours_jbcaldlvjlgr.txt",header = T,sep=";")
+cours_martineau<-read.table("data/cours_martineau.txt",header = T,sep=";")
+cours_alexis<-read.table("data/Cours_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")
+cours_ilmdph<-read.table("data/cours_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")
 
-collaborations_amelie<-read.csv("donnees_modifs/collaborations_amelie.csv", sep=";")
-collaborations_anthonystp<-read.table("donnees_modifs/collaborations_anthonystp.txt",header = T,sep=";")
-collaborations_cvl<-read.csv("donnees_modifs/collaborations_cvl_jl_jl_mp_xs.csv", sep=";")
-collaborations_dp<-read.csv("donnees_modifs/collaborations_DP-GL-LB-ML-VQ_txt.csv", sep=";")
-collaborations_fxc<-read.table("donnees_modifs/collaborations_FXC_MF_TC_LRT_WP..txt",header = T,sep="")
-collaborations_jbca<-read.table("donnees_modifs/collaborations_jbcaldlvjlgr.txt",header = T,sep=";")
-collaborations_martineau<-read.table("donnees_modifs/collaborations_martineau.txt",header = T,sep=";")
-collaborations_alexis<-read.table("donnees_modifs/collaboration_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")
-collaborations_ilmdph<-read.table("donnees_modifs/collaborations_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")
+collaborations_amelie<-read.csv("data/collaborations_amelie.csv", sep=";")
+collaborations_anthonystp<-read.table("data/collaborations_anthonystp.txt",header = T, sep=";")
+collaborations_cvl<-read.csv("data/collaborations_cvl_jl_jl_mp_xs.csv", sep=";")
+collaborations_dp<-read.csv("data/collaborations_DP-GL-LB-ML-VQ_txt.csv", sep=";")
+collaborations_fxc<-read.table("data/collaborations_FXC_MF_TC_LRT_WP..txt",header = T, sep=";")
+collaborations_jbca<-read.table("data/collaborations_jbcaldlvjlgr.txt",header = T, sep=";")
+collaborations_martineau<-read.table("data/collaborations_martineau.txt",header = T, sep=";")
+collaborations_alexis<-read.table("data/collaboration_Alexis_Nadya_Edouard_Penelope.txt",header = T, sep=";")
+collaborations_ilmdph<-read.table("data/collaborations_IL_MDH_ASP_MB_OL.txt",header = T, sep=";")
 
 ##### Enlever les colonnes en trop pour certains ####
 
@@ -70,6 +70,7 @@ cours_anthonystp<-cours_anthonystp[,-5]
 collaborations_ilmdph<-collaborations_ilmdph[,-5]
 collaborations_dp<-collaborations_dp[,-5]
 noeuds_cvl<-noeuds_cvl[,-1]
+
 
 ##### Corretion nom de colonne #####
 
@@ -113,6 +114,7 @@ noeuds
 con<-dbConnect(SQLite(),dbname="attributs.db")
 dbSendQuery(con,"DROP TABLE collaborations;")
 dbSendQuery(con,"DROP TABLE noeuds;")
+dbSendQuery(con,"DROP TABLE cours;")
 
 #### Creation des tables SQL ####
 
@@ -146,7 +148,7 @@ CREATE TABLE collaborations (
   etudiant2     VARCHAR(50),
   sigle   CHAR(6),
   date    DATE(3),
-  PRIMARY KEY (etudiant1, etudiant2, sigle,date),
+  PRIMARY KEY (etudiant1, etudiant2, sigle, date),
   FOREIGN KEY (etudiant1) REFERENCES noeuds(nom_prenom),
   FOREIGN KEY (etudiant2) REFERENCES noeuds(nom_prenom),
   FOREIGN KEY (sigle) REFERENCES cours(sigle)

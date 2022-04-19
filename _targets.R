@@ -1,6 +1,7 @@
 library(targets)
 library(dplyr)
 tar_option_set(packages = "dplyr")
+source("R/fonctions.R")
 list(
   tar_target(noeuds_amelie,read.csv("data/noeuds_amelie.csv", sep=";")),
   tar_target(noeuds_anthonystp,read.table("data/noeuds_anthonystp .txt",header = T,sep=";")),
@@ -30,7 +31,28 @@ list(
   tar_target(collaborations_jbca,read.table("data/collaborations_jbcaldlvjlgr.txt",header = T, sep=";")),
   tar_target(collaborations_martineau,read.table("data/collaborations_martineau.txt",header = T, sep=";")),
   tar_target(collaborations_alexis,read.table("data/collaboration_Alexis_Nadya_Edouard_Penelope.txt",header = T, sep=";")),
-  tar_target(collaborations_ilmdph,read.table("data/collaborations_IL_MDH_ASP_MB_OL.txt",header = T, sep=";"))
-)
+  tar_target(collaborations_ilmdph,read.table("data/collaborations_IL_MDH_ASP_MB_OL.txt",header = T, sep=";")),
+  
+  tar_target(cours_amelie_corrige,fonction_cours_amelie(cours_amelie)),
+  tar_target(cours_anthonystp_corrige,fonction_cours_anthonystp(cours_anthonystp)),
+  tar_target(collaborations_ilmdph_corrige,fonction_collaborations_ilmdph(collaborations_ilmdph)),
+  tar_target(collaborations_dp_corrige,fonction_collaborations_dp(collaborations_dp)),
+  tar_target(noeuds_cvl_corrige,fonction_noeuds_cvl(noeuds_cvl))
+ 
+  
+  )
+
+cours_cvl<-rename(cours_cvl,sigle=Sigle)
+cours_fxc<-rename(cours_fxc,credits=credit)
+
+collaborations_amelie<-rename(collaborations_amelie,sigle=cours)
+collaborations_anthonystp<-rename(collaborations_anthonystp,sigle=cours)
+collaborations_cvl<-rename(collaborations_cvl,sigle=cours)
+collaborations_dp<-rename(collaborations_dp,sigle=cours)
+collaborations_martineau<-rename(collaborations_martineau,sigle=cours)
+
+colnames(noeuds_amelie)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
+colnames(collaborations_amelie)<-c("etudiant1","etudiant2","sigle","date")
+colnames(cours_amelie)<-c("sigle","credits","obligatoire","laboratoire","libre")
 
 
