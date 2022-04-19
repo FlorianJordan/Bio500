@@ -29,6 +29,7 @@ cours_ilmdph|stem|ad3765998b1abd93|1cfce78efd913de8|5cb42b57398551be|1853381815|
 cours_jbca|stem|506900979cfebc8f|9d8b2a3b1eb98b6a|5cb42b57398551be|-352184404||t19101.5794659103s|9cbfb857ab8b4c55|423|rds|local|vector|||0.001||
 cours_martineau|stem|5942770e24f41d3a|1d4a54bfd93aab7b|5cb42b57398551be|1872116899||t19101.5794669045s|65b2697406fa85d2|331|rds|local|vector|||0.002||
 data|stem|ae6381a53fd36606|4d28b3ae61066c9f|15669340fa0be499|1588979285||t19101.5625610116s|5a942ec2cdfd51f3|458|rds|local|vector|||0.2||
+data_cours|stem||5cc996e748d9259c|ba005f31637b85b8|-1502492530||t19101.6434207128s||0|rds|local|vector|||0.079||1m22mArgument 1 must have names.
 fonction_collaborations_amelie|function|2806c5e29385ddfe|||||||||||||||
 fonction_collaborations_anthonystp|function|908a1dde110bfdda|||||||||||||||
 fonction_collaborations_cvl|function|908a1dde110bfdda|||||||||||||||
