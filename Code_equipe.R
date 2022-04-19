@@ -57,10 +57,10 @@ collaborations_amelie<-read.csv("data/collaborations_amelie.csv", sep=";")
 collaborations_anthonystp<-read.table("data/collaborations_anthonystp.txt",header = T, sep=";")
 collaborations_cvl<-read.csv("data/collaborations_cvl_jl_jl_mp_xs.csv", sep=";")
 collaborations_dp<-read.csv("data/collaborations_DP-GL-LB-ML-VQ_txt.csv", sep=";")
-collaborations_fxc<-read.table("data/collaborations_FXC_MF_TC_LRT_WP..txt",header = T, sep=";")
+collaborations_fxc<-read.table("data/collaborations_FXC_MF_TC_LRT_WP..txt",header = T, sep="")
 collaborations_jbca<-read.table("data/collaborations_jbcaldlvjlgr.txt",header = T, sep=";")
 collaborations_martineau<-read.table("data/collaborations_martineau.txt",header = T, sep=";")
-collaborations_alexis<-read.table("data/collaboration_Alexis_Nadya_Edouard_Penelope.txt",header = T, sep=";")
+collaborations_alexis<-read.table("data/collaboration_Alexis_Nadya_Edouard_Penelope.txt",header = T, sep="")
 collaborations_ilmdph<-read.table("data/collaborations_IL_MDH_ASP_MB_OL.txt",header = T, sep=";")
 
 ##### Enlever les colonnes en trop pour certains ####
@@ -207,6 +207,169 @@ m_adj_nontsb<-table(collab_nontsb$etudiant1,collab_nontsb$etudiant2)
 adj_nontsb<-graph.adjacency(m_adj_nontsb)
 plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
 
+#### plus de 30 collabs ####
+
+liens30<-liens[liens$liens>=30,]
+sql_requete4 <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations WHERE (etudiant1 LIKE '%robert_penelope%' OR etudiant1 LIKE '%gregoire_simon%' OR etudiant1 LIKE '%quevillon_vincent%' OR etudiant1 LIKE '%saintpierre_anthony%' OR etudiant1 LIKE '%poulin_william%' OR etudiant1 LIKE '%prevosto_clara%' OR etudiant1 LIKE '%martineau_alexandre%' OR etudiant1 LIKE '%duchesne_marguerite%' OR etudiant1 LIKE '%jordan_florian%' OR etudiant1 LIKE '%lacroix_guillaume%' OR etudiant1 LIKE '%lepage_jeremi%' OR etudiant1 LIKE '%roy_elisabeth%' OR etudiant1 LIKE '%beland_laura%' OR etudiant1 LIKE '%beliveau_lauralie%' OR etudiant1 LIKE '%boum_laurence%' OR etudiant1 LIKE '%perron_maxime%' OR etudiant1 LIKE '%racine_gabrielle%' OR etudiant1 LIKE '%barbeau_juliette%' OR etudiant1 LIKE '%dhamelin_maili%' OR etudiant1 LIKE '%laurie_veldonjames%' OR etudiant1 LIKE '%nadonbeaumier_edouard%' OR etudiant1 LIKE '%stamant_xavier%' OR etudiant1 LIKE '%beaubien_marie%' OR etudiant1 LIKE '%langlois_claudieanne%' OR etudiant1 LIKE '%saintpierre_audreyann%' OR etudiant1 LIKE '%lalonde_daphnee%' OR etudiant1 LIKE '%lessard_martin%' OR etudiant1 LIKE '%matte_alexis%' OR etudiant1 LIKE '%tardy_nadia%' OR etudiant1 LIKE '%leclerc_olivier%' OR etudiant1 LIKE '%bergeron_amelie%' OR etudiant1 LIKE '%lefebvre_isabelle%' OR etudiant1 LIKE '%lavoie_alissandre%' OR etudiant1 LIKE '%lenneville_jordan%' OR etudiant1 LIKE '%plewinski_david%' OR etudiant1 LIKE '%dufour_melodie%' OR etudiant1 LIKE '%amyot_audreyanne%' OR etudiant1 LIKE '%berthiaume_elise%') AND (etudiant2 LIKE '%robert_penelope%' OR etudiant2 LIKE '%gregoire_simon%' OR etudiant2 LIKE '%quevillon_vincent%' OR etudiant2 LIKE '%saintpierre_anthony%' OR etudiant2 LIKE '%poulin_william%' OR etudiant2 LIKE '%prevosto_clara%' OR etudiant2 LIKE '%martineau_alexandre%' OR etudiant2 LIKE '%duchesne_marguerite%' OR etudiant2 LIKE '%jordan_florian%' OR etudiant2 LIKE '%lacroix_guillaume%' OR etudiant2 LIKE '%lepage_jeremi%' OR etudiant2 LIKE '%roy_elisabeth%' OR etudiant2 LIKE '%beland_laura%' OR etudiant2 LIKE '%beliveau_lauralie%' OR etudiant2 LIKE '%boum_laurence%' OR etudiant2 LIKE '%perron_maxime%' OR etudiant2 LIKE '%racine_gabrielle%' OR etudiant2 LIKE '%barbeau_juliette%' OR etudiant2 LIKE '%dhamelin_maili%' OR etudiant2 LIKE '%laurie_veldonjames%' OR etudiant2 LIKE '%nadonbeaumier_edouard%' OR etudiant2 LIKE '%stamant_xavier%' OR etudiant2 LIKE '%beaubien_marie%' OR etudiant2 LIKE '%langlois_claudieanne%' OR etudiant2 LIKE '%saintpierre_audreyann%' OR etudiant2 LIKE '%lalonde_daphnee%' OR etudiant2 LIKE '%lessard_martin%' OR etudiant2 LIKE '%matte_alexis%' OR etudiant2 LIKE '%tardy_nadia%' OR etudiant2 LIKE '%leclerc_olivier%' OR etudiant2 LIKE '%bergeron_amelie%' OR etudiant2 LIKE '%lefebvre_isabelle%' OR etudiant2 LIKE '%lavoie_alissandre%' OR etudiant2 LIKE '%lenneville_jordan%' OR etudiant2 LIKE '%plewinski_david%' OR etudiant2 LIKE '%dufour_melodie%' OR etudiant2 LIKE '%amyot_audreyanne%' OR etudiant2 LIKE '%berthiaume_elise%')
+"
+collabs30<-dbGetQuery(con,sql_requete4)
+
+m_adj_30<-table(collabs30$etudiant1,collabs30$etudiant2)
+
+adj_30<-graph.adjacency(m_adj_30)
+plot(adj_30,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+
+#### nombre de collabs différentes ####
+
+sql_requete5 <- "
+CREATE TABLE collaborations_dif AS 
+  SELECT DISTINCT etudiant1,etudiant2
+  FROM collaborations
+"
+dbSendQuery(con,"DROP TABLE collaborations_dif;")
+dbExecute(con,sql_requete5)
+dbListTables(con)
+
+sql_requete6 <- "
+SELECT etudiant1 as etudiant, count(etudiant2) as liens_dif
+FROM collaborations_dif
+GROUP BY etudiant
+ORDER BY liens_dif
+"
+liens_dif <- dbGetQuery(con,sql_requete6)
+liens_dif
+
+sql_requete7 <- "
+SELECT etudiant1, etudiant2
+FROM collaborations_dif
+"
+collabs_dif<-dbGetQuery(con,sql_requete7)
+
+m_adj_dif<-table(collabs_dif$etudiant1,collabs_dif$etudiant2)
+
+adj_dif<-graph.adjacency(m_adj_dif)
+plot(adj_dif,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+
+#### progression du réseau ####
+#### 2014 ####
+
+sql_requete8 <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations WHERE date LIKE '%H14%'
+"
+collab_14<-dbGetQuery(con,sql_requete8)
+
+m_adj_14<-table(collab_14$etudiant1,collab_14$etudiant2)
+
+adj_14<-graph.adjacency(m_adj_14)
+plot(adj_14,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+
+#### 2017 ####
+
+sql_requete9 <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations WHERE date LIKE '%H14%' OR date LIKE '%H17%'
+"
+collab_17<-dbGetQuery(con,sql_requete9)
+
+m_adj_17<-table(collab_17$etudiant1,collab_17$etudiant2)
+
+adj_17<-graph.adjacency(m_adj_17)
+plot(adj_17,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+
+#### 2018 ####
+
+sql_requete10 <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations WHERE date LIKE '%H14%' OR date LIKE '%H17%' OR date LIKE '%A17%' OR date LIKE '%E18%'
+"
+collab_18<-dbGetQuery(con,sql_requete10)
+
+m_adj_18<-table(collab_18$etudiant1,collab_18$etudiant2)
+
+adj_18<-graph.adjacency(m_adj_18)
+plot(adj_18,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+
+#### 2019 ####
+
+sql_requete11 <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations WHERE date LIKE '%H14%' OR date LIKE '%H17%' OR date LIKE '%A17%' OR date LIKE '%E18%' OR date LIKE '%H19%'
+"
+collab_19<-dbGetQuery(con,sql_requete11)
+
+m_adj_19<-table(collab_19$etudiant1,collab_19$etudiant2)
+
+adj_19<-graph.adjacency(m_adj_19)
+plot(adj_19,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+
+#### 2020 ####
+
+sql_requete12 <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations WHERE date LIKE '%H14%' OR date LIKE '%H17%' OR date LIKE '%A17%' OR date LIKE '%E18%' OR date LIKE '%H19%' OR date LIKE '%A19%' OR date LIKE '%H20%' OR date LIKE '%E20%'
+"
+collab_20<-dbGetQuery(con,sql_requete12)
+
+m_adj_20<-table(collab_20$etudiant1,collab_20$etudiant2)
+
+adj_20<-graph.adjacency(m_adj_20)
+plot(adj_20,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+
+#### 2021 ####
+
+sql_requete13 <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations WHERE date LIKE '%H14%' OR date LIKE '%H17%' OR date LIKE '%A17%' OR date LIKE '%E18%' OR date LIKE '%H19%' OR date LIKE '%A19%' OR date LIKE '%H20%' OR date LIKE '%E20%' OR date LIKE '%A20%' OR date LIKE '%H21%' OR date LIKE '%E21%'
+"
+collab_21<-dbGetQuery(con,sql_requete13)
+
+m_adj_21<-table(collab_21$etudiant1,collab_21$etudiant2)
+
+adj_21<-graph.adjacency(m_adj_21)
+plot(adj_21,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+
+#### cours labo vs theorie ####
+
+sql_requete14 <- "
+SELECT etudiant1,etudiant2,sigle,date,laboratoire
+FROM collaborations
+INNER JOIN cours USING (sigle)
+"
+collab_cours<-dbGetQuery(con,sql_requete14)
+
+collab_theo<-collab_cours[collab_cours$laboratoire==0,]
+
+m_adj_theo<-table(collab_theo$etudiant1,collab_theo$etudiant2)
+
+adj_theo<-graph.adjacency(m_adj_theo)
+plot(adj_theo,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+
+collab_labo<-collab_cours[collab_cours$laboratoire==1,]
+
+m_adj_labo<-table(collab_labo$etudiant1,collab_labo$etudiant2)
+
+adj_labo<-graph.adjacency(m_adj_labo)
+plot(adj_labo,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+
+#### collaborations ecologie ####
+
+sql_requete15 <- "
+SELECT collaborations.etudiant1,noeuds1.programme as programme1,collaborations.etudiant2,noeuds2.programme as programme2,collaborations.sigle,collaborations.date
+FROM collaborations
+INNER JOIN noeuds noeuds1 ON collaborations.etudiant1=noeuds1.nom_prenom
+INNER JOIN noeuds noeuds2 ON collaborations.etudiant2=noeuds2.nom_prenom
+"
+collab_prog<-dbGetQuery(con,sql_requete15)
+
+collab_eco<-collab_prog[collab_prog$programme1=="ecologie",]
+collab_eco<-collab_eco[collab_eco$programme2=="ecologie",]
+
+m_adj_eco<-table(collab_eco$etudiant1,collab_eco$etudiant2)
+
+adj_eco<-graph.adjacency(m_adj_eco)
+plot(adj_eco,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+
 tar_make()
-
-
