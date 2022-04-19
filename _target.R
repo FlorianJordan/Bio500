@@ -11,24 +11,20 @@ list(
   tar_target(noeuds_jbca,read.table("donnees_modifs/noeuds_jbcaldlvjlgr.txt",header = T,sep=";")),
   tar_target(noeuds_martineau,read.table("donnees_modifs/noeuds_martineau.txt",header = T,sep=";")),
   tar_target(noeuds_alexis,read.table("donnees_modifs/etudiant_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")),
-  tar_target(noeuds_ilmdph,read.table("donnees_modifs/etudiant_IL_MDH_ASP_MB_OL.txt",header = T,sep=";"))
+  tar_target(noeuds_ilmdph,read.table("donnees_modifs/etudiant_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")),
+  
+  tar_target(cours_amelie,read.csv("donnees_BIO500/cours_amelie.csv", sep=";")),
+  tar_target(cours_anthonystp,read.table("donnees_BIO500/cours_anthonystp.txt",header = T,sep=";")),
+  tar_target(cours_cvl,read.csv("donnees_BIO500/cours_cvl_jl_jl_mp_xs.csv", sep=";")),
+  tar_target(cours_dp,read.csv("donnees_BIO500/cours_DP-GL-LB-ML-VQ_txt.csv", sep=";")),
+  tar_target(cours_fxc,read.table("donnees_BIO500/cours_FXC_MF_TC_LRT_WP..txt",header = T,sep="")),
+  tar_target(cours_jbca,read.table("donnees_BIO500/cours_jbcaldlvjlgr.txt",header = T,sep=";")),
+  tar_target(cours_martineau,read.table("donnees_BIO500/cours_martineau.txt",header = T,sep=";")),
+  tar_target(cours_alexis,read.table("donnees_BIO500/Cours_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")),
+  tar_target(cours_ilmdph,read.table("donnees_BIO500/cours_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")),
+  
   )
   
-
-noeuds_jbca<-read.table("donnees_modifs/noeuds_jbcaldlvjlgr.txt",header = T,sep=";")
-noeuds_martineau<-read.table("donnees_modifs/noeuds_martineau.txt",header = T,sep=";")
-noeuds_alexis<-read.table("donnees_modifs/etudiant_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")
-noeuds_ilmdph<-read.table("donnees_modifs/etudiant_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")
-
-cours_amelie<-read.csv("donnees_BIO500/cours_amelie.csv", sep=";")
-cours_anthonystp<-read.table("donnees_BIO500/cours_anthonystp.txt",header = T,sep=";")
-cours_cvl<-read.csv("donnees_BIO500/cours_cvl_jl_jl_mp_xs.csv", sep=";")
-cours_dp<-read.csv("donnees_BIO500/cours_DP-GL-LB-ML-VQ_txt.csv", sep=";")
-cours_fxc<-read.table("donnees_BIO500/cours_FXC_MF_TC_LRT_WP..txt",header = T,sep="")
-cours_jbca<-read.table("donnees_BIO500/cours_jbcaldlvjlgr.txt",header = T,sep=";")
-cours_martineau<-read.table("donnees_BIO500/cours_martineau.txt",header = T,sep=";")
-cours_alexis<-read.table("donnees_BIO500/Cours_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")
-cours_ilmdph<-read.table("donnees_BIO500/cours_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")
 
 collaborations_amelie<-read.csv("donnees_modifs/collaborations_amelie.csv", sep=";")
 collaborations_anthonystp<-read.table("donnees_modifs/collaborations_anthonystp.txt",header = T,sep=";")
