@@ -3,14 +3,14 @@ library(dplyr)
 source()
 
 list(
-  tar_target(noeuds_amelie,read.csv("donnees_modifs/noeuds_amelie.csv", sep=";"))
-  tar_target(noeuds_anthonystp,read.table("donnees_modifs/noeuds_anthonystp .txt",header = T,sep=";"))
-  tar_target(noeuds_cvl,read.csv("donnees_modifs/noeuds_cvl_jl_jl_mp_xs.csv", sep=";"))
-  tar_target(noeuds_dp,read.csv("donnees_modifs/noeuds_DP-GL-LB-ML-VQ_txt.csv", sep=";"))
-  tar_target(noeuds_fxc,read.table("donnees_modifs/noeuds_FXC_MF_TC_LRT_WP.txt",header = T,sep=""))
-  tar_target(noeuds_jbca,read.table("donnees_modifs/noeuds_jbcaldlvjlgr.txt",header = T,sep=";"))
-  tar_target(noeuds_martineau,read.table("donnees_modifs/noeuds_martineau.txt",header = T,sep=";"))
-  tar_target(noeuds_alexis,read.table("donnees_modifs/etudiant_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep=""))
+  tar_target(noeuds_amelie,read.csv("donnees_modifs/noeuds_amelie.csv", sep=";")),
+  tar_target(noeuds_anthonystp,read.table("donnees_modifs/noeuds_anthonystp .txt",header = T,sep=";")),
+  tar_target(noeuds_cvl,read.csv("donnees_modifs/noeuds_cvl_jl_jl_mp_xs.csv", sep=";")),
+  tar_target(noeuds_dp,read.csv("donnees_modifs/noeuds_DP-GL-LB-ML-VQ_txt.csv", sep=";")),
+  tar_target(noeuds_fxc,read.table("donnees_modifs/noeuds_FXC_MF_TC_LRT_WP.txt",header = T,sep="")),
+  tar_target(noeuds_jbca,read.table("donnees_modifs/noeuds_jbcaldlvjlgr.txt",header = T,sep=";")),
+  tar_target(noeuds_martineau,read.table("donnees_modifs/noeuds_martineau.txt",header = T,sep=";")),
+  tar_target(noeuds_alexis,read.table("donnees_modifs/etudiant_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")),
   tar_target(noeuds_ilmdph,read.table("donnees_modifs/etudiant_IL_MDH_ASP_MB_OL.txt",header = T,sep=";"))
   )
   
