@@ -39,7 +39,20 @@ list(
   tar_target(collaborations_dp_corrige,fonction_collaborations_dp(collaborations_dp)),
   tar_target(noeuds_cvl_corrige,fonction_noeuds_cvl(noeuds_cvl))
  
+  
   )
 
+cours_cvl<-rename(cours_cvl,sigle=Sigle)
+cours_fxc<-rename(cours_fxc,credits=credit)
+
+collaborations_amelie<-rename(collaborations_amelie,sigle=cours)
+collaborations_anthonystp<-rename(collaborations_anthonystp,sigle=cours)
+collaborations_cvl<-rename(collaborations_cvl,sigle=cours)
+collaborations_dp<-rename(collaborations_dp,sigle=cours)
+collaborations_martineau<-rename(collaborations_martineau,sigle=cours)
+
+colnames(noeuds_amelie)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
+colnames(collaborations_amelie)<-c("etudiant1","etudiant2","sigle","date")
+colnames(cours_amelie)<-c("sigle","credits","obligatoire","laboratoire","libre")
 
 
