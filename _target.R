@@ -1,6 +1,6 @@
 library(targets)
 library(dplyr)
-source("R/data")
+tar_option_set(packages = "dplyr")
 
 list(
   tar_target(noeuds_amelie,read.csv("data/noeuds_amelie.csv", sep=";")),
