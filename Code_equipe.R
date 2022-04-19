@@ -114,6 +114,7 @@ noeuds
 con<-dbConnect(SQLite(),dbname="attributs.db")
 dbSendQuery(con,"DROP TABLE collaborations;")
 dbSendQuery(con,"DROP TABLE noeuds;")
+dbSendQuery(con,"DROP TABLE cours;")
 
 #### Creation des tables SQL ####
 
