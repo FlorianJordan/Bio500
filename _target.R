@@ -1,27 +1,27 @@
 library(targets)
 library(dplyr)
-source()
+source("R/data")
 
 list(
-  tar_target(noeuds_amelie,read.csv("donnees_modifs/noeuds_amelie.csv", sep=";")),
-  tar_target(noeuds_anthonystp,read.table("donnees_modifs/noeuds_anthonystp .txt",header = T,sep=";")),
-  tar_target(noeuds_cvl,read.csv("donnees_modifs/noeuds_cvl_jl_jl_mp_xs.csv", sep=";")),
-  tar_target(noeuds_dp,read.csv("donnees_modifs/noeuds_DP-GL-LB-ML-VQ_txt.csv", sep=";")),
-  tar_target(noeuds_fxc,read.table("donnees_modifs/noeuds_FXC_MF_TC_LRT_WP.txt",header = T,sep="")),
-  tar_target(noeuds_jbca,read.table("donnees_modifs/noeuds_jbcaldlvjlgr.txt",header = T,sep=";")),
-  tar_target(noeuds_martineau,read.table("donnees_modifs/noeuds_martineau.txt",header = T,sep=";")),
-  tar_target(noeuds_alexis,read.table("donnees_modifs/etudiant_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")),
-  tar_target(noeuds_ilmdph,read.table("donnees_modifs/etudiant_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")),
+  tar_target(noeuds_amelie,read.csv("data/noeuds_amelie.csv", sep=";")),
+  tar_target(noeuds_anthonystp,read.table("data/noeuds_anthonystp .txt",header = T,sep=";")),
+  tar_target(noeuds_cvl,read.csv("data/noeuds_cvl_jl_jl_mp_xs.csv", sep=";")),
+  tar_target(noeuds_dp,read.csv("data/noeuds_DP-GL-LB-ML-VQ_txt.csv", sep=";")),
+  tar_target(noeuds_fxc,read.table("data/noeuds_FXC_MF_TC_LRT_WP.txt",header = T,sep="")),
+  tar_target(noeuds_jbca,read.table("data/noeuds_jbcaldlvjlgr.txt",header = T,sep=";")),
+  tar_target(noeuds_martineau,read.table("data/noeuds_martineau.txt",header = T,sep=";")),
+  tar_target(noeuds_alexis,read.table("data/etudiant_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")),
+  tar_target(noeuds_ilmdph,read.table("data/etudiant_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")),
   
-  tar_target(cours_amelie,read.csv("donnees_BIO500/cours_amelie.csv", sep=";")),
-  tar_target(cours_anthonystp,read.table("donnees_BIO500/cours_anthonystp.txt",header = T,sep=";")),
-  tar_target(cours_cvl,read.csv("donnees_BIO500/cours_cvl_jl_jl_mp_xs.csv", sep=";")),
-  tar_target(cours_dp,read.csv("donnees_BIO500/cours_DP-GL-LB-ML-VQ_txt.csv", sep=";")),
-  tar_target(cours_fxc,read.table("donnees_BIO500/cours_FXC_MF_TC_LRT_WP..txt",header = T,sep="")),
-  tar_target(cours_jbca,read.table("donnees_BIO500/cours_jbcaldlvjlgr.txt",header = T,sep=";")),
-  tar_target(cours_martineau,read.table("donnees_BIO500/cours_martineau.txt",header = T,sep=";")),
-  tar_target(cours_alexis,read.table("donnees_BIO500/Cours_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")),
-  tar_target(cours_ilmdph,read.table("donnees_BIO500/cours_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")),
+  tar_target(cours_amelie,read.csv("data/cours_amelie.csv", sep=";")),
+  tar_target(cours_anthonystp,read.table("data/cours_anthonystp.txt",header = T,sep=";")),
+  tar_target(cours_cvl,read.csv("data/cours_cvl_jl_jl_mp_xs.csv", sep=";")),
+  tar_target(cours_dp,read.csv("data/cours_DP-GL-LB-ML-VQ_txt.csv", sep=";")),
+  tar_target(cours_fxc,read.table("data/cours_FXC_MF_TC_LRT_WP..txt",header = T,sep="")),
+  tar_target(cours_jbca,read.table("data/cours_jbcaldlvjlgr.txt",header = T,sep=";")),
+  tar_target(cours_martineau,read.table("data/cours_martineau.txt",header = T,sep=";")),
+  tar_target(cours_alexis,read.table("data/Cours_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")),
+  tar_target(cours_ilmdph,read.table("data/cours_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")),
   
   tar_target(collaborations_amelie,read.csv("data/collaborations_amelie.csv", sep=";")),
   tar_target(collaborations_anthonystp,read.csv("data/collaborations_anthonystp.csv", sep=";")),
