@@ -16,6 +16,7 @@ collaborations_ilmdph_corrige|stem|32f2be9be6bc2cf6|27241efe6f5dc36e|059005a1359
 collaborations_jbca|stem|fb2f70e6687c1eec|c4adb83f587a31b3|5cb42b57398551be|-1406093207||t19104.9710341819s|ab73801c5fe014aa|966|rds|local|vector|||0.003||
 collaborations_martineau|stem|f003a90716a963c0|632f91921d19651b|5cb42b57398551be|-1352083052||t19104.9710343805s|ff5c133327f980f0|1504|rds|local|vector|||0.003||
 collaborations_martineau_corrige|stem|9609342ea80b66ff|ec37b0553d8127d7|ef95fac7554fcc15|378212602||t19104.9710401324s|ff5c133327f980f0|1504|rds|local|vector|||0.003||
+con|stem|d60545be2e429a80|b973fc1247aface4|49e42eccfcfe4e76|-1614524628||t19104.9803813924s|e92536e5890953e5|126|rds|local|vector|||0.432||
 cours|stem|3a291e1202b4c933|0ad7110627272fca|3461e99dee503fc4|-1351517523||t19104.9710447724s|a1b1917b2d5b0e1e|616|rds|local|vector|||0||
 cours_alexis|stem|ad3f87fa424c3a60|79731092ff484b35|5cb42b57398551be|42662324||t19104.971036298s|ad82ca75f74b2a14|335|rds|local|vector|||0.002||
 cours_amelie|stem|b444cb5f3588cdef|3f4ec4e9a91ad314|cfcaebb9b7cad818|-2008807031||t19104.9710300494s|65b2697406fa85d2|331|rds|local|vector|||0.007||
@@ -39,6 +40,7 @@ fonction_collaborations_cvl|function|908a1dde110bfdda|||||||||||||||
 fonction_collaborations_dp|function|908a1dde110bfdda|||||||||||||||
 fonction_collaborations_ilmdph|function|6dab5ad3abf031b4|||||||||||||||
 fonction_collaborations_martineau|function|908a1dde110bfdda|||||||||||||||
+fonction_connectionSQL|function|701442125f9392aa|||||||||||||||
 fonction_cours_amelie|function|ad3bcacde4c4a669|||||||||||||||
 fonction_cours_anthonystp|function|6dab5ad3abf031b4|||||||||||||||
 fonction_cours_cvl|function|f7bad407f0f627f2|||||||||||||||

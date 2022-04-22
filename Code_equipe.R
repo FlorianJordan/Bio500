@@ -441,7 +441,7 @@ list(
   tar_target(collaborations,fonction_doublons_collaborations(data_collaborations)),
   tar_target(noeuds,fonction_doublons_noeuds(data_noeuds)),
   
-  tar_target(con,fonction_attributsdb)
+  tar_target(connection,fonction_attributsdb)
 )
 
 
