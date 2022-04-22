@@ -31,6 +31,6 @@ fonction_doublons_collaborations<-function(x){distinct(x)}
 fonction_doublons_noeuds<-function(x){x %>% arrange(rowSums(is.na(x)))
   x[!duplicated(x$nom_prenom),]}
 
-fonction_connectionSQL<-function(x){dbConnect(SQLite(),dbname="attributs.db")}
+fonction_connectionSQL<-dbConnect(SQLite(),dbname="attributs.db")
 
 
