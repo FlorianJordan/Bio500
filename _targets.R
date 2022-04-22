@@ -1,5 +1,9 @@
 library(targets)
 library(dplyr)
+library(RSQLite)
+library(igraph)
+tar_option_set(packages = "RSQLite")
+tar_option_set(packages = "igraph")
 tar_option_set(packages = "dplyr")
 source("R/fonctions.R")
 list(
