@@ -32,3 +32,4 @@ fonction_doublons_noeuds<-function(x){x %>% arrange(rowSums(is.na(x)))
   x[!duplicated(x$nom_prenom),]}
 
 
+
