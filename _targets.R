@@ -56,7 +56,9 @@ list(
   tar_target(data_collaborations,bind_rows(collaborations_amelie_corrige,collaborations_anthonystp_corrige,collaborations_cvl_corrige,collaborations_dp_corrige2,collaborations_fxc,collaborations_jbca,collaborations_martineau_corrige,collaborations_alexis,collaborations_ilmdph_corrige)),
   tar_target(cours,fonction_doublons_cours(data_cours)),
   tar_target(collaborations,fonction_doublons_collaborations(data_collaborations)),
-  tar_target(noeuds,fonction_doublons_noeuds(data_noeuds))
+  tar_target(noeuds,fonction_doublons_noeuds(data_noeuds)),
+  
+  tar_target(connection,fonction_attributsdb)
   )
 
 

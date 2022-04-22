@@ -116,7 +116,13 @@ dbSendQuery(con,"DROP TABLE collaborations;")
 dbSendQuery(con,"DROP TABLE noeuds;")
 dbSendQuery(con,"DROP TABLE cours;")
 
-#### Creation des tables SQL ####
+#### Creation des tables SQL ####  
+#tar_target(drop_collaborations,fonction_drop_collaborations),
+#tar_target(drop_noeuds,fonction_drop_noeuds),
+#tar_target(drop_cours,fonction_drop_cours),
+
+#tar_target(tbl_noeuds,fonction_creation_table_noeud),
+#tar_target(ajout_noeud,fonction_ajout_noeud)
 
 tbl_noeuds <- "
 CREATE TABLE noeuds (
