@@ -42,7 +42,7 @@ list(
   tar_target(collaborations_ilmdph_corrige,fonction_collaborations_ilmdph(collaborations_ilmdph)),
   tar_target(collaborations_dp_corrige,fonction_collaborations_dp(collaborations_dp)),
   tar_target(noeuds_cvl_corrige,fonction_noeuds_cvl(noeuds_cvl)),
- 
+  
   tar_target(cours_cvl_corrige,fonction_cours_cvl(cours_cvl)),
   tar_target(cours_fxc_corrige,fonction_cours_fxc(cours_fxc)),
   tar_target(collaborations_amelie_corrige,fonction_collaborations_amelie(collaborations_amelie)),
@@ -56,10 +56,9 @@ list(
   tar_target(data_collaborations,bind_rows(collaborations_amelie_corrige,collaborations_anthonystp_corrige,collaborations_cvl_corrige,collaborations_dp_corrige2,collaborations_fxc,collaborations_jbca,collaborations_martineau_corrige,collaborations_alexis,collaborations_ilmdph_corrige)),
   tar_target(cours,fonction_doublons_cours(data_cours)),
   tar_target(collaborations,fonction_doublons_collaborations(data_collaborations)),
-  tar_target(noeuds,fonction_doublons_noeuds(data_noeuds)),
-  
-  tar_target(connection,fonction_attributsdb)
-  )
+  tar_target(noeuds,fonction_doublons_noeuds(data_noeuds))
+)
+
 
 
 
