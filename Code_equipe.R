@@ -200,11 +200,10 @@ rk<-rank(deg)
 col.vec<-heat.colors(nrow(m_adj))
 adj<-graph.adjacency(m_adj)
 V(adj)$color = col.vec[rk]
-col.vec<-seq(2, 20, length.out = nrow(m_adj))
+col.vec<-seq(10, 70, length.out = nrow(m_adj))
 V(adj)$size = col.vec[rk]
 
-plot(adj, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj))
-
+plot(adj, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-7,7), xlim=c(-7,7))
 
 #### Enlever TSB303 ####
 
