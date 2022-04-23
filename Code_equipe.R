@@ -195,8 +195,16 @@ var(liens$liens)
 m_adj<-table(collaborations$etudiant1,collaborations$etudiant2)
 m_adj
 
+deg<-apply(m_adj, 2, sum) + apply(m_adj, 1, sum)
+rk<-rank(deg)
+col.vec<-heat.colors(nrow(m_adj))
 adj<-graph.adjacency(m_adj)
-plot(adj,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+V(adj)$color = col.vec[rk]
+col.vec<-seq(2, 20, length.out = nrow(m_adj))
+V(adj)$size = col.vec[rk]
+
+plot(adj, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj))
+
 
 #### Enlever TSB303 ####
 
