@@ -58,8 +58,7 @@ list(
   tar_target(table,fonction_creation_table),
   tar_target(requete,fonction_requete),
   tar_target(requete2,fonction_requete2),
-  tar_target(graph,graph_base(collaborations)),
-  tar_target(graph2,graph_base2(collaborations))
+  tar_target(graph,graph_base(collaborations))
 )
 
 
