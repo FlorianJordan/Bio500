@@ -62,7 +62,6 @@ list(
   tar_target(requete2,fonction_requete2)
 )
 
-tar_make()
 
 
 
