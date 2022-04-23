@@ -80,7 +80,7 @@ CREATE TABLE collaborations (
   
   }
 
-fonction_requete1<-function(){
+fonction_requete<-function(){
 
 sql_requete <- "
 SELECT etudiant1 as etudiant, count(etudiant2) as liens
@@ -90,6 +90,5 @@ ORDER BY liens
 "
 liens <- dbGetQuery(con,sql_requete)
 liens}
-
 
 
