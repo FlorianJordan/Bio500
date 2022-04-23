@@ -1,9 +1,7 @@
 library(targets)
 
-tar_option_set(packages = "RSQLite")
-tar_option_set(packages = "igraph")
-tar_option_set(packages = "dplyr")
-source("results")
+tar_option_set(packages = c("RSQLite","igraph","dplyr"))
+
 source("R/fonctions.R")
 list(
   tar_target(noeuds_amelie,read.csv("data/noeuds_amelie.csv", sep=";")),
