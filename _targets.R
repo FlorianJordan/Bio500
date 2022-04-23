@@ -58,7 +58,7 @@ list(
   tar_target(noeuds,fonction_doublons_noeuds(data_noeuds)),
   
   tar_target(table,fonction_creation_table),
-  tar_target(requete,fonction_requete)
+  tar_target(requete,fonction_requete) 
 )
 
 
