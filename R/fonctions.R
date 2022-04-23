@@ -91,4 +91,32 @@ ORDER BY liens
 liens <- dbGetQuery(con,sql_requete)
 liens}
 
+fonction_requete2<-function(){
+
+sql_requete2 <- "
+SELECT etudiant1, etudiant2, count(sigle) as liens
+FROM collaborations
+GROUP BY etudiant1, etudiant2
+ORDER BY liens DESC
+"
+liens_paire <- dbGetQuery(con,sql_requete2)
+}
+
+graph_base<-function(x){
+
+m_adj<-table(x$etudiant1,x$etudiant2)
+m_adj
+
+adj<-graph.adjacency(m_adj)
+plot(adj,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+}
+
+fonction_requete3<-function(){
+
+sql_requete3 <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
+"
+collab_nontsb<-dbGetQuery(con,sql_requete3)
+}
 
