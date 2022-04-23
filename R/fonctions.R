@@ -111,6 +111,17 @@ adj<-graph.adjacency(m_adj)
 plot(adj,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
 }
 
+graph_base2<-function(x){
+  pdf(file = "results/figure1_2.pdf")
+  m_adj<-table(x$etudiant1,x$etudiant2)
+  deg<-degree(m_adj)
+  size.vec<-seq(2,15,length.out=91)
+  rk=rank(deg)
+  V(m_adj)$size<-size.vec[rk]
+  V(m_adj)$color<-"plum"
+  plot(m_adj,vertex.label.cex = 0.5, edge.arrow.mode = 0,layout=layout.circle)
+}
+
 fonction_requete3<-function(){
 
 sql_requete3 <- "
