@@ -1,8 +1,6 @@
 library(targets)
 
-tar_option_set(packages = "RSQLite")
-tar_option_set(packages = "igraph")
-tar_option_set(packages = "dplyr")
+tar_option_set(packages = c("RSQLite","igraph","dplyr"))
 
 source("R/fonctions.R")
 list(
@@ -59,10 +57,11 @@ list(
   
   tar_target(table,fonction_creation_table),
   tar_target(requete,fonction_requete),
-  tar_target(requete2,fonction_requete2)
+  tar_target(requete2,fonction_requete2),
+  tar_target(graph,graph_base(collaborations)),
+  tar_target(graph2,graph_base2(collaborations))
 )
 
-tar_make()
 
 
 
