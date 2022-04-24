@@ -217,6 +217,15 @@ FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
 
 collab_nontsb<-dbGetQuery(con,sql_requete3)
 
+sql_requete_liens <- "
+SELECT etudiant1 as etudiant, count(etudiant2) as liens
+FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
+GROUP BY etudiant
+ORDER BY liens
+"
+liens_nontsb <- dbGetQuery(con,sql_requete_liens)
+liens_nontsb
+
 sql_requete_tsb <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle LIKE '%TSB303%'
