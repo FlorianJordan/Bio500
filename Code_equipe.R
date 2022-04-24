@@ -197,7 +197,7 @@ m_adj
 
 deg<-apply(m_adj, 2, sum) + apply(m_adj, 1, sum)
 rk<-rank(deg)
-col.vec<-heat.colors(nrow(m_adj))
+col.vec<-rev(heat.colors(nrow(m_adj)))
 adj<-graph.adjacency(m_adj)
 V(adj)$color = col.vec[rk]
 col.vec<-seq(10, 70, length.out = nrow(m_adj))
