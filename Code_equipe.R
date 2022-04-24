@@ -214,12 +214,67 @@ sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
 "
+
 collab_nontsb<-dbGetQuery(con,sql_requete3)
 
+sql_requete_tsb <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations WHERE sigle LIKE '%TSB303%'
+"
+
+collab_tsb<-dbGetQuery(con,sql_requete_tsb)
+
+sql_requete_prog <- "
+SELECT nom_prenom,programme
+FROM noeuds
+"
+
+prog<-dbGetQuery(con,sql_requete_prog)
+col<-data.frame(programme=unique(prog$programme),color=c("green","yellow","yellow","yellow","yellow","yellow","yellow","yellow"))
+prog$color<-col$color[match(prog$programme, col$programme)]
+
 m_adj_nontsb<-table(collab_nontsb$etudiant1,collab_nontsb$etudiant2)
+m_adj_tsb<-table(collab_tsb$etudiant1,collab_tsb$etudiant2)
 
 adj_nontsb<-graph.adjacency(m_adj_nontsb)
-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+adj_tsb<-graph.adjacency(m_adj_tsb)
+
+V(adj_nontsb)$color = prog$color
+V(adj_nontsb)$size = 50
+vertex_attr(adj_nontsb)
+adj_nontsb<-simplify(adj_nontsb)
+
+graph_nontsb<-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
+
+V(adj_tsb)$color = prog$color
+vertex_attr(adj_tsb)
+V(adj_tsb)$size = 50
+adj_tsb<-simplify(adj_tsb)
+E(adj_tsb)$color = "black"
+
+graph_tsb<-plot(adj_tsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_tsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), edge.width = 2)
+
+adj3<-graph.adjacency(m_adj)
+V(adj3)$color = prog$color
+V(adj3)$size = 50
+adj3<-simplify(adj3)
+
+edge_tsb<-as.data.frame(get.edgelist(adj_tsb))
+edge_tsb$color<- "black"
+edge_tsb$width<-2
+
+edge_nontsb<-as.data.frame(get.edgelist(adj_nontsb))
+edge_nontsb$color<- "gray"
+edge_nontsb$width<-1
+edge_tot<-as.data.frame(get.edgelist(adj3))
+edge_tot<-bind_rows(edge_nontsb,edge_tsb)
+edge_tot<-edge_tot %>% distinct(V1, V2, .keep_all = TRUE)
+
+E(adj3)$color = edge_tot$color
+E(adj3)$width = edge_tot$width
+edge_attr(adj3)
+
+plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
 
 #### plus de 30 collabs ####
 
@@ -231,9 +286,6 @@ FROM collaborations WHERE (etudiant1 LIKE '%robert_penelope%' OR etudiant1 LIKE 
 collabs30<-dbGetQuery(con,sql_requete4)
 
 m_adj_30<-table(collabs30$etudiant1,collabs30$etudiant2)
-
-adj_30<-graph.adjacency(m_adj_30)
-plot(adj_30,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
 
 #### nombre de collabs différentes ####
 
