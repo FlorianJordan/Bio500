@@ -102,16 +102,9 @@ ORDER BY liens DESC
 liens_paire <- dbGetQuery(con,sql_requete2)
 }
 
+
 graph_base<-function(x){
 pdf(file = "results/figure1.pdf")
-m_adj<-table(x$etudiant1,x$etudiant2)
-m_adj
-
-adj<-graph.adjacency(m_adj)
-plot(adj,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
-}
-graph_base2<-function(x){
-pdf(file = "results/figure1_2.pdf")
 m_adj<-table(x$etudiant1,x$etudiant2)
 m_adj
 
