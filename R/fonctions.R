@@ -111,19 +111,23 @@ adj<-graph.adjacency(m_adj)
 plot(adj,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
 }
 graph_base2<-function(x){
-  pdf(file = "results/figure1_2.pdf")
+pdf(file = "results/figure1_2.pdf")
 m_adj<-table(x$etudiant1,x$etudiant2)
 m_adj
-
+  
 deg<-apply(m_adj, 2, sum) + apply(m_adj, 1, sum)
 rk<-rank(deg)
 col.vec<-heat.colors(nrow(m_adj))
 adj<-graph.adjacency(m_adj)
 V(adj)$color = col.vec[rk]
-col.vec<-seq(2, 20, length.out = nrow(m_adj))
+col.vec<-seq(10, 70, length.out = nrow(m_adj))
 V(adj)$size = col.vec[rk]
-
-plot(adj, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj))
+adj2<-simplify(adj)
+E(adj2)$weight = sapply(E(adj2), function(e) { 
+    length(all_shortest_paths(adj, from=ends(adj2, e)[1], to=ends(adj2, e)[2])$res) } )
+  
+plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-7,7), xlim=c(-7,7), edge.width=E(adj2)$weight*0.5, asp=0.9)
+  
 }
 fonction_requete3<-function(){
 
