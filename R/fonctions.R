@@ -119,7 +119,7 @@ adj2<-simplify(adj)
 E(adj2)$weight = sapply(E(adj2), function(e) { 
   length(all_shortest_paths(adj, from=ends(adj2, e)[1], to=ends(adj2, e)[2])$res) } )
 
-plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-7,7), xlim=c(-7,7), edge.width=E(adj2)$weight*0.5, asp=0.9)
+plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-2,2), xlim=c(-5,12), edge.width=E(adj2)$weight*0.5, asp=0.9)
 
 }
 fonction_requete3<-function(){
