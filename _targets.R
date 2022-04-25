@@ -57,7 +57,8 @@ list(
   
 
   tar_target(table,fonction_creation_table),
-  tar_target(graph,graph_base(collaborations))
+  tar_target(graph,graph_base(collaborations)),
+  tar_target(requete_tsb303,fonction_requete_tsb303)
 )
 
 

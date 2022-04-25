@@ -104,8 +104,9 @@ plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(ad
 }
 
 
-fonction_requete_tsb303<-function(con){
-  sql_requete3 <- "
+fonction_requete_tsb303<-function(){
+ 
+sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
 "
@@ -135,8 +136,6 @@ SELECT nom_prenom,programme
 FROM noeuds
 "
 prog<-dbGetQuery(con,sql_requete_prog)
-
-
 pdf(file = "results/figure2.pdf")
 prog<-dbGetQuery(con,sql_requete_prog)
 col<-data.frame(programme=unique(prog$programme),color=c("green","yellow","yellow","yellow","yellow","yellow","yellow","yellow"))
