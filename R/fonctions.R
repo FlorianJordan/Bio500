@@ -34,7 +34,7 @@ fonction_doublons_noeuds<-function(x){x %>% arrange(rowSums(is.na(x)))
   x[!duplicated(x$nom_prenom),]
   x}
 
-fonction_creation_table<-function(x,y,z){
+fonction_creation_table<-function(noeuds,cours,collaborations){
   
   con<-dbConnect(SQLite(),dbname="attributs.db")
   dbSendQuery(con,"DROP TABLE collaborations;")
@@ -77,9 +77,9 @@ CREATE TABLE collaborations (
   FOREIGN KEY (sigle) REFERENCES cours(sigle)
 );"
   dbSendQuery(con, tbl_collaborations)
-  dbWriteTable(con, append = TRUE, name = "noeuds", value = x, row.names = FALSE)
-  dbWriteTable(con, append = TRUE, name = "cours", value = y, row.names = FALSE)
-  dbWriteTable(con, append = TRUE, name = "collaborations", value = z, row.names = FALSE)
+  dbWriteTable(con, append = TRUE, name = "noeuds", value = noeuds, row.names = FALSE)
+  dbWriteTable(con, append = TRUE, name = "cours", value = cours, row.names = FALSE)
+  dbWriteTable(con, append = TRUE, name = "collaborations", value = collaborations, row.names = FALSE)
   con
   }
 
