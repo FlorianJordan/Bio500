@@ -31,12 +31,10 @@ fonction_doublons_noeuds<-function(x){x %>% arrange(rowSums(is.na(x)))
   x[!duplicated(x$nom_prenom),]
   x}
 
-connection_con<-function(){
-  con<-dbConnect(SQLite(),dbname="attributs.db")
-  con}
+
 fonction_creation_table<-function(con,noeuds,cours,collaborations){
   
-  
+  con<-dbConnect(SQLite(),dbname="attributs.db")
   dbSendQuery(con,"DROP TABLE collaborations;")
   dbSendQuery(con,"DROP TABLE noeuds;")
   dbSendQuery(con,"DROP TABLE cours;")
