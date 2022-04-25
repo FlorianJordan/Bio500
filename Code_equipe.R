@@ -12,6 +12,7 @@ library(dplyr)
 library(RSQLite)
 #install.packages("targets")
 library(targets)
+
 #install.packages("igraph")
 library(igraph)
 
