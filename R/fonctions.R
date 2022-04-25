@@ -132,6 +132,7 @@ FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
 "
 
 collab_nontsb<-dbGetQuery(con,sql_requete3)
+collab_nontsb
 
 sql_requete_liens <- "
 SELECT etudiant1 as etudiant, count(etudiant2) as liens
@@ -148,6 +149,7 @@ FROM collaborations WHERE sigle LIKE '%TSB303%'
 "
 
 collab_tsb<-dbGetQuery(con,sql_requete_tsb)
+collab_tsb
 
 sql_requete_prog <- "
 SELECT nom_prenom,programme
@@ -172,38 +174,4 @@ vertex_attr(adj_nontsb)
 adj_nontsb<-simplify(adj_nontsb)
 
 graph_nontsb<-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
-
-pdf(file = "results/figure3.pdf")
-V(adj_tsb)$color = prog$color
-vertex_attr(adj_tsb)
-V(adj_tsb)$size = 50
-adj_tsb<-simplify(adj_tsb)
-E(adj_tsb)$color = "black"
-
-graph_tsb<-plot(adj_tsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_tsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), edge.width = 2)
-
-pdf(file = "results/figure4.pdf")
-adj3<-graph.adjacency(m_adj)
-V(adj3)$color = prog$color
-V(adj3)$size = 50
-adj3<-simplify(adj3)
-
-edge_tsb<-as.data.frame(get.edgelist(adj_tsb))
-edge_tsb$color<- "black"
-edge_tsb$width<-2
-
-edge_nontsb<-as.data.frame(get.edgelist(adj_nontsb))
-edge_nontsb$color<- "gray"
-edge_nontsb$width<-1
-edge_tot<-as.data.frame(get.edgelist(adj3))
-edge_tot<-bind_rows(edge_nontsb,edge_tsb)
-edge_tot<-edge_tot %>% distinct(V1, V2, .keep_all = TRUE)
-
-E(adj3)$color = edge_tot$color
-E(adj3)$width = edge_tot$width
-edge_attr(adj3)
-
-plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
-
 }
-
