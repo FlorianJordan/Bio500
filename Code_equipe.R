@@ -311,13 +311,13 @@ E(adj_30_2)$weight = sapply(E(adj_30_2), function(e) {
 plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-4,4), xlim=c(-4,4), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
 
 #### nombre de collabs différentes ####
-
+dbSendQuery(con,"DROP TABLE collaborations_dif;")
 sql_requete5 <- "
 CREATE TABLE collaborations_dif AS 
   SELECT DISTINCT etudiant1,etudiant2
   FROM collaborations
 "
-dbSendQuery(con,"DROP TABLE collaborations_dif;")
+
 dbExecute(con,sql_requete5)
 dbListTables(con)
 
