@@ -296,6 +296,20 @@ collabs30<-dbGetQuery(con,sql_requete4)
 
 m_adj_30<-table(collabs30$etudiant1,collabs30$etudiant2)
 
+deg_30<-apply(m_adj_30, 2, sum) + apply(m_adj_30, 1, sum)
+rk_30<-rank(deg_30)
+col.vec_30<-rev(topo.colors(nrow(m_adj_30)))
+adj_30<-graph.adjacency(m_adj_30)
+V(adj_30)$color = col.vec_30[rk_30]
+col.vec_30<-seq(30, 50, length.out = nrow(m_adj_30))
+V(adj_30)$size = col.vec_30[rk_30]
+V(adj_30)$label.cex = 0.6
+adj_30_2<-simplify(adj_30)
+E(adj_30_2)$weight = sapply(E(adj_30_2), function(e) { 
+  length(all_shortest_paths(adj_30, from=ends(adj_30_2, e)[1], to=ends(adj_30_2, e)[2])$res) } )
+
+plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-4,4), xlim=c(-4,4), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
+
 #### nombre de collabs différentes ####
 
 sql_requete5 <- "
