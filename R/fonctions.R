@@ -25,18 +25,18 @@ fonction_collaborations_martineau<-function(x){rename(x,sigle=cours)}
 
 fonction_doublons_cours<-function(x){x[!duplicated(x$sigle),]
   x}
-
-
 fonction_doublons_collaborations<-function(x){distinct(x)
   x}
-
 fonction_doublons_noeuds<-function(x){x %>% arrange(rowSums(is.na(x)))
   x[!duplicated(x$nom_prenom),]
   x}
 
-fonction_creation_table<-function(noeuds,cours,collaborations){
-  
+connection_con<-function(){
   con<-dbConnect(SQLite(),dbname="attributs.db")
+  con}
+fonction_creation_table<-function(con,noeuds,cours,collaborations){
+  
+  
   dbSendQuery(con,"DROP TABLE collaborations;")
   dbSendQuery(con,"DROP TABLE noeuds;")
   dbSendQuery(con,"DROP TABLE cours;")
@@ -80,7 +80,7 @@ CREATE TABLE collaborations (
   dbWriteTable(con, append = TRUE, name = "noeuds", value = noeuds, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "cours", value = cours, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "collaborations", value = collaborations, row.names = FALSE)
-  return(con)
+  con
   }
 
 graph_base<-function(x){
