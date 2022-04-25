@@ -31,8 +31,8 @@ fonction_doublons_collaborations<-function(x){distinct(x)}
 fonction_doublons_noeuds<-function(x){x %>% arrange(rowSums(is.na(x)))
   x[!duplicated(x$nom_prenom),]}
 
-fonction_creation_table<-function(cours,collaborations,noeuds){
-    
+fonction_creation_table<-function(x,y,z){
+
   con<-dbConnect(SQLite(),dbname="attributs.db")
   dbSendQuery(con,"DROP TABLE collaborations;")
   dbSendQuery(con,"DROP TABLE noeuds;")
@@ -74,34 +74,11 @@ CREATE TABLE collaborations (
   FOREIGN KEY (sigle) REFERENCES cours(sigle)
 );"
   dbSendQuery(con, tbl_collaborations)
-  dbWriteTable(con, append = TRUE, name = "noeuds", value = noeuds, row.names = FALSE)
-  dbWriteTable(con, append = TRUE, name = "cours", value = cours, row.names = FALSE)
-  dbWriteTable(con, append = TRUE, name = "collaborations", value = collaborations, row.names = FALSE)
-  
+  dbWriteTable(con, append = TRUE, name = "noeuds", value = x, row.names = FALSE)
+  dbWriteTable(con, append = TRUE, name = "cours", value = y, row.names = FALSE)
+  dbWriteTable(con, append = TRUE, name = "collaborations", value = z, row.names = FALSE)
+  con
   }
-
-fonction_requete<-function(){
-
-sql_requete <- "
-SELECT etudiant1 as etudiant, count(etudiant2) as liens
-FROM collaborations
-GROUP BY etudiant
-ORDER BY liens
-"
-liens <- dbGetQuery(con,sql_requete)
-liens}
-
-fonction_requete2<-function(){
-
-sql_requete2 <- "
-SELECT etudiant1, etudiant2, count(sigle) as liens
-FROM collaborations
-GROUP BY etudiant1, etudiant2
-ORDER BY liens DESC
-"
-liens_paire <- dbGetQuery(con,sql_requete2)
-}
-
 
 graph_base<-function(x){
 pdf(file = "results/figure1.pdf")
@@ -125,8 +102,8 @@ plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(ad
 
 
 fonction_requete_tsb303<-function(){
-
-sql_requete3 <- "
+  
+  sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
 "
@@ -157,8 +134,7 @@ FROM noeuds
 "
 prog<-dbGetQuery(con,sql_requete_prog)
 
-}
-fonction_figure_tsb303<-function(){
+
 pdf(file = "results/figure2.pdf")
 prog<-dbGetQuery(con,sql_requete_prog)
 col<-data.frame(programme=unique(prog$programme),color=c("green","yellow","yellow","yellow","yellow","yellow","yellow","yellow"))

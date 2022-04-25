@@ -20,7 +20,7 @@ collaborations_ilmdph_corrige|stem|32f2be9be6bc2cf6|27241efe6f5dc36e|059005a1359
 collaborations_jbca|stem|fb2f70e6687c1eec|c4adb83f587a31b3|5cb42b57398551be|-1406093207||t19107.8630986856s|ab73801c5fe014aa|966|rds|local|vector|||0.001||
 collaborations_martineau|stem|f003a90716a963c0|632f91921d19651b|5cb42b57398551be|-1352083052||t19107.863098072s|ff5c133327f980f0|1504|rds|local|vector|||0.003||
 collaborations_martineau_corrige|stem|9609342ea80b66ff|ec37b0553d8127d7|ef95fac7554fcc15|378212602||t19107.8631060103s|ff5c133327f980f0|1504|rds|local|vector|||0.02||
-con|stem|d60545be2e429a80|b973fc1247aface4|49e42eccfcfe4e76|-1614524628||t19104.9803813924s|e92536e5890953e5|126|rds|local|vector|||0.432||
+con|stem|c8a2d92de4e03327|4e986384fb3ecbca|00f4779a755b7b68|-1614524628||t19107.8912165058s|801cade07abe9db2|312|rds|local|vector|||0.529||
 cours|stem|3a291e1202b4c933|0ad7110627272fca|3461e99dee503fc4|-1351517523||t19107.8631106186s|a1b1917b2d5b0e1e|616|rds|local|vector|||0.001||
 cours_alexis|stem|ad3f87fa424c3a60|79731092ff484b35|5cb42b57398551be|42662324||t19107.8630982235s|ad82ca75f74b2a14|335|rds|local|vector|||0.001||
 cours_amelie|stem|b444cb5f3588cdef|3f4ec4e9a91ad314|cfcaebb9b7cad818|-2008807031||t19107.863102106s|65b2697406fa85d2|331|rds|local|vector|||0.084||
@@ -38,7 +38,7 @@ cours_martineau|stem|5942770e24f41d3a|1d4a54bfd93aab7b|5cb42b57398551be|18721168
 data_collaborations|stem|1b8b54191aaf4eaa|bc3f550f885064ef|d108526899c1c224|1866430512||t19107.8631098907s|0b2e6f2d1e73a81d|13079|rds|local|vector|||0.001||
 data_cours|stem|e9a0c499e3eee10f|5cc996e748d9259c|6cf3e36a8db721f6|-1502492530||t19107.8631093684s|b32d4cc9abeedb18|888|rds|local|vector|||0.007||
 data_noeuds|stem|b6c5adc82876ebc1|47428fa13b3c52f2|930d881d4b719322|1611738916||t19107.8631103569s|68603ec6d7249668|3078|rds|local|vector|||0.002||
-figure_tsb|stem|1fec9c9fa193a102|067545709233fb90|ad6a89ea713c7649|-535400921||t19107.8790576711s||591|rds|local|vector|||0.637||erreur dïvaluation de largument conn lors de la sïlection dune mïthode pour la fonction dbGetQuery  objet con introuvable
+figure_tsb|stem|1fec9c9fa193a102|067545709233fb90|ad6a89ea713c7649|-535400921||t19107.8790576711s||591|rds|local|vector|||0.628||erreur dïvaluation de largument conn lors de la sïlection dune mïthode pour la fonction dbGetQuery  objet con introuvable
 figure_tsb303|stem|62af8f7a909dd42d|ad5bc18075191e5c|f1985b383a20185c|-469336657||t19107.8333605853s|4d19982602e132ae|599|rds|local|vector|||0.535||
 figure2|stem|62af8f7a909dd42d|5198400fdc9e2881|17dde9184da3e4c2|1817584280||t19107.8223576279s|4d19982602e132ae|599|rds|local|vector|||0.523||
 figure3|stem|84d6877f8ff2cf12|3f3abb75e29676ef|4e5dce47e2a0f601|1387786072||t19107.7935736653s|322d63e04337946b|247|rds|local|vector|||0||
@@ -54,14 +54,14 @@ fonction_cours_amelie|function|ad3bcacde4c4a669|||||||||||||||
 fonction_cours_anthonystp|function|6dab5ad3abf031b4|||||||||||||||
 fonction_cours_cvl|function|f7bad407f0f627f2|||||||||||||||
 fonction_cours_fxc|function|241f3b022c913083|||||||||||||||
-fonction_creation_table|function|39472d0e96547a3c|||||||||||||||
+fonction_creation_table|function|d6e52e996be72cbf|||||||||||||||
 fonction_doublons_collaborations|function|ad7dc6ea35599506|||||||||||||||
 fonction_doublons_cours|function|0e6f31e4345c9f63|||||||||||||||
 fonction_doublons_noeuds|function|412bf4813cd0ff66|||||||||||||||
 fonction_figure_2|function|a70ce33bbe416cb6|||||||||||||||
 fonction_figure_3|function|79fad7dc24da408e|||||||||||||||
 fonction_figure_4|function|b615fa3326db63f0|||||||||||||||
-fonction_figure_tsb303|function|14ba2dc47bc68131|||||||||||||||
+fonction_figure_tsb303|function|b9ce27e451bc7f9a|||||||||||||||
 fonction_noeuds_cvl|function|d3b2775a34f356d3|||||||||||||||
 fonction_partie_tsb303|function|c04d8621681959ea|||||||||||||||
 fonction_requete|function|b560fee9cec4b6a4|||||||||||||||
@@ -69,7 +69,7 @@ fonction_requete_figure|function|518d47b0e0bb3832|||||||||||||||
 fonction_requete_liens|function|0e9ac8dc70fa784f|||||||||||||||
 fonction_requete_prog|function|ae0fb1ff4f9e58f7|||||||||||||||
 fonction_requete_tsb|function|e7d9c14c4c7970a8|||||||||||||||
-fonction_requete_tsb303|function|ea090994e8bcba64|||||||||||||||
+fonction_requete_tsb303|function|81fc0935640b784a|||||||||||||||
 fonction_requete1|function|b560fee9cec4b6a4|||||||||||||||
 fonction_requete13|function|4e9f605136900edd|||||||||||||||
 fonction_requete2|function|bd54ca94e3bec291|||||||||||||||
@@ -91,14 +91,14 @@ noeuds_ilmdph|stem|414f72296cadce6a|25cfd296995230a3|5cb42b57398551be|-161976243
 noeuds_jbca|stem|5994f06a557f4052|8e042a2169b68cc4|5cb42b57398551be|292470834||t19107.8631008684s|20798277a5bbdf65|499|rds|local|vector|||0.001||
 noeuds_martineau|stem|05634e9ccf333a92|75c3bb6b02ee0a0b|5cb42b57398551be|-1761149643||t19107.8631045014s|8c95d42e0607dc07|553|rds|local|vector|||0.002||
 partie_tsb303|stem|26372ff14346c16a|2c30b23fb587f00f|edc99c8b554116c9|1696605764||t19107.8286006217s|7325a5f2baad2457|1171|rds|local|vector|||0.537||
-requete|stem|b3f2f3d7cba55c8b|89c29feb954432c9|17267fc542be8be5|1378933197||t19107.8631031039s|94e1d7418d47ed10|214|rds|local|vector|||0||
+requete|stem|b3f2f3d7cba55c8b|89c29feb954432c9|17267fc542be8be5|1378933197||t19107.8912166005s|94e1d7418d47ed10|214|rds|local|vector|||0.001||
 requete_liens|stem|586eb58a70144317|14647d841e2b4965|53c68f666888d7d5|1832302368||t19107.7935699657s|e4d8959e1d69ff64|257|rds|local|vector|||0||
 requete_requete_prog|stem|4d139266ffd2d054|e0acb9523b57f21c|1c97a7013b5444cc|-242085755||t19107.7935724349s|37c5114db086cc97|136|rds|local|vector|||0.002||
 requete_requete_tsb|stem|ccd2cef0e39b32cc|a622d796c1ed4ae1|9c1e47f3e3764321|-104584169||t19107.7935730855s|0cca50742c16a705|215|rds|local|vector|||0||
-requete_tsb|stem|8941e884e9bc7b45|aa10e2e2ca44b82d|7c58503d97eb4855|1983859436||t19107.8781878311s||385|rds|local|vector|||0.722||erreur dïvaluation de largument conn lors de la sïlection dune mïthode pour la fonction dbGetQuery  objet con introuvable
+requete_tsb|stem|8941e884e9bc7b45|aa10e2e2ca44b82d|f202160bd97f992e|1983859436||t19107.8781878311s||385|rds|local|vector|||0.599||erreur dïvaluation de largument conn lors de la sïlection dune mïthode pour la fonction dbGetQuery  objet con introuvable
 requete_tsb303|stem|7efdeedbb70d6d08|8ab40a14bd729a2b|f7695f4d2e444052|1370387128||t19107.8342115246s|355e02d86e0a1d2e|366|rds|local|vector|||0.516||
 requete1|stem|b3f2f3d7cba55c8b|23a5e38b8bf289d7|c730fc2925b35df4|378723383||t19105.0330890522s|94e1d7418d47ed10|214|rds|local|vector|||0.442||
 requete13|stem|c1d88641e4689b62|de0f13bf76094fa5|d1c4a4364dcde99f|337314471||t19105.0359005832s|4566d5bf5a60f145|413|rds|local|vector|||0.774||
 requete2|stem|5549b53c8d187b0d|ea3a3d287e1c5359|30b1a4512daa48f6|633109130||t19107.8631024524s|d34faae1f346fb15|226|rds|local|vector|||0.001||
 requete3|stem|2af4ecea22bed659|befb50ff8b2011a7|644b88e33b5b504b|857052476||t19107.7935723209s|3b7c77e89f1a6100|221|rds|local|vector|||0||
-table|stem|15885a2dd44e4f07|ea03ca1476dc9bb0|d7232fea8ad30483|-1420435068||t19107.8630984254s|b7cbe5c9a2eaa9ac|651|rds|local|vector|||0.001||
+table|stem|2e5638a6a16cb20a|a751c1a8844a5108|008aaeca32fa6aef|-1420435068||t19107.8920532391s||652|rds|local|vector|||0.741|Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows|Columns X, etudiant1.etudiant2.sigle.date not found
