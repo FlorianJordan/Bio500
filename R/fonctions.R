@@ -23,16 +23,19 @@ fonction_collaborations_cvl<-function(x){rename(x,sigle=cours)}
 fonction_collaborations_dp<-function(x){rename(x,sigle=cours)}
 fonction_collaborations_martineau<-function(x){rename(x,sigle=cours)}
 
-fonction_doublons_cours<-function(x){x[!duplicated(x$sigle),]}
+fonction_doublons_cours<-function(x){x[!duplicated(x$sigle),]
+  x}
 
 
-fonction_doublons_collaborations<-function(x){distinct(x)}
+fonction_doublons_collaborations<-function(x){distinct(x)
+  x}
 
 fonction_doublons_noeuds<-function(x){x %>% arrange(rowSums(is.na(x)))
-  x[!duplicated(x$nom_prenom),]}
+  x[!duplicated(x$nom_prenom),]
+  x}
 
 fonction_creation_table<-function(x,y,z){
-
+  
   con<-dbConnect(SQLite(),dbname="attributs.db")
   dbSendQuery(con,"DROP TABLE collaborations;")
   dbSendQuery(con,"DROP TABLE noeuds;")
@@ -101,8 +104,7 @@ plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(ad
 }
 
 
-fonction_requete_tsb303<-function(){
-  
+fonction_requete_tsb303<-function(con){
   sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
