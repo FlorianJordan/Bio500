@@ -122,12 +122,56 @@ E(adj2)$weight = sapply(E(adj2), function(e) {
 plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-2,2), xlim=c(-5,12), edge.width=E(adj2)$weight*0.5, asp=0.9)
 
 }
-fonction_requete3<-function(){
+
+
+fonction_requete_tsb303<-function(){
 
 sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
 "
-collab_nontsb<-dbGetQuery(con,sql_requete3)
-}
 
+collab_nontsb<-dbGetQuery(con,sql_requete3)
+collab_nontsb
+
+sql_requete_liens <- "
+SELECT etudiant1 as etudiant, count(etudiant2) as liens
+FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
+GROUP BY etudiant
+ORDER BY liens
+"
+liens_nontsb <- dbGetQuery(con,sql_requete_liens)
+liens_nontsb
+
+sql_requete_tsb <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations WHERE sigle LIKE '%TSB303%'
+"
+
+collab_tsb<-dbGetQuery(con,sql_requete_tsb)
+collab_tsb
+
+sql_requete_prog <- "
+SELECT nom_prenom,programme
+FROM noeuds
+"
+}
+fonction_figure_tsb303<-function(){
+pdf(file = "results/figure2.pdf")
+prog<-dbGetQuery(con,sql_requete_prog)
+col<-data.frame(programme=unique(prog$programme),color=c("green","yellow","yellow","yellow","yellow","yellow","yellow","yellow"))
+prog$color<-col$color[match(prog$programme, col$programme)]
+
+m_adj_nontsb<-table(collab_nontsb$etudiant1,collab_nontsb$etudiant2)
+m_adj_tsb<-table(collab_tsb$etudiant1,collab_tsb$etudiant2)
+
+adj_nontsb<-graph.adjacency(m_adj_nontsb)
+adj_tsb<-graph.adjacency(m_adj_tsb)
+
+V(adj_nontsb)$color = prog$color
+V(adj_nontsb)$size = 50
+vertex_attr(adj_nontsb)
+adj_nontsb<-simplify(adj_nontsb)
+
+graph_nontsb<-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
+}
