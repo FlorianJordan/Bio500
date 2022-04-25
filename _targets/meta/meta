@@ -58,7 +58,7 @@ fonction_cours_amelie|function|ad3bcacde4c4a669|||||||||||||||
 fonction_cours_anthonystp|function|6dab5ad3abf031b4|||||||||||||||
 fonction_cours_cvl|function|f7bad407f0f627f2|||||||||||||||
 fonction_cours_fxc|function|241f3b022c913083|||||||||||||||
-fonction_creation_table|function|0e02e18f1e602a30|||||||||||||||
+fonction_creation_table|function|d67af9970ffe377f|||||||||||||||
 fonction_doublons_collaborations|function|c6251be434b23f35|||||||||||||||
 fonction_doublons_cours|function|3ed3256f2e0d4166|||||||||||||||
 fonction_doublons_noeuds|function|c1211c343219af2b|||||||||||||||
@@ -106,4 +106,4 @@ requete1|stem|b3f2f3d7cba55c8b|23a5e38b8bf289d7|c730fc2925b35df4|378723383||t191
 requete13|stem|c1d88641e4689b62|de0f13bf76094fa5|d1c4a4364dcde99f|337314471||t19105.0359005832s|4566d5bf5a60f145|413|rds|local|vector|||0.774||
 requete2|stem|5549b53c8d187b0d|ea3a3d287e1c5359|30b1a4512daa48f6|633109130||t19107.8631024524s|d34faae1f346fb15|226|rds|local|vector|||0.001||
 requete3|stem|2af4ecea22bed659|befb50ff8b2011a7|644b88e33b5b504b|857052476||t19107.7935723209s|3b7c77e89f1a6100|221|rds|local|vector|||0||
-table|stem|7e6e58fd020acbb0|a751c1a8844a5108|9a51ac13da2d623f|-1420435068||t19107.9810968509s||1302|rds|local|vector|||0.553||unable to find an inherited method for function dbSendQuery for signature data.frame, character
+table|stem|7e6e58fd020acbb0|a751c1a8844a5108|5483f668e710b4a4|-1420435068||t19107.9810968509s||1302|rds|local|vector|||0.654||no such table collaborations
