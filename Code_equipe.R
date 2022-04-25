@@ -453,7 +453,7 @@ collab_eco<-collab_eco[collab_eco$programme2=="ecologie",]
 m_adj_eco<-table(collab_eco$etudiant1,collab_eco$etudiant2)
 
 adj_eco<-graph.adjacency(m_adj_eco)
-plot(adj_eco,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+plot(adj_eco,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA, layout=layout.kamada.kawai(adj_eco))
 
 
 
