@@ -23,16 +23,17 @@ fonction_collaborations_cvl<-function(x){rename(x,sigle=cours)}
 fonction_collaborations_dp<-function(x){rename(x,sigle=cours)}
 fonction_collaborations_martineau<-function(x){rename(x,sigle=cours)}
 
-fonction_doublons_cours<-function(x){x[!duplicated(x$sigle),]}
-
-
-fonction_doublons_collaborations<-function(x){distinct(x)}
-
+fonction_doublons_cours<-function(x){x[!duplicated(x$sigle),]
+  x}
+fonction_doublons_collaborations<-function(x){distinct(x)
+  x}
 fonction_doublons_noeuds<-function(x){x %>% arrange(rowSums(is.na(x)))
-  x[!duplicated(x$nom_prenom),]}
+  x[!duplicated(x$nom_prenom),]
+  x}
 
-fonction_creation_table<-function(cours,collaborations,noeuds){
-    
+
+fonction_creation_table<-function(con,noeuds,cours,collaborations){
+  
   con<-dbConnect(SQLite(),dbname="attributs.db")
   dbSendQuery(con,"DROP TABLE collaborations;")
   dbSendQuery(con,"DROP TABLE noeuds;")
@@ -77,31 +78,8 @@ CREATE TABLE collaborations (
   dbWriteTable(con, append = TRUE, name = "noeuds", value = noeuds, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "cours", value = cours, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "collaborations", value = collaborations, row.names = FALSE)
-  
+  con
   }
-
-fonction_requete<-function(){
-
-sql_requete <- "
-SELECT etudiant1 as etudiant, count(etudiant2) as liens
-FROM collaborations
-GROUP BY etudiant
-ORDER BY liens
-"
-liens <- dbGetQuery(con,sql_requete)
-liens}
-
-fonction_requete2<-function(){
-
-sql_requete2 <- "
-SELECT etudiant1, etudiant2, count(sigle) as liens
-FROM collaborations
-GROUP BY etudiant1, etudiant2
-ORDER BY liens DESC
-"
-liens_paire <- dbGetQuery(con,sql_requete2)
-}
-
 
 graph_base<-function(x){
 pdf(file = "results/figure1.pdf")
@@ -125,7 +103,7 @@ plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(ad
 
 
 fonction_requete_tsb303<-function(){
-
+ 
 sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
@@ -155,8 +133,7 @@ sql_requete_prog <- "
 SELECT nom_prenom,programme
 FROM noeuds
 "
-}
-fonction_figure_tsb303<-function(){
+prog<-dbGetQuery(con,sql_requete_prog)
 pdf(file = "results/figure2.pdf")
 prog<-dbGetQuery(con,sql_requete_prog)
 col<-data.frame(programme=unique(prog$programme),color=c("green","yellow","yellow","yellow","yellow","yellow","yellow","yellow"))
@@ -173,5 +150,5 @@ V(adj_nontsb)$size = 50
 vertex_attr(adj_nontsb)
 adj_nontsb<-simplify(adj_nontsb)
 
-graph_nontsb<-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
+plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
 }

@@ -55,11 +55,9 @@ list(
   tar_target(collaborations,fonction_doublons_collaborations(data_collaborations)),
   tar_target(noeuds,fonction_doublons_noeuds(data_noeuds)),
   
-  tar_target(table,fonction_creation_table),
-  tar_target(requete,fonction_requete),
-  tar_target(requete2,fonction_requete2),
-  tar_target(graph,graph_base(collaborations))
-
+  tar_target(table,fonction_creation_table(noeuds,cours,collaborations)),
+  tar_target(graph,graph_base(collaborations)),
+  tar_target(requete_tsb303,fonction_requete_tsb303)
 )
 
 
