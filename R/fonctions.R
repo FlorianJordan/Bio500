@@ -156,7 +156,7 @@ SELECT nom_prenom,programme
 FROM noeuds
 "
 prog<-dbGetQuery(con,sql_requete_prog)
-list(collab_tsb,collab_nontsb)
+
 }
 fonction_figure_tsb303<-function(){
 pdf(file = "results/figure2.pdf")

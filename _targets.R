@@ -59,8 +59,8 @@ list(
   tar_target(requete,fonction_requete),
   tar_target(requete2,fonction_requete2),
   tar_target(graph,graph_base(collaborations)),
-  tar_target(requete_tsb,fonction_requete_tsb303),
-  tar_target(figure_tsb,fonction_figure_tsb303)
+  tar_target(requete_tsb,fonction_requete_tsb303()),
+  tar_target(figure_tsb,fonction_figure_tsb303())
 
 )
 
