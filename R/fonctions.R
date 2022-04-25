@@ -155,6 +155,8 @@ sql_requete_prog <- "
 SELECT nom_prenom,programme
 FROM noeuds
 "
+prog<-dbGetQuery(con,sql_requete_prog)
+list(collab_tsb,collab_nontsb)
 }
 fonction_figure_tsb303<-function(){
 pdf(file = "results/figure2.pdf")
@@ -173,5 +175,5 @@ V(adj_nontsb)$size = 50
 vertex_attr(adj_nontsb)
 adj_nontsb<-simplify(adj_nontsb)
 
-graph_nontsb<-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
+plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
 }
