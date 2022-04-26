@@ -345,6 +345,8 @@ ORDER BY liens_dif
 liens_dif <- dbGetQuery(con,sql_requete6)
 liens_dif
 
+mean(liens_dif$liens_dif)
+
 sql_requete6_1 <- "
 SELECT etudiant1 as etudiant, count(etudiant2) as liens_dif
 FROM collaborations_nontsb_dif
@@ -353,6 +355,8 @@ ORDER BY liens_dif
 "
 liens_nontsb_dif <- dbGetQuery(con,sql_requete6_1)
 liens_nontsb_dif
+
+mean(liens_nontsb_dif$liens_dif)
 
 par(mfrow=c(2,2))
 hist(liens$liens, xlab = "Collaborations par étudiant", ylab = "Fréquence", main = "a)")
