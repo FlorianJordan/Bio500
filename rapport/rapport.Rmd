@@ -60,17 +60,20 @@ Pour mieux illustrer les réponses au questions, plusieurs figures présenteront
 
 La figure 1 représente le réseau de toutes les collaborations depuis le début du baccalauréat des étudiants du cours Méthode en écologie computationnelle (BIO500) à l’hiver 2022. La grandeur des cercles est graduée par le nombre collaboration de chaque élève, les cercles les plus petits correspondent à 1 collaboration tandis que les plus grands correspondent à XX collaborations.
 
-La figure 2 est le réseau des différentes collaborations des étudiants, mais sans le cours TSB303 qui semble avoir une grande influence sur le réseau.
+La figure 2 est le réseau des différentes collaborations avec les collaborations issues de méthode analytique en biologie (TSB303) contrasté. La grandeur des cercles est graduée par le nombre collaboration de chaque élève, les cercles les plus petits correspondent à 1 collaboration tandis que les plus grands correspondent à XX collaborations.
 
 La figure 3 est le réseau des différentes collaborations depuis le début du baccalauréat des étudiants du cours Méthode en écologie computationnelle (BIO500) à l’hiver 2022 possédant trente collaborations et plus. La grandeur des cercles est graduée par le nombre collaboration de chaque élève, les cercles les plus petits correspondent à XX collaboration tandis que les plus grands correspondent à XX collaborations.
 
-Notre dernière figure, la quatrième, représente le réseau des différentes collaborations avec les collaborations issues de TSB303 contrasté. La grandeur des cercles est graduée par le nombre collaboration de chaque élève, les cercles les plus petits correspondent à 1 collaboration tandis que les plus grands correspondent à XX collaborations.
+Notre dernière figure, la quatrième, représente le réseau des différentes collaborations des étudiants, mais sans le cours TSB303 qui semble avoir une grande influence sur le réseau. C,est donc la même figure que la 2, mais avec les liens de TSB303 en gras.
 
-Fig. 1 : Réseau de collaborations des élèves de la 59e cohorte
 
-Fig. 2 : Réseau de collaborations des élèves de la 59e cohorte sans le cours TSB303
+Fig. 1 : Réseau de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022
 
-Fig. 3 : 
+Fig. 2 : Les différentes collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022
+
+Fig. 3 : Réseau de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 qui ont plus de 30 collaborations
+
+Fig. 4 : Réseau de collaborations des élèves de la 59e cohorte de l'auotmne 2019 à l'hiver 2022 sans le cours TSB303
 
 # Discussion  
 
