@@ -11,6 +11,7 @@ collaborations_|stem|1b8b54191aaf4eaa|6ce13c21cf8a14fb|8294087c424d9c88|-1039021
 collaborations_alexis|stem|f52e82cba2b9f393|b889e54e8eebed18|5cb42b57398551be|1360722139||t19108.03448643s|cea8b7c815a3a34c|2476|rds|local|vector|||0.009||
 collaborations_amelie|stem|e94fde692060b969|cefa9e6198fe58bd|cfcaebb9b7cad818|223223921||t19108.0344850294s|c6b5cf4fca3cc5f8|1548|rds|local|vector|||0.009||
 collaborations_amelie_corrige|stem|945991945f94c4ca|60be492bfeac6850|a18f7bc23cb8ffd3|-1488492638||t19108.03449568s|725d5707065f5021|1547|rds|local|vector|||0.033||
+collaborations_amelie_corrige2|stem|945991945f94c4ca|f7db21d222723a64|4fdbaff2d08c900b|2037586502||t19108.044665969s|725d5707065f5021|1547|rds|local|vector|||0||
 collaborations_anthonystp|stem|b100c0b24012bd37|73f372d50e4eceaa|5cb42b57398551be|-1054253271||t19108.0344901907s|3e4efbefff0c81f8|1242|rds|local|vector|||0.003||
 collaborations_anthonystp_corrige|stem|987dea248acb768d|a450c1d4df3405ca|a53f834c14f07333|-1854084873||t19108.0344987827s|3e4efbefff0c81f8|1242|rds|local|vector|||0.01||
 collaborations_cvl|stem|a3d4047e92b3a8ad|86b619e30b8061ee|cfcaebb9b7cad818|-86559403||t19108.0344897549s|2266d985519bf438|1420|rds|local|vector|||0.003||
@@ -33,6 +34,7 @@ cours_|stem|e9a0c499e3eee10f|0ad7110627272fca|357be41af05dd1a7|171630272||t19107
 cours_alexis|stem|ad3f87fa424c3a60|79731092ff484b35|5cb42b57398551be|42662324||t19108.0344886147s|ad82ca75f74b2a14|335|rds|local|vector|||0.002||
 cours_amelie|stem|b444cb5f3588cdef|3f4ec4e9a91ad314|cfcaebb9b7cad818|-2008807031||t19108.0344946954s|65b2697406fa85d2|331|rds|local|vector|||0.002||
 cours_amelie_corrige|stem|afdb3c1b8e4cf553|f32d734378089912|f6365d7c4917b5d4|-1054109208||t19108.0344997604s|d3e83d604f91dd7a|310|rds|local|vector|||0.004||
+cours_amelie_corrige2|stem|afdb3c1b8e4cf553|6a456e5293d49534|8d2ac3a6e4313aa2|600105420||t19108.0446658628s|d3e83d604f91dd7a|310|rds|local|vector|||0||
 cours_anthonystp|stem|c6dda4f286863529|dd200e27a91c3a8a|5cb42b57398551be|997295578||t19108.0344845357s|e15587cb24470da7|329|rds|local|vector|||0.577||
 cours_anthonystp_corrige|stem|c9d554b244c4d7f3|4360da6921da30fb|d6eb07c01330b17a|-217745790||t19108.034494873s|d3e83d604f91dd7a|310|rds|local|vector|||0||
 cours_cvl|stem|3763d2c9b53e160b|87deae57af4526cb|cfcaebb9b7cad818|41987045||t19108.0344873142s|b118d73574f00f7d|299|rds|local|vector|||0.013||
@@ -44,15 +46,16 @@ cours_ilmdph|stem|ad3765998b1abd93|1cfce78efd913de8|5cb42b57398551be|1853381815|
 cours_jbca|stem|506900979cfebc8f|9d8b2a3b1eb98b6a|5cb42b57398551be|-352184404||t19108.0344930146s|9cbfb857ab8b4c55|423|rds|local|vector|||0.004||
 cours_martineau|stem|5942770e24f41d3a|1d4a54bfd93aab7b|5cb42b57398551be|1872116899||t19108.0344933606s|65b2697406fa85d2|331|rds|local|vector|||0.009||
 cours1|stem|e9a0c499e3eee10f|0ad7110627272fca|357be41af05dd1a7|-1863062388||t19108.002575176s|b32d4cc9abeedb18|888|rds|local|vector|||0.001||
-data_collaborations|stem|1b8b54191aaf4eaa|bc3f550f885064ef|d108526899c1c224|1866430512||t19108.0345013006s|0b2e6f2d1e73a81d|13079|rds|local|vector|||0.001||
-data_cours|stem|e9a0c499e3eee10f|5cc996e748d9259c|6cf3e36a8db721f6|-1502492530||t19108.0345018735s|b32d4cc9abeedb18|888|rds|local|vector|||0.001||
-data_noeuds|stem|b6c5adc82876ebc1|47428fa13b3c52f2|930d881d4b719322|1611738916||t19108.0345002612s|68603ec6d7249668|3078|rds|local|vector|||0.006||
+data_collaborations|stem|1b8b54191aaf4eaa|3dcb5cc7efb14e64|e6cb5dac7863aa12|1866430512||t19108.0446665907s|0b2e6f2d1e73a81d|13079|rds|local|vector|||0.001||
+data_cours|stem|e9a0c499e3eee10f|3e773ad8434bfa5e|7390b3adbffabcaf|-1502492530||t19108.0446662782s|b32d4cc9abeedb18|888|rds|local|vector|||0.001||
+data_noeuds|stem|b6c5adc82876ebc1|93411268d33fbfd9|1af30285387d00fc|1611738916||t19108.0446661278s|68603ec6d7249668|3078|rds|local|vector|||0.001||
 figure_tsb|stem|1fec9c9fa193a102|067545709233fb90|ad6a89ea713c7649|-535400921||t19107.8790576711s||591|rds|local|vector|||0.628||erreur dïvaluation de largument conn lors de la sïlection dune mïthode pour la fonction dbGetQuery  objet con introuvable
 figure_tsb303|stem|62af8f7a909dd42d|ad5bc18075191e5c|f1985b383a20185c|-469336657||t19107.8333605853s|4d19982602e132ae|599|rds|local|vector|||0.535||
 figure2|stem|62af8f7a909dd42d|5198400fdc9e2881|17dde9184da3e4c2|1817584280||t19107.8223576279s|4d19982602e132ae|599|rds|local|vector|||0.523||
 figure3|stem|84d6877f8ff2cf12|3f3abb75e29676ef|4e5dce47e2a0f601|1387786072||t19107.7935736653s|322d63e04337946b|247|rds|local|vector|||0||
 figure4|stem|3673a6a8026406e4|ac0c71df560c804c|17d2952d0baeaae2|-519926801||t19107.7935692438s|e34a2795ea968550|656|rds|local|vector|||0.55||
 fonction_collaborations_amelie|function|b3d1f207a143d543|||||||||||||||
+fonction_collaborations_amelie_col|function|d09e7aa0a590902a|||||||||||||||
 fonction_collaborations_anthonystp|function|b3d1f207a143d543|||||||||||||||
 fonction_collaborations_cvl|function|b3d1f207a143d543|||||||||||||||
 fonction_collaborations_dp|function|b3d1f207a143d543|||||||||||||||
@@ -60,6 +63,7 @@ fonction_collaborations_ilmdph|function|d21fdec72a1d2046|||||||||||||||
 fonction_collaborations_martineau|function|b3d1f207a143d543|||||||||||||||
 fonction_connectionSQL|function|701442125f9392aa|||||||||||||||
 fonction_cours_amelie|function|02d9b5104d6eabe5|||||||||||||||
+fonction_cours_amelie_col|function|bb65bc54d415c7c5|||||||||||||||
 fonction_cours_anthonystp|function|d21fdec72a1d2046|||||||||||||||
 fonction_cours_cvl|function|02e3a474c191ef4c|||||||||||||||
 fonction_cours_fxc|function|2412308ff6ff99cb|||||||||||||||
@@ -71,6 +75,7 @@ fonction_figure_2|function|a70ce33bbe416cb6|||||||||||||||
 fonction_figure_3|function|79fad7dc24da408e|||||||||||||||
 fonction_figure_4|function|b615fa3326db63f0|||||||||||||||
 fonction_figure_tsb303|function|b9ce27e451bc7f9a|||||||||||||||
+fonction_noeuds_amelie|function|767a117badab1dd5|||||||||||||||
 fonction_noeuds_cvl|function|1802ea2a7a46b129|||||||||||||||
 fonction_partie_tsb303|function|c04d8621681959ea|||||||||||||||
 fonction_requete|function|b560fee9cec4b6a4|||||||||||||||
@@ -92,6 +97,7 @@ noeuds|stem|a5f38aadbe33bd61|56e73a7e58a62163|800ed4eeb6ebfc33|1489872263||t1910
 noeuds_|stem|b6c5adc82876ebc1|56e73a7e58a62163|fc5776dfd6d97951|1752416215||t19107.9409992768s|68603ec6d7249668|3078|rds|local|vector|||0.548||
 noeuds_alexis|stem|d6786e8d7aab7821|3c95cbda66662c99|5cb42b57398551be|1559376575||t19108.0344875642s|019ac14fbe96bc4c|1259|rds|local|vector|||0.004||
 noeuds_amelie|stem|aa78a0ba0986da9b|a09531af22dc8279|cfcaebb9b7cad818|-1692454272||t19108.0344908086s|984cbd81dd27df51|440|rds|local|vector|||0.005||
+noeuds_amelie_corrige|stem|aa78a0ba0986da9b|a9228db4788450a1|5249be2594815af6|-1602439195||t19108.0446650204s|984cbd81dd27df51|440|rds|local|vector|||0.674||
 noeuds_anthonystp|stem|55ccd9d3e7c30a59|e7d1029196d3e909|5cb42b57398551be|1416868395||t19108.0344911983s|14438a794189323e|826|rds|local|vector|||0.005||
 noeuds_cvl|stem|1c8ed353b0d3d7b9|e33a35ba154fa109|cfcaebb9b7cad818|481335049||t19108.0344937678s|5f0404ccd275e1fb|761|rds|local|vector|||0.004||
 noeuds_cvl_corrige|stem|c3b8aa15692aa026|250814fab08fbd2c|24177ee0e1a4ed54|-1359464715||t19108.0344990746s|a2becad744b46983|745|rds|local|vector|||0||
@@ -113,4 +119,4 @@ requete13|stem|c1d88641e4689b62|de0f13bf76094fa5|d1c4a4364dcde99f|337314471||t19
 requete2|stem|5549b53c8d187b0d|ea3a3d287e1c5359|30b1a4512daa48f6|633109130||t19107.8631024524s|d34faae1f346fb15|226|rds|local|vector|||0.001||
 requete3|stem|2af4ecea22bed659|befb50ff8b2011a7|644b88e33b5b504b|857052476||t19107.7935723209s|3b7c77e89f1a6100|221|rds|local|vector|||0||
 table|stem|7e6e58fd020acbb0|a751c1a8844a5108|4981d11ce46c7e1d|-1420435068||t19107.9810968509s||1302|rds|local|vector|||0.034||no such table collaborations
-tables|stem||a751c1a8844a5108|0ce2da8e00257787|397746313||t19108.018578934s||0|rds|local|vector|||0.849|Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows|Columns X, etudiant1.etudiant2.sigle.date not found
+tables|stem||a751c1a8844a5108|0ce2da8e00257787|397746313||t19108.018578934s||0|rds|local|vector|||0.178|Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows|Columns X, etudiant1.etudiant2.sigle.date not found
