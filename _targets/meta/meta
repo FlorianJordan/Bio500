@@ -29,6 +29,7 @@ collaborations1|stem|1b8b54191aaf4eaa|6ce13c21cf8a14fb|8294087c424d9c88|-1405804
 con|stem|0e1ed913ee0c1a10|84db1c18bf1ecfd4|8e6f77b617935eb7|-1614524628||t19107.9890875409s|2caa9f84a7ad3d6c|138|rds|local|vector|||0.543||
 connection|stem|0e1ed913ee0c1a10|84db1c18bf1ecfd4|8e6f77b617935eb7|-1419291807||t19107.9885625694s|2caa9f84a7ad3d6c|138|rds|local|vector|||0.947||
 connection_con|function|e420184c898e5a6b|||||||||||||||
+correction|stem||75c52077a5ad3aba|2247cf064a9d79ae|-1777909960||t19108.067869043s||0|rds|local|vector|||0.579||objet cours_amelie introuvable
 cours|stem|3a291e1202b4c933|0ad7110627272fca|c1513f7f78814944|-1351517523||t19108.0345032237s|a1b1917b2d5b0e1e|616|rds|local|vector|||0.001||
 cours_|stem|e9a0c499e3eee10f|0ad7110627272fca|357be41af05dd1a7|171630272||t19107.9409996475s|b32d4cc9abeedb18|888|rds|local|vector|||0||
 cours_alexis|stem|ad3f87fa424c3a60|79731092ff484b35|5cb42b57398551be|42662324||t19108.0344886147s|ad82ca75f74b2a14|335|rds|local|vector|||0.002||
@@ -62,6 +63,7 @@ fonction_collaborations_dp|function|b3d1f207a143d543|||||||||||||||
 fonction_collaborations_ilmdph|function|d21fdec72a1d2046|||||||||||||||
 fonction_collaborations_martineau|function|b3d1f207a143d543|||||||||||||||
 fonction_connectionSQL|function|701442125f9392aa|||||||||||||||
+fonction_correction_fichier|function|bd07eaaab6995778|||||||||||||||
 fonction_cours_amelie|function|02d9b5104d6eabe5|||||||||||||||
 fonction_cours_amelie_col|function|bb65bc54d415c7c5|||||||||||||||
 fonction_cours_anthonystp|function|d21fdec72a1d2046|||||||||||||||
@@ -119,4 +121,4 @@ requete13|stem|c1d88641e4689b62|de0f13bf76094fa5|d1c4a4364dcde99f|337314471||t19
 requete2|stem|5549b53c8d187b0d|ea3a3d287e1c5359|30b1a4512daa48f6|633109130||t19107.8631024524s|d34faae1f346fb15|226|rds|local|vector|||0.001||
 requete3|stem|2af4ecea22bed659|befb50ff8b2011a7|644b88e33b5b504b|857052476||t19107.7935723209s|3b7c77e89f1a6100|221|rds|local|vector|||0||
 table|stem|7e6e58fd020acbb0|a751c1a8844a5108|4981d11ce46c7e1d|-1420435068||t19107.9810968509s||1302|rds|local|vector|||0.034||no such table collaborations
-tables|stem||a751c1a8844a5108|0ce2da8e00257787|397746313||t19108.018578934s||0|rds|local|vector|||0.828|Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows|Columns X, etudiant1.etudiant2.sigle.date not found
+tables|stem||a751c1a8844a5108|0ce2da8e00257787|397746313||t19108.018578934s||0|rds|local|vector|||0.89|Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows|Columns X, etudiant1.etudiant2.sigle.date not found

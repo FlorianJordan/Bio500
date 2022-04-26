@@ -56,7 +56,7 @@ list(
   tar_target(noeuds_amelie_corrige,fonction_noeuds_amelie(noeuds_amelie)),
   tar_target(collaborations_amelie_corrige2,fonction_collaborations_amelie_col(collaborations_amelie_corrige)),
   tar_target(cours_amelie_corrige2,fonction_cours_amelie_col(cours_amelie_corrige)),
-  
+
 # Merge des donnes
   tar_target(data_noeuds,bind_rows(noeuds_amelie_corrige,noeuds_anthonystp,noeuds_cvl_corrige,noeuds_dp,noeuds_fxc,noeuds_jbca,noeuds_martineau,noeuds_alexis,noeuds_ilmdph)),
   tar_target(data_cours,bind_rows(cours_amelie_corrige2,cours_anthonystp_corrige,cours_cvl_corrige,cours_dp,cours_fxc_corrige,cours_jbca,cours_martineau,cours_alexis,cours_ilmdph)),

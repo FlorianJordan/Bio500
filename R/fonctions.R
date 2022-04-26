@@ -46,6 +46,8 @@ fonction_doublons_noeuds<-function(x){x<-x %>% arrange(rowSums(is.na(x)))
   x<-x[!duplicated(x$nom_prenom),]
   x}
 
+
+
 fonction_creation_table<-function(noeuds,cours,collaborations){
 
 
