@@ -51,12 +51,12 @@ list(
   tar_target(data_noeuds,bind_rows(noeuds_amelie,noeuds_anthonystp,noeuds_cvl_corrige,noeuds_dp,noeuds_fxc,noeuds_jbca,noeuds_martineau,noeuds_alexis,noeuds_ilmdph)),
   tar_target(data_cours,bind_rows(cours_amelie_corrige,cours_anthonystp_corrige,cours_cvl_corrige,cours_dp,cours_fxc_corrige,cours_jbca,cours_martineau,cours_alexis,cours_ilmdph)),
   tar_target(data_collaborations,bind_rows(collaborations_amelie_corrige,collaborations_anthonystp_corrige,collaborations_cvl_corrige,collaborations_dp_corrige2,collaborations_fxc,collaborations_jbca,collaborations_martineau_corrige,collaborations_alexis,collaborations_ilmdph_corrige)),
+  
+  tar_target(noeuds,fonction_doublons_noeuds(data_noeuds)),
   tar_target(cours,fonction_doublons_cours(data_cours)),
   tar_target(collaborations,fonction_doublons_collaborations(data_collaborations)),
-  tar_target(noeuds,fonction_doublons_noeuds(data_noeuds)),
   
-  tar_target(table,fonction_creation_table(noeuds,cours,collaborations)),
-  tar_target(graph,graph_base(collaborations))
+  tar_target(tables,fonction_creation_table(noeuds, cours, collaborations))
 )
 
 

@@ -1,41 +1,47 @@
 fonction_cours_amelie<-function(x){
-  
+  x<-x[,-c(6:7)]
   colnames(x)<-c("sigle","credits","obligatoire","laboratoire","libre")
-x[,-c(6:7)]}
-fonction_cours_anthonystp <-function(x){x[,-5]
-}
+
+x}
+fonction_cours_anthonystp <-function(x){x<-x[,-5]
+x}
 fonction_collaborations_ilmdph <-function(x){
-  x[,-5]
-}
+  x<-x[,-5]
+x}
 fonction_collaborations_dp<-function(x){
-  x[,-5]
-}
+  x<-x[,-5]
+x}
 fonction_noeuds_cvl<-function(x){
-  x[,-1]
-}
+  x<-x[,-1]
+x}
 
-fonction_cours_cvl<-function(x){rename(x,sigle=Sigle)}
-fonction_cours_fxc<-function(x){rename(x,credits=credit)}
+fonction_cours_cvl<-function(x){x<-rename(x,sigle=Sigle)
+  x}
+fonction_cours_fxc<-function(x){x<-rename(x,credits=credit)
+  x}
 fonction_collaborations_amelie<-function(x){
-  rename(x,sigle=cours)}
-fonction_collaborations_anthonystp<-function(x){rename(x,sigle=cours)}
-fonction_collaborations_cvl<-function(x){rename(x,sigle=cours)}
-fonction_collaborations_dp<-function(x){rename(x,sigle=cours)}
-fonction_collaborations_martineau<-function(x){rename(x,sigle=cours)}
+  x<-rename(x,sigle=cours)
+  x}
+fonction_collaborations_anthonystp<-function(x){x<-rename(x,sigle=cours)
+  x}
+fonction_collaborations_cvl<-function(x){x<-rename(x,sigle=cours)
+  x}
+fonction_collaborations_dp<-function(x){x<-rename(x,sigle=cours)
+  x}
+fonction_collaborations_martineau<-function(x){x<-rename(x,sigle=cours)
+  x}
 
-fonction_doublons_cours<-function(x){x[!duplicated(x$sigle),]
+fonction_doublons_cours<-function(x){x<-x[!duplicated(x$sigle),]
   x}
-fonction_doublons_collaborations<-function(x){distinct(x)
+fonction_doublons_collaborations<-function(x){x<-distinct(x)
   x}
-fonction_doublons_noeuds<-function(x){x %>% arrange(rowSums(is.na(x)))
-  x[!duplicated(x$nom_prenom),]
+fonction_doublons_noeuds<-function(x){x<-x %>% arrange(rowSums(is.na(x)))
+  x<-x[!duplicated(x$nom_prenom),]
   x}
 
 
 fonction_creation_table<-function(noeuds,cours,collaborations){
-x<-noeuds
-y<-cours
-z<-collaborations
+
   con<-dbConnect(SQLite(),dbname="attributs.db")
   dbSendQuery(con,"DROP TABLE collaborations;")
   dbSendQuery(con,"DROP TABLE noeuds;")
@@ -77,10 +83,10 @@ CREATE TABLE collaborations (
   FOREIGN KEY (sigle) REFERENCES cours(sigle)
 );"
   dbSendQuery(con, tbl_collaborations)
-  dbWriteTable(con, append = TRUE, name = "noeuds", value = x, row.names = FALSE)
-  dbWriteTable(con, append = TRUE, name = "cours", value = y, row.names = FALSE)
-  dbWriteTable(con, append = TRUE, name = "collaborations", value = z, row.names = FALSE)
   
+  dbWriteTable(con, append = TRUE, name = "noeuds", value = noeuds, row.names = FALSE)
+  dbWriteTable(con, append = TRUE, name = "cours", value = cours, row.names = FALSE)
+  dbWriteTable(con, append = TRUE, name = "collaborations", value = collaborations, row.names = FALSE)
   
   }
 
