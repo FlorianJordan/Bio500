@@ -35,9 +35,9 @@ fonction_collaborations_dp<-function(x){x<-rename(x,sigle=cours)
 fonction_collaborations_martineau<-function(x){x<-rename(x,sigle=cours)
   x}
 
-fonction_creation_table<-function(con,noeuds,cours,collaborations){
+fonction_creation_table<-function(noeuds,cours,collaborations){
 
-
+  con<-dbConnect(SQLite(),dbname="attributs.db")
   dbSendQuery(con,"DROP TABLE collaborations;")
   dbSendQuery(con,"DROP TABLE noeuds;")
   dbSendQuery(con,"DROP TABLE cours;")
@@ -107,7 +107,7 @@ x
 
 
 fonction_requete_tsb303<-function(con,collaborations){
-
+  con<-dbConnect(SQLite(),dbname="attributs.db")
 sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
