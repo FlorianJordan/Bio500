@@ -58,11 +58,17 @@ Une fois la copilation des données réalisée par chaque équipe, celle-ci fut 
 
 ### Résultats
 
+Pour mieux illustrer les réponses au questions, plusieurs figures présenteront les liens entre les étudiants.
+
+La figure 1 représente les liens de collaborations entre les étudiants. Il est possible de voir les étudiants ayant eu plusieurs collaboration ensemble, car la ligne qui les relit est plus large. Les différentes couleurs représentent différent degré de collaboration. (code couleur). 
+
 Fig. 1 : Réseau de collaborations des élèves de la 59e cohorte
 
-Fig. 2 : Nombres de collaboration différentes par élève
+Fig. 2 : Nombres de collaboration différentes par élève avec et sans TSB303
 
-Fig. 3 : Nombres de collaboration différentes par élèves sans TSB303
+Fig. 3 : 
+
+
 
 **Voici comment inclure une figure .pdf préalablement générée et la citer/référencer dans le texte, via son `label`: Figure \ref{fig:plot1}**. 
 
