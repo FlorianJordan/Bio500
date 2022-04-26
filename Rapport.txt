@@ -99,7 +99,19 @@ Lorsqu’on ajoute le cours TSB303 aux collaborations, on identifie une augmenta
 
 \newpage
 # Bibliographie{-}
+
+Csardi G and Nepusz T (2006). “The igraph software package for complex network research. InterJournal, Complex Systems, 1695. https://igraph.org.
+
+Delmas, E., Besson, M., Brice, M.-H., Burkle, L. A., Dalla Riva, G. V., Fortin, M.-J., … Poisot, T. (2018). Analysing ecological networks of species interactions. Biological Reviews. doi:10.1111/brv.12433
+Holtzman, Y. and Anderberg, J. (2011), "Diversify your teams and collaborate: because great minds don't think alike", Journal of Management Development, Vol. 30 No. 1, pp. 75-92. https://doi.org/10.1108/02621711111098389
+
+Legendre, P. & Legendre, L. (2012). Numerical Ecology, 3rd English Edition (). Elsevier, Oxford.
+
 Milgram, S. (1967). The small world problem. Psychology today, 2(1), 60-67.
 Montoya, J. M., & Solé, R. V. (2002). Small world patterns in food webs. Journal of theoretical biology, 214(3), 405-412.
-Holtzman, Y. and Anderberg, J. (2011), "Diversify your teams and collaborate: because great minds don't think alike", Journal of Management Development, Vol. 30 No. 1, pp. 75-92. https://doi.org/10.1108/02621711111098389
-Legendre, P. & Legendre, L. (2012). Numerical Ecology, 3rd English Edition (). Elsevier, Oxford.
+
+Müller, K., Wickham, H., James, D. A., and Falcon, S. (2021). RSQLite: SQLite Interface for R. R package version 2.2.12.
+
+Wickham, H., François, R., Henry, L., and Müller, K. (2022). dplyr: A Grammar of Data Manipulation. Rpackage version 1.0.8.
+
+Landau W. M. (2022). targets: Dynamic Function-Oriented .Make. – Like Declarative Workflows. Rpackage version 0.12.0.
