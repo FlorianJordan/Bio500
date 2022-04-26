@@ -351,7 +351,7 @@ FROM collaborations_nontsb_dif
 GROUP BY etudiant
 ORDER BY liens_dif
 "
-liens_nontsb_dif <- dbGetQuery(con,sql_requete6)
+liens_nontsb_dif <- dbGetQuery(con,sql_requete6_1)
 liens_nontsb_dif
 
 par(mfrow=c(2,2))
