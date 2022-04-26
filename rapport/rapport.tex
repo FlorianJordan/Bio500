@@ -13,6 +13,35 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 
+% Pandoc citation processing
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+% for Pandoc 2.8 to 2.10.1
+\newenvironment{cslreferences}%
+  {}%
+  {\par}
+% For Pandoc 2.11+
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 
 \templatetype{pnasresearcharticle}  % Choose template
@@ -25,8 +54,8 @@
 \author[a]{Simon Grégoire}
 \author[a]{Francis Lessard}
 
-  \affil[a]{Université de Sherbrooke, Départment de biologie, 2500 Boulevard de
-l'Université, Sherbrooke, Québec, J1K 2R1}
+  \affil[a]{Université de Sherbrooke, Départment de biologie, 2500
+Boulevard de l'Université, Sherbrooke, Québec, J1K 2R1}
 
 
 % Please give the surname of the lead author for the running footer
@@ -43,7 +72,8 @@ l'Université, Sherbrooke, Québec, J1K 2R1}
 \correspondingauthor{\textsuperscript{} }
 
 % Keywords are not mandatory, but authors are strongly encouraged to provide them. If provided, please include two to five keywords, separated by the pipe symbol, e.g:
- \keywords{  Travaux d'équipe |  collaborations |  Université de sherbrooke |  Optionel |  Optionel  } 
+ \keywords{  Travaux d'équipe |  collaborations |  Université de
+sherbrooke |  Optionel |  Optionel  } 
 
 \begin{abstract}
 Nous avons voulu nous intérésser aux collaborations des élèves de
@@ -71,110 +101,82 @@ parcours dans le baccalauréat en biologie.
 \acknow{}
 
 \hypertarget{introduction}{%
-\section{Introduction}\label{introduction}}
-
-\textbf{Voici un exemple de citation (1), et en voici deux autres
-(1--3).}
+\subsection{Introduction}\label{introduction}}
 
 On entend souvent l'expression « ah que le monde est petit ! » lorsque
 deux personnes se retrouvent à avoir une connexion qu'on ne suspectait
 pas. Certaines études se sont intéressées à ce principe que par un lien
-relativement proche, tout le monde se connait. Milgram (1967) s'est
-penché sur le sujet et à testé cette hypothèse que deux personnes pigées
-au hasard vont avoir un lien quelconque entre eux {[}@. Ce principe peut
-s'appliquer à l'écologie, car d'un point de vu de l'évolution, toutes
-les espèces sont reliées par un ancêtre commun. Ce modèle de « petit
-monde » peut donc s'appliquer à grande et petite échelle. Nous avons
-voulu tester cette théorie à petite échelle. Nous nous sommes donc posés
-la question si le réseau de collaborations entre les étudiants du bacc
-en écologie a les mêmes propriétés que les réseaux écologiques. Plus
-spécifiquement, nous avons étudiés si les élèves en tendances à
-conserver les mêmes collaborateurs dans tous les travaux ou s'ils
-avaient plus tendance à diversifier leurs partenaires.
+relativement proche, tout le monde se connait à un certain niveau.
+Milgram (1967) s'est penché sur le sujet et à testé cette hypothèse que
+deux personnes pigées au hasard vont avoir un lien quelconque entre eux
+(1). Ce principe peut s'appliquer à l'écologie, car d'un point de vu de
+l'évolution, toutes les espèces sont reliées par un ancêtre commun et
+pour étudier les réseaux trophiques (2). Ce modèle de « petit monde »
+peut donc s'appliquer à grande et petite échelle. Nous avons voulu
+tester cette théorie à très petite échelle dans le baccalauréat de la
+59e cohorte d'écologie de l'Université de Sherbrooke. Nous nous sommes
+donc posés la question si le réseau de collaborations entre les
+étudiants du bacc en écologie a les mêmes propriétés que les réseaux
+écologiques. Plus spécifiquement, nous avons étudiés si les élèves en
+tendances à conserver les mêmes collaborateurs dans tous les travaux ou
+s'ils avaient plus tendance à diversifier leurs partenaires. En effet,
+il est intéressant de voir si les étudiants ont plusieurs groupe d'amis
+ou si au cours du baccalauréat, ils sont restés toujours avec les mêmes
+personnes. Nous avons aussi vérifier si le cours de méthode méthode
+analytique en biologie (TSB303) a eu beaucoup d'effet dans le réseaux de
+collaboration, puisque dans ce cours, les travaux étaient en équipe de
+15. On peut donc s'imaginer qu'à lui seul, ce cours ajoute beaucoup de
+collaborations entre les étudiants. Pour aider à visulaliser le tout, le
+première figure va détailler toutes les colaborations entre tous les
+individus de la cohorte, puis plus spécifiquement ne figure qui démontre
+uniquements les liens de plus de X collaborations et ensuite cette même
+figure, mais en excluant le cours TSB303.
 
 \hypertarget{muxe9thode}{%
-\section{Méthode}\label{muxe9thode}}
+\subsection{Méthode}\label{muxe9thode}}
 
-Per recepto pugnes. Soror est adiit nusquam, in arserunt nondum tempore
-bracchia. Pater tempora limen. Falcata parentibus dolor et vobis aranea!
-Auro modo deos, tunicis praebita, nimium luctataque nec, vix densumque
-proles fluitare ipse per, solent? Pondera abrumpit cum quaeque iuris.
-Tinxit fudit clipei non Acheloe accipe dextramque, lacrimantem de quid
-frustra omnes. Indigenae exta quamque modo meae, detur idem curas prope
-erat. Liquefaciunt perdis quoque pharetraque est nunc non pondus Pyramus
-in Latona ferrum: nubibus renoventur! Fallacia sonuit Proreus, aurora:
-omen cur a moenia ore ego narret, ego. Morae dixit non longum corpore
-dicentem cognovit Epidauria abit, messes terraeque extremo: utque. Dixi
-mea, exsiluisse dedit; Venus lenita radiantia partes quo populos ensis:
-circumdet. Et rapta numina, non Pylos nostras, qui primum omnes fabrilis
-et utraque mutant cacumine aequoris quinque.
+La classe de BIO500 de la session d'hiver 2022 s'est divisé en 9 (à
+valider) équipes. Chaque élève de ses équipes a copilé l'ensemble des
+cours réaliser lors de leur baccalauréat ainsi que les informations
+considérées pertinentes reliées à ces cours dans une première table
+commune à l'équipe. Ils ont également copilé dans une seconde table le
+nom de chaque coéquipier, l'année de début de leur baccalauréat, le nom
+de leur programme ainsi que les informations considérées pertinentes
+reliées à chaque individu de l'équipe. Ils ont terminé la copilation des
+données par une troisième table. Au sein de cette dernière table, se
+trouve l'ensemble des collaborations, c'est-à-dire l'ensemble des noms
+avec qui chaque élève a réalisé des travaux d'équipe jusqu'à présent
+lors de leur baccalauréat.
 
-\hypertarget{premiuxe8re-partie}{%
-\subsection{Première partie}\label{premiuxe8re-partie}}
+Une fois la copilation des données réalisée par chaque équipe, celle-ci
+fut partagée et mise en commun. Maintenant indépendentes, les équipes
+avaient alors la tâche de fusionner l'ensemble des données ensemble afin
+de n'avoir que trois tables contenant l'ensemble des données de la
+classe. Au préalable, chaque équipe a dû standardiser les données de
+l'ensemble des équipes afin d'obtenir une unité structurelle au sein des
+différentes tables. Ces données ont été ensuite intégré dans le système
+de gestion de données SQLite3. Afin de répondre à la question posé, les
+données d'intérêts ont été extraites via des requêtes et finalement
+analysées.
 
-Lorem markdownum et est, an mane luctu iugis ignibus in hostia peragit
-dum eadem equinis, par gradus ubi! Silet canities sine dedecet, fides
-virum capro: loquuntur ante. Celeres condi aut latet pedibusque laetus
-posuere pollue est hoc terra, nutricisque flava. Eurytus auris. Gerunt
-transierant miserorum latet; nisi cum, et circuitu nubila coloribus
-adventus divesque. Loca partibus breve et unum maior stellis inpia et
-luporum. Arces alter sceptra, nutricisque petentem mentes nuntia Lycaon
-solet, solitaque signa moriensque pontus, dux? Corpora testataque, novo
-tumidum. Eurytus auris. Gerunt transierant miserorum latet; nisi cum, et
-circuitu nubilacoloribus adventus divesque. Loca partibus breve et unum
-maior stellis inpia etluporum. Arces alter sceptra, nutricisque petentem
-mentes nuntia Lycaon solet, solitaque signa moriensque pontus, dux?
-Corpora testataque, novo tumidum.
-
-\hypertarget{deuxiuxe8me-partie}{%
-\subsection{Deuxième partie}\label{deuxiuxe8me-partie}}
-
-Scelus illa ignes: loca putes tenuique, nec animum nunc simulacra et
-miratur fuerat hominesque ubi. Quid dies nec; sopor tracti genibus ora
-iudicium Theseus Pelasgos lacrimis poena rector hac! Nitidum dextro.
-Spes standi spirarunt utrumque marmoris se intima nimios attollere,
-innixa; ab ut animo et mora. Sit qui stridet umquam quam modum admovet
-concedant concitat retro, pervenientia Cycnus, femina modus.
+\hypertarget{discussion}{%
+\subsection{Discussion}\label{discussion}}
 
 \hypertarget{ruxe9sultats}{%
-\section{Résultats}\label{ruxe9sultats}}
+\subsubsection{Résultats}\label{ruxe9sultats}}
 
-Fig. 1 : Réseau de collaborations
+Fig. 1 : Réseau de collaborations des élèves de la 59e cohorte
 
-Fig. 2 : Nombres de collaboration par élève
+Fig. 2 : Nombres de collaboration différentes par élève
 
-Fig. 3 : Nombres de collaboration avec chaque partenaire
+Fig. 3 : Nombres de collaboration différentes par élèves sans TSB303
 
 \textbf{Voici comment inclure une figure .pdf préalablement générée et
 la citer/référencer dans le texte, via son \texttt{label}: Figure
 \ref{fig:plot1}}.
 
-\hypertarget{discussion}{%
-\section{Discussion}\label{discussion}}
-
-Per recepto pugnes. Soror est adiit nusquam, in arserunt nondum tempore
-bracchia. Pater tempora limen. Falcata parentibus dolor et vobis aranea!
-Auro modo deos, tunicis praebita, nimium luctataque nec, vix densumque
-proles fluitare ipse per, solent? Pondera abrumpit cum quaeque iuris.
-Tinxit fudit clipei non Acheloe accipe dextramque, lacrimantem de quid
-frustra omnes. Indigenae exta quamque modo meae, detur idem curas prope
-erat. Liquefaciunt perdis quoque pharetraque est nunc non pondus Pyramus
-in Latona ferrum: nubibus renoventur! Fallacia sonuit Proreus, aurora:
-omen cur a moenia ore ego narret, ego. Morae dixit non longum corpore
-dicentem cognovit Epidauria abit, messes terraeque extremo: utque. Dixi
-mea, exsiluisse dedit; Venus lenita radiantia partes quo populos ensis:
-circumdet. Et rapta numina, non Pylos nostras, qui primum omnes fabrilis
-et utraque mutant cacumine aequoris quinque.
-
 \hypertarget{conclusion}{%
-\section{Conclusion}\label{conclusion}}
-
-Ligavit cetera et infelix nescius, sinu timorem admonitu ferrove
-exspectatas fuerant pulcherrime, mea sonum! Formae munera, est trahendo
-regem supplice. Verba lacrimis gradus, verbis iam tempore aratri sed, at
-imagine momordit. Teque esse, ante pariter desere in quae: illa socium
-inque meae: et ipso canos: peteretis? Temptanda Daedalus et palmis
-incumbere tempora ambit.
+\subsection{Conclusion}\label{conclusion}}
 
 \newpage
 
@@ -183,21 +185,20 @@ incumbere tempora ambit.
 \addcontentsline{toc}{section}{Bibliographie}
 
 \hypertarget{refs}{}
-\leavevmode\hypertarget{ref-berard1994embedding}{}%
-1. Bérard P, Besson G, Gallot S (1994) Embedding riemannian manifolds by
-their heat kernel. \emph{Geometric \& Functional Analysis GAFA}
-4(4):373--398.
+\begin{CSLReferences}{0}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-milgram1967small}{}}%
+\CSLLeftMargin{1. }
+\CSLRightInline{Milgram S (1967) The small world problem.
+\emph{Psychology today} 2(1):60--67.}
 
-\leavevmode\hypertarget{ref-belkin2002using}{}%
-2. Belkin M, Niyogi P (2002) Using manifold stucture for partially
-labeled classification. \emph{Advances in Neural Information Processing
-Systems}, pp 929--936.
+\leavevmode\vadjust pre{\hypertarget{ref-montoya2002small}{}}%
+\CSLLeftMargin{2. }
+\CSLRightInline{Montoya JM, Solé RV (2002)
+\href{https://doi.org/10.1006/jtbi.2001.2460}{Small {World} {Patterns}
+in {Food} {Webs}}. \emph{Journal of Theoretical Biology}
+214(3):405--412.}
 
-\leavevmode\hypertarget{ref-coifman2005geometric}{}%
-3. Coifman RR, et al. (2005) Geometric diffusions as a tool for harmonic
-analysis and structure definition of data: Diffusion maps.
-\emph{Proceedings of the National Academy of Sciences of the United
-States of America} 102(21):7426--7431.
+\end{CSLReferences}
 
 
 
@@ -205,4 +206,3 @@ States of America} 102(21):7426--7431.
 % \bibliography{pnas-sample}
 
 \end{document}
-
