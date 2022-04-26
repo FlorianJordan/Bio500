@@ -84,7 +84,6 @@ CREATE TABLE collaborations (
 );"
   dbSendQuery(con, tbl_collaborations)
 
-  
   dbWriteTable(con, append = TRUE, name = "noeuds", value = noeuds, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "cours", value = cours, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "collaborations", value = collaborations, row.names = FALSE)
