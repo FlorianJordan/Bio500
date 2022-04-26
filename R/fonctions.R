@@ -78,7 +78,6 @@ CREATE TABLE collaborations (
   dbWriteTable(con, append = TRUE, name = "noeuds", value = x, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "cours", value = y, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "collaborations", value = z, row.names = FALSE)
-
   }
 
 graph_base<-function(x){
