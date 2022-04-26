@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.22)  26 APR 2022 17:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.22)  26 APR 2022 17:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1076,42 +1076,62 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 161.
+(Font)              scaled to size 5.69998pt on input line 160.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.64998pt on input line 205.
+(Font)              scaled to size 6.64998pt on input line 204.
 [1{c:/Users/margu/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 223.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 219.
 (c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 223.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 219.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-LaTeX Warning: Reference `fig:plot1' on page 2 undefined on input line 223.
+LaTeX Warning: Reference `fig:plot1' on page 2 undefined on input line 219.
 
 
-Overfull \hbox (2.05554pt too wide) in paragraph at lines 236--242
+Overfull \hbox (2.05554pt too wide) in paragraph at lines 268--272
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--242
+Underfull \hbox (badness 10000) in paragraph at lines 268--272
+
+ []
+
+
+Overfull \hbox (2.05554pt too wide) in paragraph at lines 273--279
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--279
+
+ []
+
+
+Overfull \hbox (2.05554pt too wide) in paragraph at lines 280--284
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--284
 
  []
 
 
 AED: lastpage setting LastPage
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 250.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 292.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.64998pt on input line 250.
+(Font)              scaled to size 6.64998pt on input line 292.
 [2] (./rapport.aux)
 
 LaTeX Warning: There were undefined references.
@@ -1120,18 +1140,18 @@ Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: 6DD1E4048A6097C5929104D97A7129D1;569.
  ) 
 Here is how much of TeX's memory you used:
- 29626 strings out of 480193
- 553705 string characters out of 5891069
+ 29632 strings out of 480193
+ 553784 string characters out of 5891069
  880083 words of memory out of 5000000
  46847 multiletter control sequences out of 15000+600000
- 545737 words of font info for 162 fonts, out of 8000000 for 9000
+ 545915 words of font info for 164 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  115i,14n,118p,1004b,573s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on rapport.pdf (2 pages, 213655 bytes).
+Output written on rapport.pdf (2 pages, 217136 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
+ 119 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
  58941 words of extra memory for PDF output out of 61914 (max. 10000000)
 
