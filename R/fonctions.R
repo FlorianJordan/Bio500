@@ -163,7 +163,7 @@ pdf(file = "results/figure3.pdf")
 plot(adj_tsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_tsb), rescale=FALSE, ylim=c(-11,2), xlim=c(-10,9), edge.width = 2)
 
 
-m_adj<-table(x$etudiant1,x$etudiant2)
+m_adj<-table(collaborations$etudiant1,collaborations$etudiant2)
 m_adj
 adj3<-graph.adjacency(m_adj)
 V(adj3)$color = prog$color
