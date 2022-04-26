@@ -66,7 +66,7 @@ La figure 3
 
 Fig. 1 : Réseau de collaborations des élèves de la 59e cohorte
 
-Fig. 2 : Nombres de collaboration différentes par élève avec et sans TSB303
+Fig. 2 : Réseau de collaborations des élèves de la 59e cohorte sans le cours TSB303
 
 Fig. 3 : 
 
