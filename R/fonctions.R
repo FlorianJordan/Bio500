@@ -106,7 +106,7 @@ x
 }
 
 
-fonction_requete_tsb303<-function(collaborations){
+fonction_requete_tsb303<-function(){
   con<-dbConnect(SQLite(),dbname="attributs.db")
 sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
@@ -186,4 +186,7 @@ E(adj3)$width = edge_tot$width
 edge_attr(adj3)
 pdf(file = "results/figure4.pdf")
 plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj3), rescale=FALSE, ylim=c(-2,2), xlim=c(-5,12), asp=0.9)
+
+con
+dbDisconnect(con)
 }
