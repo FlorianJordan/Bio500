@@ -109,7 +109,7 @@ plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(ad
 
 
 fonction_requete_tsb303<-function(x){
-  con<-dbConnect(SQLite(),dbname="attributs.db")
+con<-dbConnect(SQLite(),dbname="attributs.db")
 sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
