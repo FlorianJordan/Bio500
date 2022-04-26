@@ -1,5 +1,3 @@
-
-
 fonction_cours_cvl<-function(x){x<-rename(x,sigle=Sigle)
 x}
 fonction_cours_fxc<-function(x){x<-rename(x,credits=credit)
@@ -84,7 +82,7 @@ CREATE TABLE collaborations (
   dbWriteTable(con, append = TRUE, name = "noeuds", value = noeuds, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "cours", value = cours, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "collaborations", value = collaborations, row.names = FALSE)
-  
+  con
   }
 
 graph_base<-function(x){
@@ -104,12 +102,12 @@ E(adj2)$weight = sapply(E(adj2), function(e) {
   length(all_shortest_paths(adj, from=ends(adj2, e)[1], to=ends(adj2, e)[2])$res) } )
 
 plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-2,2), xlim=c(-5,12), edge.width=E(adj2)$weight*0.5, asp=0.9)
-
+x
 }
 
 
 fonction_requete_tsb303<-function(x){
-  con<-dbConnect(SQLite(),dbname="attributs.db")
+con<-dbConnect(SQLite(),dbname="attributs.db")
 sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
@@ -188,4 +186,4 @@ E(adj3)$width = edge_tot$width
 edge_attr(adj3)
 pdf(file = "results/figure4.pdf")
 plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj3), rescale=FALSE, ylim=c(-2,2), xlim=c(-5,12), asp=0.9)
-}
+x}
