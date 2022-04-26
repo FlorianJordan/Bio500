@@ -47,10 +47,13 @@ list(
   tar_target(collaborations_cvl_corrige,fonction_collaborations_cvl(collaborations_cvl)),
   tar_target(collaborations_dp_corrige2,fonction_collaborations_dp(collaborations_dp)),
   tar_target(collaborations_martineau_corrige,fonction_collaborations_martineau(collaborations_martineau)),
+  tar_target(noeuds_amelie_corrige,fonction_noeuds_amelie(noeuds_amelie)),
+  tar_target(collaborations_amelie_corrige2,fonction_collaborations_amelie_col(collaborations_amelie_corrige)),
+  tar_target(cours_amelie_corrige2,fonction_cours_amelie_col(cours_amelie_corrige)),
   
-  tar_target(data_noeuds,bind_rows(noeuds_amelie,noeuds_anthonystp,noeuds_cvl_corrige,noeuds_dp,noeuds_fxc,noeuds_jbca,noeuds_martineau,noeuds_alexis,noeuds_ilmdph)),
-  tar_target(data_cours,bind_rows(cours_amelie_corrige,cours_anthonystp_corrige,cours_cvl_corrige,cours_dp,cours_fxc_corrige,cours_jbca,cours_martineau,cours_alexis,cours_ilmdph)),
-  tar_target(data_collaborations,bind_rows(collaborations_amelie_corrige,collaborations_anthonystp_corrige,collaborations_cvl_corrige,collaborations_dp_corrige2,collaborations_fxc,collaborations_jbca,collaborations_martineau_corrige,collaborations_alexis,collaborations_ilmdph_corrige)),
+  tar_target(data_noeuds,bind_rows(noeuds_amelie_corrige,noeuds_anthonystp,noeuds_cvl_corrige,noeuds_dp,noeuds_fxc,noeuds_jbca,noeuds_martineau,noeuds_alexis,noeuds_ilmdph)),
+  tar_target(data_cours,bind_rows(cours_amelie_corrige2,cours_anthonystp_corrige,cours_cvl_corrige,cours_dp,cours_fxc_corrige,cours_jbca,cours_martineau,cours_alexis,cours_ilmdph)),
+  tar_target(data_collaborations,bind_rows(collaborations_amelie_corrige2,collaborations_anthonystp_corrige,collaborations_cvl_corrige,collaborations_dp_corrige2,collaborations_fxc,collaborations_jbca,collaborations_martineau_corrige,collaborations_alexis,collaborations_ilmdph_corrige)),
   
   tar_target(noeuds,fonction_doublons_noeuds(data_noeuds)),
   tar_target(cours,fonction_doublons_cours(data_cours)),

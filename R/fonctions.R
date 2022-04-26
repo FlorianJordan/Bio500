@@ -35,13 +35,8 @@ fonction_noeuds_amelie<-function(x){colnames(x)<-c("nom_prenom","annee_debut","s
 x}
 fonction_collaborations_amelie_col<-function(x){colnames(x)<-c("etudiant1","etudiant2","sigle","date")
 x}
-fonction_noeuds_amelie<-function(x){colnames(x)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
+fonction_cours_amelie_col<-function(x){colnames(x)<-c("sigle","credits","obligatoire","laboratoire","libre")
 x}
-colnames(noeuds_amelie)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
-colnames(collaborations_amelie)<-c("etudiant1","etudiant2","sigle","date")
-colnames(cours_amelie)<-c("sigle","credits","obligatoire","laboratoire","libre")
-
-
 
 fonction_doublons_cours<-function(x){x<-x[!duplicated(x$sigle),]
   x}
