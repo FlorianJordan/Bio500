@@ -1,3 +1,47 @@
+---
+title: Le manque d'hétérogénéité dans les travaux d'équipe au sein du réseaux des étudiants du cours BIO500 à l'hiver 2022
+
+# Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
+author:
+  - name: Marguerite Duchesne
+    affiliation: a
+  - name: Florian Jordan
+    affiliation: a
+  - name: Anthony St-Pierre
+    affiliation: a
+  - name: Simon Grégoire
+    affiliation: a
+  - name: Francis Lessard
+    affiliation: a
+
+address:
+  - code: a
+    address: Université de Sherbrooke, Départment de biologie, 2500 Boulevard de l'Université, Sherbrooke, Québec, J1K 2R1
+
+
+abstract: |
+  Nous avons voulu nous intérésser aux collaborations des élèves de l'Université de Sherbrooke lors de travaux d'équipe pendant leur parcours 
+  dans le baccalauréat en biologie. 
+
+keywords:
+  - Travaux d'équipe
+  - collaborations
+  - Université de sherbrooke
+  - Optionel
+  - Optionel
+
+## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)
+pnas_type: pnasresearcharticle
+
+bibliography: pnas-sample.bib
+csl: pnas.csl
+
+## change to true to add optional line numbering
+lineno: false
+
+output: pdf_document
+---
+
 # Introduction
 
 
