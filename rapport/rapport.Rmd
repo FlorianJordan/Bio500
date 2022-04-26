@@ -58,9 +58,13 @@ Une fois la copilation des données réalisée par chaque équipe, celle-ci fut 
 
 Pour mieux illustrer les réponses au questions, plusieurs figures présenteront les liens entre les étudiants.
 
-La figure 1 représente les liens de collaborations entre les étudiants. Il est possible de voir les étudiants ayant eu plusieurs collaboration ensemble, car la ligne qui les relit est plus large. Les différentes couleurs représentent différent degré de collaboration. (code couleur). Les cercles de différentes grosseurs représentent aussi le nombre de collaborations.
-La figure 2 est ce même reseau, mais sans le cours de méthode analytique en bioologie (TSB303). Il est alors possible de visualiser l'effet de ce cours sur le reseau de collaborations de la 59e cohorte.
-La figure 3 
+La figure 1 représente le réseau de toutes les collaborations depuis le début du baccalauréat des étudiants du cours Méthode en écologie computationnelle (BIO500) à l’hiver 2022. La grandeur des cercles est graduée par le nombre collaboration de chaque élève, les cercles les plus petits correspondent à 1 collaboration tandis que les plus grands correspondent à XX collaborations.
+
+La figure 2 est le réseau des différentes collaborations des étudiants, mais sans le cours TSB303 qui semble avoir une grande influence sur le réseau.
+
+La figure 3 est le réseau des différentes collaborations depuis le début du baccalauréat des étudiants du cours Méthode en écologie computationnelle (BIO500) à l’hiver 2022 possédant trente collaborations et plus. La grandeur des cercles est graduée par le nombre collaboration de chaque élève, les cercles les plus petits correspondent à XX collaboration tandis que les plus grands correspondent à XX collaborations.
+
+Figure 4 : Réseau des différentes collaborations depuis le début du baccalauréat des étudiants du cours Méthode en écologie computationnelle (BIO500) à l’hiver 2022 avec les collaborations issues de TSB303 contrasté. La grandeur des cercles est graduée par le nombre collaboration de chaque élève, les cercles les plus petits correspondent à 1 collaboration tandis que les plus grands correspondent à XX collaborations.
 
 Fig. 1 : Réseau de collaborations des élèves de la 59e cohorte
 
