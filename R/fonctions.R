@@ -39,12 +39,8 @@ fonction_doublons_noeuds<-function(x){x<-x %>% arrange(rowSums(is.na(x)))
   x<-x[!duplicated(x$nom_prenom),]
   x}
 
-
-<<<<<<< HEAD
-fonction_creation_table<-function(noeuds,cours,collaborations){
-=======
 fonction_creation_table<-function(x,y,z){
->>>>>>> 9e1e3073552f3935bf4d9be28c180da4f2573d25
+
 
   con<-dbConnect(SQLite(),dbname="attributs.db")
   dbSendQuery(con,"DROP TABLE collaborations;")
@@ -87,18 +83,13 @@ CREATE TABLE collaborations (
   FOREIGN KEY (sigle) REFERENCES cours(sigle)
 );"
   dbSendQuery(con, tbl_collaborations)
-<<<<<<< HEAD
+
   
   dbWriteTable(con, append = TRUE, name = "noeuds", value = noeuds, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "cours", value = cours, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "collaborations", value = collaborations, row.names = FALSE)
   
-=======
-  dbWriteTable(con, append = TRUE, name = "noeuds", value = x, row.names = FALSE)
-  dbWriteTable(con, append = TRUE, name = "cours", value = y, row.names = FALSE)
-  dbWriteTable(con, append = TRUE, name = "collaborations", value = z, row.names = FALSE)
 
->>>>>>> 9e1e3073552f3935bf4d9be28c180da4f2573d25
   }
 
 graph_base<-function(x){
