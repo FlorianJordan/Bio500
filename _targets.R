@@ -4,6 +4,7 @@ tar_option_set(packages = c("RSQLite","igraph","dplyr"))
 
 source("R/fonctions.R")
 list(
+#Donnee noeud
   tar_target(noeuds_amelie,read.csv("data/noeuds_amelie.csv", sep=";")),
   tar_target(noeuds_anthonystp,read.table("data/noeuds_anthonystp .txt",header = T,sep=";")),
   tar_target(noeuds_cvl,read.csv("data/noeuds_cvl_jl_jl_mp_xs.csv", sep=";")),
@@ -13,7 +14,8 @@ list(
   tar_target(noeuds_martineau,read.table("data/noeuds_martineau.txt",header = T,sep=";")),
   tar_target(noeuds_alexis,read.table("data/etudiant_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")),
   tar_target(noeuds_ilmdph,read.table("data/etudiant_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")),
-  
+
+#Donnee cours
   tar_target(cours_amelie,read.csv("data/cours_amelie.csv", sep=";")),
   tar_target(cours_anthonystp,read.table("data/cours_anthonystp.txt",header = T,sep=";")),
   tar_target(cours_cvl,read.csv("data/cours_cvl_jl_jl_mp_xs.csv", sep=";")),
@@ -23,7 +25,9 @@ list(
   tar_target(cours_martineau,read.table("data/cours_martineau.txt",header = T,sep=";")),
   tar_target(cours_alexis,read.table("data/Cours_Alexis_Nadya_Edouard_Penelope.txt",header = T,sep="")),
   tar_target(cours_ilmdph,read.table("data/cours_IL_MDH_ASP_MB_OL.txt",header = T,sep=";")),
-  
+
+#Donnee collaborations
+
   tar_target(collaborations_amelie,read.csv("data/collaborations_amelie.csv", sep=";")),
   tar_target(collaborations_anthonystp,read.table("data/collaborations_anthonystp.txt",header = T, sep=";")),
   tar_target(collaborations_cvl,read.csv("data/collaborations_cvl_jl_jl_mp_xs.csv", sep=";")),
@@ -34,6 +38,8 @@ list(
   tar_target(collaborations_alexis,read.table("data/collaboration_Alexis_Nadya_Edouard_Penelope.txt",header = T, sep=";")),
   tar_target(collaborations_ilmdph,read.table("data/collaborations_IL_MDH_ASP_MB_OL.txt",header = T, sep=";")),
   
+#correction d'erreure
+
   tar_target(cours_amelie_corrige,fonction_cours_amelie(cours_amelie)),
   tar_target(cours_anthonystp_corrige,fonction_cours_anthonystp(cours_anthonystp)),
   tar_target(collaborations_ilmdph_corrige,fonction_collaborations_ilmdph(collaborations_ilmdph)),
@@ -51,10 +57,13 @@ list(
   tar_target(collaborations_amelie_corrige2,fonction_collaborations_amelie_col(collaborations_amelie_corrige)),
   tar_target(cours_amelie_corrige2,fonction_cours_amelie_col(cours_amelie_corrige)),
   
+# Merge des donnes
   tar_target(data_noeuds,bind_rows(noeuds_amelie_corrige,noeuds_anthonystp,noeuds_cvl_corrige,noeuds_dp,noeuds_fxc,noeuds_jbca,noeuds_martineau,noeuds_alexis,noeuds_ilmdph)),
   tar_target(data_cours,bind_rows(cours_amelie_corrige2,cours_anthonystp_corrige,cours_cvl_corrige,cours_dp,cours_fxc_corrige,cours_jbca,cours_martineau,cours_alexis,cours_ilmdph)),
   tar_target(data_collaborations,bind_rows(collaborations_amelie_corrige2,collaborations_anthonystp_corrige,collaborations_cvl_corrige,collaborations_dp_corrige2,collaborations_fxc,collaborations_jbca,collaborations_martineau_corrige,collaborations_alexis,collaborations_ilmdph_corrige)),
-  
+
+#Suppression des doublons
+
   tar_target(noeuds,fonction_doublons_noeuds(data_noeuds)),
   tar_target(cours,fonction_doublons_cours(data_cours)),
   tar_target(collaborations,fonction_doublons_collaborations(data_collaborations)),
