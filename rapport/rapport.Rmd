@@ -54,9 +54,6 @@ La classe de BIO500 de la session d'hiver 2022 s'est divisé en 9 (à valider) �
 Une fois la copilation des données réalisée par chaque équipe, celle-ci fut partagée et mise en commun. Maintenant indépendentes, les équipes avaient alors la tâche de fusionner l'ensemble des données ensemble afin de n'avoir que trois tables contenant l'ensemble des données de la classe. Au préalable, chaque équipe a dû standardiser les données de l'ensemble des équipes afin d'obtenir une unité structurelle au sein des différentes tables. Ces données ont été ensuite intégré dans le système de gestion de données SQLite3. Afin de répondre à la question posé, les données d'intérêts ont été extraites via des requêtes et finalement analysées.
 
 
-# Discussion  
-
-
 # Résultats  
 
 Pour mieux illustrer les réponses au questions, plusieurs figures présenteront les liens entre les étudiants.
@@ -71,7 +68,7 @@ Fig. 2 : Réseau de collaborations des élèves de la 59e cohorte sans le cours 
 
 Fig. 3 : 
 
-
+# Discussion  
 
 **Voici comment inclure une figure .pdf préalablement générée et la citer/référencer dans le texte, via son `label`: Figure \ref{fig:plot1}**. 
 
