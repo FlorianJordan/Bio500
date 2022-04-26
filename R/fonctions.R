@@ -1,4 +1,3 @@
-
 fonction_cours_cvl<-function(x){x<-rename(x,sigle=Sigle)
 x}
 fonction_cours_fxc<-function(x){x<-rename(x,credits=credit)
