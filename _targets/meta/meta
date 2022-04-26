@@ -84,10 +84,16 @@ cours_fxc_corrige|stem|f567f634297c6a58|b5d7a6ebb808c0af|492d09abae8edab4|131083
 cours_ilmdph|stem|ad3765998b1abd93|1cfce78efd913de8|5cb42b57398551be|1853381815||t19108.8435295621s|905688308fb113f7|351|rds|local|vector|||0.001||
 cours_jbca|stem|506900979cfebc8f|9d8b2a3b1eb98b6a|5cb42b57398551be|-352184404||t19108.8435245643s|9cbfb857ab8b4c55|423|rds|local|vector|||0.003||
 cours_martineau|stem|5942770e24f41d3a|1d4a54bfd93aab7b|5cb42b57398551be|1872116899||t19108.8435254021s|65b2697406fa85d2|331|rds|local|vector|||0.004||
-data_collaborations|stem|1b8b54191aaf4eaa|ca22fa60dfc161b9|e92c148a22986b93|1866430512||t19108.843531253s|0b2e6f2d1e73a81d|13079|rds|local|vector|||0.001||
-data_cours|stem|216c94c27bd22261|607e436e31ef074c|24b50d77a69b29e6|-1502492530||t19108.8435317787s|b518a3c2eda8e5a8|955|rds|local|vector|||0.001||
+data_collaborations|stem|1b8b54191aaf4eaa|ca22fa60dfc161b9|e92c148a22986b93|1866430512||t19108.85437395s|0b2e6f2d1e73a81d|13079|rds|local|vector|||0.545||
+data_cours|stem|216c94c27bd22261|607e436e31ef074c|24b50d77a69b29e6|-1502492530||t19108.8543743606s|b518a3c2eda8e5a8|955|rds|local|vector|||0.001||
 data_noeuds|stem|383273df0cf6f6a6|aa60119f8ad48ed1|b808171710c2c3cc|1611738916||t19108.8435307759s|0823a82b3ef0d784|3104|rds|local|vector|||0.003||
+<<<<<<< HEAD
 >>>>>>> 97333d4dcc9e1f2cc6b3d1949a741263d2c94a83
+=======
+fonction_bind_rows_collab|function|6ad7e6386897b8b9|||||||||||||||
+fonction_bind_rows_cours|function|9e6a50b9935c3f9c|||||||||||||||
+fonction_bind_rows_noeuds|function|ee24c3f3e563c884|||||||||||||||
+>>>>>>> d339cb0f9c710ff950e9a7d47ec2b7521be32369
 fonction_collaborations_amelie|function|b3d1f207a143d543|||||||||||||||
 fonction_collaborations_anthonystp|function|b3d1f207a143d543|||||||||||||||
 fonction_collaborations_cvl|function|b3d1f207a143d543|||||||||||||||
@@ -144,5 +150,9 @@ noeuds_fxc|stem|8e32d6c471479f0f|ca8728e2cdb5ea73|5cb42b57398551be|-1128926334||
 noeuds_ilmdph|stem|414f72296cadce6a|25cfd296995230a3|5cb42b57398551be|-1619762433||t19108.84352741s|7687bb011feaab9b|808|rds|local|vector|||0.011||
 noeuds_jbca|stem|5994f06a557f4052|8e042a2169b68cc4|5cb42b57398551be|292470834||t19108.843529173s|20798277a5bbdf65|499|rds|local|vector|||0.002||
 noeuds_martineau|stem|05634e9ccf333a92|75c3bb6b02ee0a0b|5cb42b57398551be|-1761149643||t19108.8435292727s|8c95d42e0607dc07|553|rds|local|vector|||0.001||
+<<<<<<< HEAD
 requete_tsb303|stem||aa10e2e2ca44b82d|5a2b6335fffc8bbc|1370387128||t19108.8435339889s||0|rds|local|vector|||0.669||no such table collaborations
 >>>>>>> 97333d4dcc9e1f2cc6b3d1949a741263d2c94a83
+=======
+requete_tsb303|stem||33b15ab69d4eedaa|840bc809b7e09cab|1370387128||t19108.8435339889s||0|rds|local|vector|||0.188||no such table collaborations
+>>>>>>> d339cb0f9c710ff950e9a7d47ec2b7521be32369
