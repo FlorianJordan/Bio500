@@ -24,10 +24,9 @@ abstract: |
   dans le baccalauréat en biologie. 
 
 keywords:
-  - Travaux d'équipe
   - collaborations
-  - Université de sherbrooke
-  - Optionel
+  - Réseau écologique
+  - Travaux d'équipe
   - Optionel
 
 ## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)
