@@ -117,12 +117,6 @@ dbSendQuery(con,"DROP TABLE noeuds;")
 dbSendQuery(con,"DROP TABLE cours;")
 
 #### Creation des tables SQL ####  
-#tar_target(drop_collaborations,fonction_drop_collaborations),
-#tar_target(drop_noeuds,fonction_drop_noeuds),
-#tar_target(drop_cours,fonction_drop_cours),
-
-#tar_target(tbl_noeuds,fonction_creation_table_noeud),
-#tar_target(ajout_noeud,fonction_ajout_noeud)
 
 tbl_noeuds <- "
 CREATE TABLE noeuds (
@@ -195,8 +189,18 @@ var(liens$liens)
 m_adj<-table(collaborations$etudiant1,collaborations$etudiant2)
 m_adj
 
+deg<-apply(m_adj, 2, sum) + apply(m_adj, 1, sum)
+rk<-rank(deg)
+col.vec<-rev(heat.colors(nrow(m_adj)))
 adj<-graph.adjacency(m_adj)
-plot(adj,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+V(adj)$color = col.vec[rk]
+col.vec<-seq(10, 70, length.out = nrow(m_adj))
+V(adj)$size = col.vec[rk]
+adj2<-simplify(adj)
+E(adj2)$weight = sapply(E(adj2), function(e) { 
+  length(all_shortest_paths(adj, from=ends(adj2, e)[1], to=ends(adj2, e)[2])$res) } )
+
+plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), edge.width=E(adj2)$weight*0.5, asp=0.9)
 
 #### Enlever TSB303 ####
 
@@ -204,12 +208,76 @@ sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
 "
+
 collab_nontsb<-dbGetQuery(con,sql_requete3)
 
+sql_requete_liens <- "
+SELECT etudiant1 as etudiant, count(etudiant2) as liens
+FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
+GROUP BY etudiant
+ORDER BY liens
+"
+liens_nontsb <- dbGetQuery(con,sql_requete_liens)
+liens_nontsb
+
+sql_requete_tsb <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations WHERE sigle LIKE '%TSB303%'
+"
+
+collab_tsb<-dbGetQuery(con,sql_requete_tsb)
+
+sql_requete_prog <- "
+SELECT nom_prenom,programme
+FROM noeuds
+"
+
+prog<-dbGetQuery(con,sql_requete_prog)
+col<-data.frame(programme=unique(prog$programme),color=c("green","yellow","yellow","yellow","yellow","yellow","yellow","yellow"))
+prog$color<-col$color[match(prog$programme, col$programme)]
+
 m_adj_nontsb<-table(collab_nontsb$etudiant1,collab_nontsb$etudiant2)
+m_adj_tsb<-table(collab_tsb$etudiant1,collab_tsb$etudiant2)
 
 adj_nontsb<-graph.adjacency(m_adj_nontsb)
-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+adj_tsb<-graph.adjacency(m_adj_tsb)
+
+V(adj_nontsb)$color = prog$color
+V(adj_nontsb)$size = 50
+vertex_attr(adj_nontsb)
+adj_nontsb<-simplify(adj_nontsb)
+
+graph_nontsb<-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
+
+V(adj_tsb)$color = prog$color
+vertex_attr(adj_tsb)
+V(adj_tsb)$size = 50
+adj_tsb<-simplify(adj_tsb)
+E(adj_tsb)$color = "black"
+
+graph_tsb<-plot(adj_tsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_tsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), edge.width = 2)
+
+adj3<-graph.adjacency(m_adj)
+V(adj3)$color = prog$color
+V(adj3)$size = 50
+adj3<-simplify(adj3)
+
+edge_tsb<-as.data.frame(get.edgelist(adj_tsb))
+edge_tsb$color<- "black"
+edge_tsb$width<-2
+
+edge_nontsb<-as.data.frame(get.edgelist(adj_nontsb))
+edge_nontsb$color<- "gray"
+edge_nontsb$width<-1
+edge_tot<-as.data.frame(get.edgelist(adj3))
+edge_tot<-bind_rows(edge_nontsb,edge_tsb)
+edge_tot<-edge_tot %>% distinct(V1, V2, .keep_all = TRUE)
+
+E(adj3)$color = edge_tot$color
+E(adj3)$width = edge_tot$width
+edge_attr(adj3)
+
+plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
 
 #### plus de 30 collabs ####
 
@@ -222,17 +290,28 @@ collabs30<-dbGetQuery(con,sql_requete4)
 
 m_adj_30<-table(collabs30$etudiant1,collabs30$etudiant2)
 
+deg_30<-apply(m_adj_30, 2, sum) + apply(m_adj_30, 1, sum)
+rk_30<-rank(deg_30)
+col.vec_30<-rev(topo.colors(nrow(m_adj_30)))
 adj_30<-graph.adjacency(m_adj_30)
-plot(adj_30,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+V(adj_30)$color = col.vec_30[rk_30]
+col.vec_30<-seq(30, 50, length.out = nrow(m_adj_30))
+V(adj_30)$size = col.vec_30[rk_30]
+V(adj_30)$label.cex = 0.6
+adj_30_2<-simplify(adj_30)
+E(adj_30_2)$weight = sapply(E(adj_30_2), function(e) { 
+  length(all_shortest_paths(adj_30, from=ends(adj_30_2, e)[1], to=ends(adj_30_2, e)[2])$res) } )
+
+plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-4,4), xlim=c(-4,4), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
 
 #### nombre de collabs différentes ####
-
+dbSendQuery(con,"DROP TABLE collaborations_dif;")
 sql_requete5 <- "
 CREATE TABLE collaborations_dif AS 
   SELECT DISTINCT etudiant1,etudiant2
   FROM collaborations
 "
-dbSendQuery(con,"DROP TABLE collaborations_dif;")
+
 dbExecute(con,sql_requete5)
 dbListTables(con)
 
@@ -374,11 +453,9 @@ collab_eco<-collab_eco[collab_eco$programme2=="ecologie",]
 m_adj_eco<-table(collab_eco$etudiant1,collab_eco$etudiant2)
 
 adj_eco<-graph.adjacency(m_adj_eco)
-plot(adj_eco,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA)
+plot(adj_eco,vertex.label = NA, edge.arrow.mode = 0,vertex.frame.color = NA, layout=layout.kamada.kawai(adj_eco))
 
 
-
-tar_make()
 
 
 
