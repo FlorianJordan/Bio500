@@ -39,7 +39,7 @@ fonction_doublons_noeuds<-function(x){x<-x %>% arrange(rowSums(is.na(x)))
   x<-x[!duplicated(x$nom_prenom),]
   x}
 
-fonction_creation_table<-function(x,y,z){
+fonction_creation_table<-function(noeuds,cours,collaborations){
 
 
   con<-dbConnect(SQLite(),dbname="attributs.db")
