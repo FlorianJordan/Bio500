@@ -41,26 +41,28 @@ lineno: false
 output: rticles::pnas_article
 ---
 
-## Introduction
+## Introduction  
 
 On entend souvent l'expression « ah que le monde est petit ! » lorsque deux personnes se retrouvent à avoir une connexion qu'on ne suspectait pas. Certaines études se sont intéressées à ce principe que par un lien relativement proche, tout le monde se connait à un certain niveau. Milgram (1967) s'est penché sur le sujet et à testé cette hypothèse que deux personnes pigées au hasard vont avoir un lien quelconque 
 entre eux [@milgram1967small]. Ce principe peut s'appliquer à l'écologie, car d'un point de vu de l'évolution, toutes les espèces sont reliées par un ancêtre commun et pour étudier les réseaux trophiques [@montoya2002small]. Ce modèle de « petit monde » peut donc s'appliquer à grande et petite échelle. Nous avons voulu tester cette théorie à très petite échelle dans le baccalauréat de la 59e cohorte d'écologie de l'Université de Sherbrooke. Nous nous sommes donc posés la question si le réseau de collaborations entre les étudiants du bacc en écologie a les mêmes propriétés que les réseaux écologiques. Plus spécifiquement, nous avons étudiés si les élèves en tendances à conserver les mêmes collaborateurs dans tous les travaux ou s'ils avaient plus tendance à diversifier leurs partenaires. En effet, il est intéressant de voir si les étudiants ont plusieurs groupe d'amis ou si au cours du baccalauréat, ils sont restés toujours avec les mêmes personnes. Nous avons aussi vérifier si le cours de méthode méthode analytique en biologie (TSB303) a eu beaucoup d'effet dans le réseaux de collaboration, puisque dans ce cours, les travaux étaient en équipe de 15. On peut donc s'imaginer qu'à lui seul, ce cours ajoute beaucoup de collaborations entre les étudiants. Pour aider à visulaliser le tout, le première figure va détailler toutes les colaborations entre tous les individus de la cohorte, puis plus spécifiquement ne figure qui démontre uniquements les liens de plus de X collaborations et ensuite cette même figure, mais en excluant le cours TSB303.
 
-## Méthode
+## Méthode  
 
 La classe de BIO500 de la session d'hiver 2022 s'est divisé en 9 (à valider) équipes. Chaque élève de ses équipes a copilé l'ensemble des cours réaliser lors de leur baccalauréat ainsi que les informations considérées pertinentes reliées à ces cours dans une première table commune à l'équipe. Ils ont également copilé dans une seconde table le nom de chaque coéquipier, l'année de début de leur baccalauréat, le nom de leur programme ainsi que les informations considérées pertinentes reliées à chaque individu de l'équipe. Ils ont terminé la copilation des données par une troisième table. Au sein de cette dernière table, se trouve l'ensemble des collaborations, c'est-à-dire l'ensemble des noms avec qui chaque élève a réalisé des travaux d'équipe jusqu'à présent lors de leur baccalauréat. 
 
 Une fois la copilation des données réalisée par chaque équipe, celle-ci fut partagée et mise en commun. Maintenant indépendentes, les équipes avaient alors la tâche de fusionner l'ensemble des données ensemble afin de n'avoir que trois tables contenant l'ensemble des données de la classe. Au préalable, chaque équipe a dû standardiser les données de l'ensemble des équipes afin d'obtenir une unité structurelle au sein des différentes tables. Ces données ont été ensuite intégré dans le système de gestion de données SQLite3. Afin de répondre à la question posé, les données d'intérêts ont été extraites via des requêtes et finalement analysées.
 
 
-## Discussion
+## Discussion  
 
 
-### Résultats
+### Résultats  
 
 Pour mieux illustrer les réponses au questions, plusieurs figures présenteront les liens entre les étudiants.
 
-La figure 1 représente les liens de collaborations entre les étudiants. Il est possible de voir les étudiants ayant eu plusieurs collaboration ensemble, car la ligne qui les relit est plus large. Les différentes couleurs représentent différent degré de collaboration. (code couleur). 
+La figure 1 représente les liens de collaborations entre les étudiants. Il est possible de voir les étudiants ayant eu plusieurs collaboration ensemble, car la ligne qui les relit est plus large. Les différentes couleurs représentent différent degré de collaboration. (code couleur). Les cercles de différentes grosseurs représentent aussi le nombre de collaborations.
+La figure 2 est ce même reseau, mais sans le cours de méthode analytique en bioologie (TSB303). Il est alors possible de visualiser l'effet de ce cours sur le reseau de collaborations de la 59e cohorte.
+La figure 3 
 
 Fig. 1 : Réseau de collaborations des élèves de la 59e cohorte
 
@@ -73,7 +75,7 @@ Fig. 3 :
 **Voici comment inclure une figure .pdf préalablement générée et la citer/référencer dans le texte, via son `label`: Figure \ref{fig:plot1}**. 
 
 
-## Conclusion
+## Conclusion  
 
 
 
