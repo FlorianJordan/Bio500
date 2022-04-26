@@ -106,7 +106,7 @@ x
 }
 
 
-fonction_requete_tsb303<-function(con,collaborations){
+fonction_requete_tsb303<-function(collaborations){
   con<-dbConnect(SQLite(),dbname="attributs.db")
 sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
