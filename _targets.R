@@ -64,7 +64,3 @@ list(
   tar_target(requete_tsb303,fonction_requete_tsb303(collaborations))
 
 )
-
-
-
-
