@@ -55,9 +55,12 @@ list(
   tar_target(noeuds,fonction_data_noeuds(data_noeuds)),
   tar_target(cours,fonction_data_cours(data_cours)),
   tar_target(collaborations,fonction_data_collab(data_collaborations)),
-  
+
+#Creation de tables  
   tar_target(tables,fonction_creation_table(noeuds, cours, collaborations)),
+#Creation figure1
   tar_target(graphique_base,graph_base(collaborations)),
+#Creation figure 2,3,4
   tar_target(requete_tsb303,fonction_requete_tsb303(collaborations))
 
 )
