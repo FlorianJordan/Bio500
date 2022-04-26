@@ -66,11 +66,13 @@ La figure 3 est le réseau des différentes collaborations depuis le début du b
 
 Notre dernière figure, la quatrième, représente le réseau des différentes collaborations avec les collaborations issues de TSB303 contrasté. La grandeur des cercles est graduée par le nombre collaboration de chaque élève, les cercles les plus petits correspondent à 1 collaboration tandis que les plus grands correspondent à XX collaborations.
 
-Fig. 1 : Réseau de collaborations des élèves de la 59e cohorte
+Fig. 1 : Réseau de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022
 
-Fig. 2 : Réseau de collaborations des élèves de la 59e cohorte sans le cours TSB303
+Fig. 2 : Les différentes collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022
 
-Fig. 3 : 
+Fig. 3 : Réseau de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 qui ont plus de 30 collaborations
+
+Fig. 4 : Réseau de collaborations des élèves de la 59e cohorte de l'auotmne 2019 à l'hiver 2022 sans le cours TSB303
 
 # Discussion  
 
