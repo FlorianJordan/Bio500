@@ -35,9 +35,9 @@ fonction_collaborations_dp<-function(x){x<-rename(x,sigle=cours)
 fonction_collaborations_martineau<-function(x){x<-rename(x,sigle=cours)
   x}
 
-fonction_creation_table<-function(noeuds,cours,collaborations){
+fonction_creation_table<-function(con,noeuds,cours,collaborations){
 
-  con<-dbConnect(SQLite(),dbname="attributs.db")
+
   dbSendQuery(con,"DROP TABLE collaborations;")
   dbSendQuery(con,"DROP TABLE noeuds;")
   dbSendQuery(con,"DROP TABLE cours;")
@@ -106,8 +106,8 @@ x
 }
 
 
-fonction_requete_tsb303<-function(x){
-con<-dbConnect(SQLite(),dbname="attributs.db")
+fonction_requete_tsb303<-function(con,collaborations){
+
 sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
@@ -186,4 +186,4 @@ E(adj3)$width = edge_tot$width
 edge_attr(adj3)
 pdf(file = "results/figure4.pdf")
 plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj3), rescale=FALSE, ylim=c(-2,2), xlim=c(-5,12), asp=0.9)
-x}
+}
