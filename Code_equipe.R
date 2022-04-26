@@ -303,6 +303,7 @@ adj_30_2<-simplify(adj_30)
 E(adj_30_2)$weight = sapply(E(adj_30_2), function(e) { 
   length(all_shortest_paths(adj_30, from=ends(adj_30_2, e)[1], to=ends(adj_30_2, e)[2])$res) } )
 
+par(mfrow=c(1,1))
 plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-4,4), xlim=c(-4,4), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
 
 #### nombre de collabs différentes ####
@@ -344,14 +345,24 @@ ORDER BY liens_dif
 liens_dif <- dbGetQuery(con,sql_requete6)
 liens_dif
 
+mean(liens_dif$liens_dif)
+
 sql_requete6_1 <- "
 SELECT etudiant1 as etudiant, count(etudiant2) as liens_dif
 FROM collaborations_nontsb_dif
 GROUP BY etudiant
 ORDER BY liens_dif
 "
-liens_nontsb_dif <- dbGetQuery(con,sql_requete6)
+liens_nontsb_dif <- dbGetQuery(con,sql_requete6_1)
 liens_nontsb_dif
+
+mean(liens_nontsb_dif$liens_dif)
+
+par(mfrow=c(2,2))
+hist(liens$liens, xlab = "Collaborations par étudiant", ylab = "Fréquence", main = "a)")
+hist(liens_dif$liens_dif, xlab = "Collaborations différentes par étudiant", ylab = "Fréquence", main = "b)")
+hist(liens_nontsb$liens, xlab = "Collaborations par étudiant (sans TSB303)", ylab = "Fréquence", main = "c)")
+hist(liens_nontsb_dif$liens_dif, xlab = "Collaborations différentes par étudiant (sans TSB303)", ylab = "Fréquence", main = "d)")
 
 sql_requete7 <- "
 SELECT etudiant1, etudiant2
