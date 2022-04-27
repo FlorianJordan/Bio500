@@ -31,7 +31,7 @@ fonction_noeuds_amelie<-function(x){
 
 colnames(x)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
 x}
-colnames(noeuds_amelie)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
+
 fonction_collaborations_amelie<-function(x){
   colnames(x)<-c("etudiant1","etudiant2","sigle","date")
   x}
