@@ -152,7 +152,7 @@ V(adj_nontsb)$size = 50
 vertex_attr(adj_nontsb)
 adj_nontsb<-simplify(adj_nontsb)
 pdf(file = "results/figure2.pdf")
-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-2,2), xlim=c(-5,12), asp=0.9)
+plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-3,2), xlim=c(-5,12), asp=0.9)
 
 V(adj_tsb)$color = prog$color
 vertex_attr(adj_tsb)
@@ -160,7 +160,7 @@ V(adj_tsb)$size = 50
 adj_tsb<-simplify(adj_tsb)
 E(adj_tsb)$color = "black"
 pdf(file = "results/figure3.pdf")
-plot(adj_tsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_tsb), rescale=FALSE, ylim=c(-11,2), xlim=c(-10,9), edge.width = 2)
+plot(adj_tsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_tsb), rescale=FALSE, ylim=c(-10,2), xlim=c(-10,9), edge.width = 2)
 
 
 m_adj<-table(collaborations$etudiant1,collaborations$etudiant2)
@@ -185,7 +185,7 @@ E(adj3)$color = edge_tot$color
 E(adj3)$width = edge_tot$width
 edge_attr(adj3)
 pdf(file = "results/figure4.pdf")
-plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj3), rescale=FALSE, ylim=c(-2,2), xlim=c(-5,12), asp=0.9)
+plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj3), rescale=FALSE, ylim=c(-3,2), xlim=c(-5,12), asp=0.9)
 
 con
 dbDisconnect(con)
