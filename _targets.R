@@ -1,4 +1,5 @@
 library(targets)
+library(tarchetypes)
 
 tar_option_set(packages = c("RSQLite","igraph","dplyr"))
 
@@ -78,6 +79,9 @@ list(
   tar_target(requete_reseau,fonction_requete_reseau()),
   
   #Creation figure 4
-  tar_target(requete_hist,fonction_requete_hist())
+  tar_target(requete_hist,fonction_requete_hist()),
+  
+  #Creation Markdown
+  tar_render(rapport,"rapport/rapport.Rmd" )
 
 )
