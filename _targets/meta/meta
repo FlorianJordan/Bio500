@@ -10,7 +10,7 @@ collaborations_cvl_corrige|stem|5884175f9c4fbf14|7602f2d1177cb24d|73759ab08e7034
 collaborations_dp|stem|8e105e28bcd61136|2b0591d5ba261933|cfcaebb9b7cad818|1848598549||t19109.0914229856s|e8195c5e7d8a1239|1650|rds|local|vector|||0.006||
 collaborations_dp_col|stem|f649ce6f529b02a2|a1d207fbacb07ede|fbbdde7b320d4ab3|944567893||t19109.1026822015s|a3f619e2e84c61d5|1627|rds|local|vector|||0.001||
 collaborations_dp_corrige|stem|cdd470d94cd26492|d4b14275f87f1343|03d7191f030f2b01|2078211545||t19109.1026844927s|153dd634347d8de3|1626|rds|local|vector|||0.025||
-collaborations_fxc|stem|c6f16cd5863b628d|f294e8a5fba8d2c9|5cb42b57398551be|-534589358||t19109.0914178833s|af3c8df1178dfb66|1164|rds|local|vector|||0.606||
+collaborations_fxc|stem|396d98fdddc881b9|db6927621db1bc1a|5cb42b57398551be|-534589358||t19109.121922126s|09f4038811cf35c8|924|rds|local|vector|||0.643||
 collaborations_ilmdph|stem|71f3d6c711898638|6f9a6737c29cd606|5cb42b57398551be|-1315368931||t19109.0914209477s|809f76b9a30d84a1|1565|rds|local|vector|||0.006||
 collaborations_ilmdph_col|stem|32f2be9be6bc2cf6|c24a189d92641c96|4b6757fc5f9ec7bd|-450371712||t19109.1026826277s|7977ff70884e1c25|1541|rds|local|vector|||0.001||
 collaborations_jbca|stem|fb2f70e6687c1eec|c4adb83f587a31b3|5cb42b57398551be|-1406093207||t19109.0914289541s|ab73801c5fe014aa|966|rds|local|vector|||0.003||
@@ -71,5 +71,5 @@ noeuds_fxc|stem|8e32d6c471479f0f|ca8728e2cdb5ea73|5cb42b57398551be|-1128926334||
 noeuds_ilmdph|stem|414f72296cadce6a|25cfd296995230a3|5cb42b57398551be|-1619762433||t19109.0914222883s|7687bb011feaab9b|808|rds|local|vector|||0.003||
 noeuds_jbca|stem|5994f06a557f4052|8e042a2169b68cc4|5cb42b57398551be|292470834||t19109.0914245301s|20798277a5bbdf65|499|rds|local|vector|||0.005||
 noeuds_martineau|stem|05634e9ccf333a92|75c3bb6b02ee0a0b|5cb42b57398551be|-1761149643||t19109.0914281895s|8c95d42e0607dc07|553|rds|local|vector|||0.006||
-requete_tsb303|stem|c8a2d92de4e03327|aa10e2e2ca44b82d|5bd355053d67cc59|1370387128||t19109.0556415337s||312|rds|local|vector|||0.861||no such table collaborations
+requete_tsb303|stem|c8a2d92de4e03327|aa10e2e2ca44b82d|5bd355053d67cc59|1370387128||t19109.0556415337s||312|rds|local|vector|||0.151||no such table collaborations
 tables|stem||a751c1a8844a5108|d9404ba6e0e3fc7a|397746313||t19109.0556669047s||0|rds|local|vector|||0.081||no such table collaborations
