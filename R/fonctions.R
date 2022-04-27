@@ -34,8 +34,10 @@ fonction_collaborations_dp<-function(x){x<-rename(x,sigle=cours)
   x}
 fonction_collaborations_martineau<-function(x){x<-rename(x,sigle=cours)
   x}
-
-fonction_creation_table<-function(noeuds,cours,collaborations){
+function_connection_SQL <- function() {
+  con <- dbConnect(SQLite(), dbname = "attributs.db")
+}
+fonction_creation_table<-function(con,noeuds,cours,collaborations){
 
   con<-dbConnect(SQLite(),dbname="attributs.db")
   dbSendQuery(con,"DROP TABLE collaborations;")
