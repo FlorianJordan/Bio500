@@ -79,7 +79,7 @@ function_connection_SQL <- function() {
 }
 fonction_creation_table<-function(noeuds, cours, collaborations){
   
-  dbConnect(SQLite(), dbname = "attributs.db")
+  con<-dbConnect(SQLite(), dbname = "attributs.db")
   dbSendQuery(con,"DROP TABLE collaborations;")
   dbSendQuery(con,"DROP TABLE noeuds;")
   dbSendQuery(con,"DROP TABLE cours;")
