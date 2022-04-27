@@ -59,10 +59,11 @@ fonction_data_cours<-function(x){
   x}
 
 fonction_data_collab<-function(x){
+  x<-distinct(x)
   colnames(x)<-c("etudiant1","etudiant2","sigle","date")
-  x[5] <- NULL 
-
-  x}
+  x<-x[,-5]
+  x
+  }
 fonction_data_collab_colone<-function(x){
  
   x<-x[,-c(5:6)]
