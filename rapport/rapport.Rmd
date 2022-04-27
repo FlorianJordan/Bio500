@@ -1,5 +1,5 @@
 ---
-title: Rapport
+title: Diversité des collaborations des élèves de la 59e cohorte d'écologie de (université de Sherbooke)
 
 # Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
 author:
