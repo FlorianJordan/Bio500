@@ -220,6 +220,8 @@ ORDER BY liens
 liens_nontsb <- dbGetQuery(con,sql_requete_liens)
 liens_nontsb
 
+mean(liens_nontsb$liens)
+
 sql_requete_tsb <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle LIKE '%TSB303%'
@@ -324,6 +326,7 @@ CREATE TABLE collaborations_nontsb AS
   SELECT etudiant1,etudiant2,sigle,date
   FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
 "
+
 dbExecute(con,sql_requete5_1)
 dbListTables(con)
 
@@ -333,14 +336,15 @@ CREATE TABLE collaborations_nontsb_dif AS
   SELECT DISTINCT etudiant1,etudiant2
   FROM collaborations_nontsb
 "
+
 dbExecute(con,sql_requete5_2)
 dbListTables(con)
 
 sql_requete6 <- "
 SELECT etudiant1 as etudiant, count(etudiant2) as liens_dif
-FROM collaborations_dif
-GROUP BY etudiant
-ORDER BY liens_dif
+  FROM collaborations_dif
+  GROUP BY etudiant
+  ORDER BY liens_dif
 "
 liens_dif <- dbGetQuery(con,sql_requete6)
 liens_dif
@@ -349,10 +353,11 @@ mean(liens_dif$liens_dif)
 
 sql_requete6_1 <- "
 SELECT etudiant1 as etudiant, count(etudiant2) as liens_dif
-FROM collaborations_nontsb_dif
-GROUP BY etudiant
-ORDER BY liens_dif
+  FROM collaborations_nontsb_dif
+  GROUP BY etudiant
+  ORDER BY liens_dif
 "
+
 liens_nontsb_dif <- dbGetQuery(con,sql_requete6_1)
 liens_nontsb_dif
 
@@ -368,7 +373,6 @@ sql_requete7 <- "
 SELECT etudiant1, etudiant2
 FROM collaborations_dif
 "
-
 collabs_dif<-dbGetQuery(con,sql_requete7)
 
 m_adj_dif<-table(collabs_dif$etudiant1,collabs_dif$etudiant2)
