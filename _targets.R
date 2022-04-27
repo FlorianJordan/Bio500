@@ -74,12 +74,7 @@ list(
 
   tar_target(graphique_base,graph_base(collaborations)),
   
-<<<<<<< HEAD
   #Creation figure 2,3
   tar_target(requete_reseau,fonction_requete_reseau())
-=======
-  #Creation figure 2,3,4,5
-  tar_target(requete_tsb303,fonction_requete_tsb303(con,tables))
->>>>>>> d64ddf429833a7e80718867ebdf4bd620956a9d5
 
 )
