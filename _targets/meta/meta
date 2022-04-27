@@ -37,7 +37,7 @@ fonction_collaborations_dp|function|b3d1f207a143d543|||||||||||||||
 fonction_collaborations_martineau|function|b3d1f207a143d543|||||||||||||||
 fonction_cours_cvl|function|02e3a474c191ef4c|||||||||||||||
 fonction_cours_fxc|function|2412308ff6ff99cb|||||||||||||||
-fonction_creation_table|function|0e02e18f1e602a30|||||||||||||||
+fonction_creation_table|function|32f9c193c2863eee|||||||||||||||
 fonction_data_collab|function|1089be8247303abc|||||||||||||||
 fonction_data_cours|function|a9738a224fe861da|||||||||||||||
 fonction_data_noeuds|function|8cff30a1ab032cb1|||||||||||||||
@@ -56,4 +56,4 @@ noeuds_ilmdph|stem|414f72296cadce6a|25cfd296995230a3|5cb42b57398551be|-161976243
 noeuds_jbca|stem|5994f06a557f4052|8e042a2169b68cc4|5cb42b57398551be|292470834||t19109.0556460298s|20798277a5bbdf65|499|rds|local|vector|||0.002||
 noeuds_martineau|stem|05634e9ccf333a92|75c3bb6b02ee0a0b|5cb42b57398551be|-1761149643||t19109.0556455315s|8c95d42e0607dc07|553|rds|local|vector|||0.001||
 requete_tsb303|stem|c8a2d92de4e03327|aa10e2e2ca44b82d|5bd355053d67cc59|1370387128||t19109.0556415337s|801cade07abe9db2|312|rds|local|vector|||1.862|le nombre dobjets à remplacer nest pas multiple de la taille du remplacement. le nombre dobjets à remplacer nest pas multiple de la taille du remplacement. le nombre dobjets à remplacer nest pas multiple de la taille du remplacement|
-tables|stem||a751c1a8844a5108|54012c780fb52f54|397746313||t19109.0556669047s||0|rds|local|vector|||0.006||unable to find an inherited method for function dbSendQuery for signature data.frame, character
+tables|stem||a751c1a8844a5108|455a62c19727ebee|397746313||t19109.0556669047s||0|rds|local|vector|||1.106|Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows|Columns sigle, credits, obligatoire, laboratoire, libre not found
