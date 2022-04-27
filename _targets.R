@@ -58,7 +58,7 @@ list(
   tar_target(collaborations,fonction_data_collab(data_collaborations)),
   
   #Creation de tables  
-  tar_target(connection,function_connection_SQL()),
+  tar_target(con,function_connection_SQL()),
   tar_target(tables,fonction_creation_table(noeuds, cours, collaborations)),
   #Creation figure1
   tar_target(graphique_base,graph_base(collaborations)),
