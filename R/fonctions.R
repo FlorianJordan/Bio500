@@ -63,24 +63,13 @@ fonction_data_collab<-function(x){
   colnames(x)<-c("etudiant1","etudiant2","sigle","date")
   x<-x[,-5]
   x
-  }
-fonction_data_collab_colone<-function(x){
- 
-  x<-x[,-c(5:6)]
-  x}
-fonction_data_collab_cor<-function(x){
-  
-  x<-x[,-5]
-  x}
+}
+
 ####tables de base sql####
 
-function_connection_SQL <- function() {
-  con <- dbConnect(SQLite(), dbname = "attributs.db")
-}
 fonction_creation_table<-function(con,noeuds, cours, collaborations){
 
   con<-dbConnect(SQLite(), dbname = "attributs.db")
-
 
   tbl_noeuds <- "
 CREATE TABLE noeuds (
@@ -146,11 +135,12 @@ plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(ad
 x
 }
 
-####fonction reseau####
+####fonction reseaux####
 
 fonction_requete_reseau<-function(){
 
-  con<-dbConnect(SQLite(),dbname="attributs.db")
+con<-dbConnect(SQLite(),dbname="attributs.db")
+
 sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
@@ -229,7 +219,8 @@ edge_attr(adj3)
 
 plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj3), rescale=FALSE, ylim=c(-6,6), xlim=c(-4,10), asp=0.9)
 
-#### Figure 30collab et +
+#### Figure 30 collabs et + ####
+
 sql_requete <- "
 SELECT etudiant1 as etudiant, count(etudiant2) as liens
 FROM collaborations
@@ -267,3 +258,77 @@ con
 
 }
 
+####fonction histogrammes####
+
+fonction_requete_hist<-function(){
+
+con<-dbConnect(SQLite(),dbname="attributs.db")
+
+sql_requete <- "
+SELECT etudiant1 as etudiant, count(etudiant2) as liens
+FROM collaborations
+GROUP BY etudiant
+ORDER BY liens
+"
+liens <- dbGetQuery(con,sql_requete)
+
+sql_requete_liens <- "
+SELECT etudiant1 as etudiant, count(etudiant2) as liens
+FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
+GROUP BY etudiant
+ORDER BY liens
+"
+liens_nontsb <- dbGetQuery(con,sql_requete_liens)
+
+sql_requete5 <- "
+CREATE TABLE collaborations_dif AS 
+  SELECT DISTINCT etudiant1,etudiant2
+  FROM collaborations
+"
+
+dbExecute(con,sql_requete5)
+
+sql_requete5_1 <- "
+CREATE TABLE collaborations_nontsb AS 
+  SELECT etudiant1,etudiant2,sigle,date
+  FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
+"
+
+dbExecute(con,sql_requete5_1)
+
+sql_requete5_2 <- "
+CREATE TABLE collaborations_nontsb_dif AS 
+  SELECT DISTINCT etudiant1,etudiant2
+  FROM collaborations_nontsb
+"
+dbExecute(con,sql_requete5_2)
+
+sql_requete6 <- "
+SELECT etudiant1 as etudiant, count(etudiant2) as liens_dif
+  FROM collaborations_dif
+  GROUP BY etudiant
+  ORDER BY liens_dif
+"
+liens_dif <- dbGetQuery(con,sql_requete6)
+
+sql_requete6_1 <- "
+SELECT etudiant1 as etudiant, count(etudiant2) as liens_dif
+  FROM collaborations_nontsb_dif
+  GROUP BY etudiant
+  ORDER BY liens_dif
+"
+
+liens_nontsb_dif <- dbGetQuery(con,sql_requete6_1)
+
+pdf(file = "results/figure4.pdf")
+par(mfrow=c(2,2))
+hist(liens$liens, xlab = "Collaborations par etudiant", ylab = "Nombre d'etudiants", main = "a)")
+hist(liens_dif$liens_dif, xlab = "Collaborations differentes 
+     par etudiant", ylab = "Nombre d'etudiants", main = "b)")
+hist(liens_nontsb$liens, xlab = "Collaborations par etudiant (sans TSB303)", ylab = "Nombre d'etudiants", main = "c)")
+hist(liens_nontsb_dif$liens_dif, xlab = "Collaborations differentes 
+     par etudiant (sans TSB303)", ylab = "Nombre d'etudiants", main = "d)")
+
+con
+
+}

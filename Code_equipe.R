@@ -311,6 +311,9 @@ plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=
 #### nombre de collabs différentes ####
 
 dbSendQuery(con,"DROP TABLE collaborations_dif;")
+dbSendQuery(con,"DROP TABLE collaborations_nontsb_dif;")
+dbSendQuery(con,"DROP TABLE collaborations_nontsb;")
+
 sql_requete5 <- "
 CREATE TABLE collaborations_dif AS 
   SELECT DISTINCT etudiant1,etudiant2
@@ -320,7 +323,7 @@ CREATE TABLE collaborations_dif AS
 dbExecute(con,sql_requete5)
 dbListTables(con)
 
-dbSendQuery(con,"DROP TABLE collaborations_nontsb;")
+
 sql_requete5_1 <- "
 CREATE TABLE collaborations_nontsb AS 
   SELECT etudiant1,etudiant2,sigle,date
@@ -330,7 +333,7 @@ CREATE TABLE collaborations_nontsb AS
 dbExecute(con,sql_requete5_1)
 dbListTables(con)
 
-dbSendQuery(con,"DROP TABLE collaborations_nontsb_dif;")
+
 sql_requete5_2 <- "
 CREATE TABLE collaborations_nontsb_dif AS 
   SELECT DISTINCT etudiant1,etudiant2
@@ -748,12 +751,3 @@ FROM noeuds
   
   plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
 }
-
-
-
-
-
-
-
-
-

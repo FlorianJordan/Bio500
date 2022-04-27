@@ -70,11 +70,14 @@ list(
   
   #Creation de tables  
   tar_target(tables,fonction_creation_table(con,noeuds, cours, collaborations)),
+  
   #Creation figure1
-
   tar_target(graphique_base,graph_base(collaborations)),
   
   #Creation figure 2,3
-  tar_target(requete_reseau,fonction_requete_reseau())
+  tar_target(requete_reseau,fonction_requete_reseau()),
+  
+  #Creation figure 4
+  tar_target(requete_hist,fonction_requete_hist())
 
 )
