@@ -77,14 +77,11 @@ fonction_data_collab_cor<-function(x){
 function_connection_SQL <- function() {
   con <- dbConnect(SQLite(), dbname = "attributs.db")
 }
-fonction_creation_table<-function(noeuds, cours, collaborations){
-  
-  con<-dbConnect(SQLite(), dbname = "attributs.db")
-  dbSendQuery(con,"DROP TABLE collaborations;")
-  dbSendQuery(con,"DROP TABLE noeuds;")
-  dbSendQuery(con,"DROP TABLE cours;")
+fonction_creation_table<-function(con,noeuds, cours, collaborations){
 
-  
+  con<-dbConnect(SQLite(), dbname = "attributs.db")
+
+
   tbl_noeuds <- "
 CREATE TABLE noeuds (
   nom_prenom      VARCHAR(50),
@@ -102,8 +99,6 @@ CREATE TABLE cours (
   credits       INTEGER(1) ,
   obligatoire     BOOLEAN(1),
   laboratoire       BOOLEAN(1),
-  distance   BOOLEAN(1),
-  groupes   BOOLEAN(1),
   libre   BOOLEAN(1),
   PRIMARY KEY (sigle)
 );"
@@ -125,7 +120,7 @@ CREATE TABLE collaborations (
   dbWriteTable(con, append = TRUE, name = "noeuds", value = noeuds, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "cours", value = cours, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "collaborations", value = collaborations, row.names = FALSE)
-  
+  con
   }
 
 ####foncion reseau de base####
@@ -146,13 +141,22 @@ adj2<-simplify(adj)
 E(adj2)$weight = sapply(E(adj2), function(e) { 
   length(all_shortest_paths(adj, from=ends(adj2, e)[1], to=ends(adj2, e)[2])$res) } )
 
+<<<<<<< HEAD
 plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-2,2), xlim=c(-9,12), edge.width=E(adj2)$weight*0.5, asp=0.9)
+=======
+plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-2,2), xlim=c(-10,10), edge.width=E(adj2)$weight*0.5, asp=0.9)
+>>>>>>> d64ddf429833a7e80718867ebdf4bd620956a9d5
 x
 }
 
 ####fonction reseasu####
 
+<<<<<<< HEAD
 fonction_requete_reseau<-function(){
+=======
+fonction_requete_tsb303<-function(con,tables){
+
+>>>>>>> d64ddf429833a7e80718867ebdf4bd620956a9d5
   con<-dbConnect(SQLite(),dbname="attributs.db")
 sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
@@ -200,8 +204,12 @@ adj_nontsb<-simplify(adj_nontsb)
 
 
 pdf(file = "results/figure2.pdf")
+<<<<<<< HEAD
 par(mfrow=c(1,2))
 plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-3,3), xlim=c(-6,8), asp=0.9)
+=======
+plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-2,2), xlim=c(-10,10), asp=0.9)
+>>>>>>> d64ddf429833a7e80718867ebdf4bd620956a9d5
 
 sql_requete_adj <- "
 SELECT etudiant1,etudiant2
@@ -229,8 +237,13 @@ edge_tot<-edge_tot %>% distinct(V1, V2, .keep_all = TRUE)
 E(adj3)$color = edge_tot$color
 E(adj3)$width = edge_tot$width
 edge_attr(adj3)
+<<<<<<< HEAD
 
 plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj3), rescale=FALSE, ylim=c(-6,6), xlim=c(-4,10), asp=0.9)
+=======
+pdf(file = "results/figure3.pdf")
+plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj3), rescale=FALSE, ylim=c(-2,2), xlim=c(-10,10), asp=0.9)
+>>>>>>> d64ddf429833a7e80718867ebdf4bd620956a9d5
 
 #### Figure 30collab et +
 sql_requete <- "
@@ -264,7 +277,12 @@ E(adj_30_2)$weight = sapply(E(adj_30_2), function(e) {
 
 pdf(file = "results/figure3.pdf")
 par(mfrow=c(1,1))
+<<<<<<< HEAD
 plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-5,5), xlim=c(-4,4), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
+=======
+pdf(file = "results/figure4.pdf")
+plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-2,2), xlim=c(-5,5), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
+>>>>>>> d64ddf429833a7e80718867ebdf4bd620956a9d5
 
 con
 
