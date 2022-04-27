@@ -1,5 +1,5 @@
 ---
-title: Diversité des collaborations des élèves de la 59e cohorte d'écologie de (université de Sherbooke)
+title: Diversité des collaborations des élèves de la 59e cohorte d'écologie (université de Sherbooke)
 
 # Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
 author:
@@ -65,17 +65,13 @@ La figure 3 est le réseau des différentes collaborations depuis le début du b
 Notre quatrième et dernière figure représente le réseau des différentes collaborations des étudiants, mais sans le cours TSB303 qui semble avoir une grande influence sur le réseau. C'est donc la même figure que la 2, mais avec les liens de TSB303 en gras.
 
 
-![Réseaux de collaboration des étudiants de la 59e cohorte de l'automne 2019 à l'hiver 2022. \label{fig:plot1}](figure1,pdf){width=50% height=40%}
+![Réseaux de collaboration des étudiants de la 59e cohorte de l'automne 2019 à l'hiver 2022. \label{fig:plot1}]("C:\Users\margu\Documents\Session_5\BIO500\Bio500\results\figure1.png"){width=50% height=40%}
 
-Fig. 2 : Les différentes collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022
+![Les différentes collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 \label{fig:plot2}]("C:\Users\margu\Documents\Session_5\BIO500\Bio500\results\figure2.png"){width=50% height=40%}
 
-Fig. 3 : Réseau de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 qui ont plus de 30 collaborations
+![Réseau de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 qui ont plus de 30 collaborations \label{fig:plot3}]("C:\Users\margu\Documents\Session_5\BIO500\Bio500\results\figure3.png"){width=50% height=40%}
 
-Fig. 4 : Réseau de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 sans le cours TSB303
-
- 
-
-**Voici comment inclure une figure .pdf préalablement générée et la citer/référencer dans le texte, via son `label`: Figure \ref{fig:plot1}**. 
+![Réseau de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 sans le cours TSB303 \label{fig:plot4}]("C:\Users\margu\Documents\Session_5\BIO500\Bio500\results\figure4.png"){width=50% height=40%}
 
 # Discussion 
 

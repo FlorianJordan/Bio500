@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.22)  27 APR 2022 17:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.22)  27 APR 2022 18:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -890,8 +890,7 @@ Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 Package: pnasresearcharticle 2018/05/06 v1.3 PNAS two column research article style
 \@float@every@sigstatement=\toks50
 \c@sigstatement=\count366
-)
-No file rapport.aux.
+) (./rapport.aux)
 \openout1 = `rapport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
@@ -931,6 +930,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 102.
 LaTeX Info: Redefining \pageref on input line 102.
 LaTeX Info: Redefining \nameref on input line 102.
+(./rapport.out) (./rapport.out)
 \@outlinefile=\write4
 \openout4 = `rapport.out'.
 
@@ -1079,29 +1079,113 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 5.69998pt on input line 160.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.64998pt on input line 200.
-
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 200.
-
 [1{c:/Users/margu/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
+<C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure1.png, id=48, 481.8pt x 481.8pt>
+File: C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure1.png Graphic file (type png)
+<use C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure1.png>
+Package pdftex.def Info: C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure1.png  used on input line 223.
+(pdftex.def)             Requested size: 252.84586pt x 270.37958pt.
 
-! LaTeX Error: File `figure1,pdf' not found.
+Overfull \hbox (6.749pt too wide) in paragraph at lines 223--225
+ [][] 
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.223 ...width,height=0.4\textheight]{figure1,pdf}
-                                                   
+<C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure2.png, id=50, 481.8pt x 481.8pt>
+File: C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure2.png Graphic file (type png)
+<use C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure2.png>
+Package pdftex.def Info: C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure2.png  used on input line 230.
+(pdftex.def)             Requested size: 252.84586pt x 270.37958pt.
+
+Overfull \hbox (6.749pt too wide) in paragraph at lines 230--232
+ [][] 
+ []
+
+<C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure3.png, id=51, 481.8pt x 481.8pt>
+File: C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure3.png Graphic file (type png)
+<use C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure3.png>
+Package pdftex.def Info: C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure3.png  used on input line 237.
+(pdftex.def)             Requested size: 252.84586pt x 270.37958pt.
+
+Overfull \hbox (6.749pt too wide) in paragraph at lines 237--240
+ [][] 
+ []
+
+<C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure4.png, id=52, 481.8pt x 481.8pt>
+File: C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure4.png Graphic file (type png)
+<use C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure4.png>
+Package pdftex.def Info: C:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure4.png  used on input line 245.
+(pdftex.def)             Requested size: 252.84586pt x 270.37958pt.
+
+Overfull \hbox (6.749pt too wide) in paragraph at lines 245--247
+ [][] 
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 262.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.64998pt on input line 262.
+[2 <c:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure1.png> <c:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure2.png> <c:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure3.png>]
+Overfull \hbox (2.05554pt too wide) in paragraph at lines 298--302
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--302
+
+ []
+
+
+Overfull \hbox (2.05554pt too wide) in paragraph at lines 303--309
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--309
+
+ []
+
+
+Overfull \hbox (2.05554pt too wide) in paragraph at lines 310--314
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--314
+
+ []
+
+
+Overfull \hbox (2.05554pt too wide) in paragraph at lines 315--319
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 315--319
+
+ []
+
+
+AED: lastpage setting LastPage
+[3 <c:/Users/margu/Documents/Session_5/BIO500/Bio500/results/figure4.png>] (./rapport.aux)
+Package rerunfilecheck Info: File `rapport.out' has not changed.
+(rerunfilecheck)             Checksum: 6DD1E4048A6097C5929104D97A7129D1;569.
+ ) 
 Here is how much of TeX's memory you used:
- 29587 strings out of 480193
- 553284 string characters out of 5891069
- 880996 words of memory out of 5000000
- 46815 multiletter control sequences out of 15000+600000
- 537816 words of font info for 163 fonts, out of 8000000 for 9000
+ 29671 strings out of 480193
+ 555709 string characters out of 5891069
+ 881828 words of memory out of 5000000
+ 46841 multiletter control sequences out of 15000+600000
+ 544076 words of font info for 188 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  115i,14n,118p,1004b,573s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/margu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on rapport.pdf (3 pages, 371677 bytes).
+PDF statistics:
+ 128 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
+ 24 named destinations out of 1000 (max. 500000)
+ 56401 words of extra memory for PDF output out of 61914 (max. 10000000)
 
-!  ==> Fatal error occurred, no output PDF file produced!
