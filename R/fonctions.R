@@ -81,6 +81,7 @@ fonction_creation_table<-function(con,noeuds, cours, collaborations){
 
   con<-dbConnect(SQLite(), dbname = "attributs.db")
 
+
   tbl_noeuds <- "
 CREATE TABLE noeuds (
   nom_prenom      VARCHAR(50),
@@ -138,7 +139,7 @@ adj2<-simplify(adj)
 E(adj2)$weight = sapply(E(adj2), function(e) { 
   length(all_shortest_paths(adj, from=ends(adj2, e)[1], to=ends(adj2, e)[2])$res) } )
 
-plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), edge.width=E(adj2)$weight*0.5, asp=0.9)
+plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-2,2), xlim=c(-5,12), edge.width=E(adj2)$weight*0.5, asp=0.9)
 x
 }
 
@@ -190,7 +191,7 @@ V(adj_nontsb)$size = 50
 vertex_attr(adj_nontsb)
 adj_nontsb<-simplify(adj_nontsb)
 pdf(file = "results/figure2.pdf")
-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
+plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-3,2), xlim=c(-5,12), asp=0.9)
 
 sql_requete_adj <- "
 SELECT etudiant1,etudiant2
@@ -219,7 +220,7 @@ E(adj3)$color = edge_tot$color
 E(adj3)$width = edge_tot$width
 edge_attr(adj3)
 pdf(file = "results/figure4.pdf")
-plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj3), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
+plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj3), rescale=FALSE, ylim=c(-3,2), xlim=c(-5,12), asp=0.9)
 
 #### Figure 30collab et +
 sql_requete <- "
@@ -252,7 +253,7 @@ E(adj_30_2)$weight = sapply(E(adj_30_2), function(e) {
 
 par(mfrow=c(1,1))
 pdf(file = "results/figure5.pdf")
-plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
+plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-4,4), xlim=c(-4,4), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
 
 con
 
