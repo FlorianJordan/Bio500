@@ -1,12 +1,21 @@
 ####enlever les colonnes####
+
 fonction_col_cours_amelie<-function(x){x<-x[,-c(6:7)]
-}
+x}
 
 fonction_col_anthony<-function(x){x<-x[,-5]
-}
+x}
 
 fonction_col_ilmdph<-function(x){x<-x[,-5]
-}
+x}
+
+fonction_col_dp<-function(x){x<-x[,-5]
+x}
+
+fonction_col_cvl<-function(x){x<-x[,-1]
+x}
+
+####correction nom de colonne####
 
 fonction_cours_cvl<-function(x){x<-rename(x,sigle=Sigle)
 x}
@@ -14,47 +23,48 @@ x}
 fonction_cours_fxc<-function(x){x<-rename(x,credits=credit)
 x}
 
-fonction_data_collab<-function(x){
-  x<-x[,-c(5:6)]
-  x<-distinct(x)
-  colnames(x)<-c("etudiant1","etudiant2","sigle","date")
-  x}
+fonction_cours_amelie<-function(x){
+colnames(x)<-c("sigle","credits","obligatoire","laboratoire","libre")
+x}
 
-fonction_data_cours<-function(x){
-  x<-x[,-c(6:8)]
-  x<-x[!duplicated(x$sigle),]
-  x}
+fonction_collaborations_amelie<-function(x){
+colnames(x)<-c("etudiant1","etudiant2","sigle","date")
+x}
+
+fonction_collaborations_anthonystp<-function(x){x<-rename(x,sigle=cours)
+x}
+
+fonction_collaborations_cvl<-function(x){x<-rename(x,sigle=cours)
+x}
+
+fonction_collaborations_dp<-function(x){x<-rename(x,sigle=cours)
+x}
+
+fonction_collaborations_martineau<-function(x){x<-rename(x,sigle=cours)
+x}
+
+fonction_noeuds_amelie<-function(x){
+colnames(x)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
+x}
+
+####enlever les doublons####
 
 fonction_data_noeuds<-function(x){
-  x<-x[,-6]
   x<-x %>% arrange(rowSums(is.na(x)))
   x<-x[!duplicated(x$nom_prenom),]
   x}
 
-fonction_cours_cvl<-function(x){x<-rename(x,sigle=Sigle)
+fonction_data_cours<-function(x){
+  x<-x[!duplicated(x$sigle),]
   x}
-fonction_cours_fxc<-function(x){x<-rename(x,credits=credit)
-  x}
-fonction_cours_amelie<-function(x){
 
-colnames(x)<-c("sigle","credits","obligatoire","laboratoire","libre")
-x}
-fonction_noeuds_amelie<-function(x){
-
-colnames(x)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
-x}
-
-fonction_collaborations_amelie<-function(x){
+fonction_data_collab<-function(x){
+  x<-distinct(x)
   colnames(x)<-c("etudiant1","etudiant2","sigle","date")
   x}
-fonction_collaborations_anthonystp<-function(x){x<-rename(x,sigle=cours)
-  x}
-fonction_collaborations_cvl<-function(x){x<-rename(x,sigle=cours)
-  x}
-fonction_collaborations_dp<-function(x){x<-rename(x,sigle=cours)
-  x}
-fonction_collaborations_martineau<-function(x){x<-rename(x,sigle=cours)
-  x}
+
+####tables de base sql####
+
 function_connection_SQL <- function() {
   con <- dbConnect(SQLite(), dbname = "attributs.db")
 }
@@ -250,3 +260,4 @@ plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=
 con
 
 }
+

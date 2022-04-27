@@ -41,27 +41,29 @@ list(
   #enlever les colonnes#
   tar_target(cours_amelie_col,fonction_col_cours_amelie(cours_amelie)),
   tar_target(cours_anthonystp_col,fonction_col_anthony(cours_anthonystp)),
-  
+  tar_target(collaborations_ilmdph_col,fonction_col_ilmdph(collaborations_ilmdph)),
+  tar_target(collaborations_dp_col,fonction_col_dp(collaborations_dp)),
+  tar_target(noeuds_cvl_col,fonction_col_cvl(noeuds_cvl)),
   
   #correction des donnees
   tar_target(cours_cvl_corrige,fonction_cours_cvl(cours_cvl)),
   tar_target(cours_fxc_corrige,fonction_cours_fxc(cours_fxc)),
+  tar_target(cours_amelie_corrige,fonction_cours_amelie(cours_amelie_col)),
+  
   tar_target(collaborations_amelie_corrige,fonction_collaborations_amelie(collaborations_amelie)),
   tar_target(collaborations_anthonystp_corrige,fonction_collaborations_anthonystp(collaborations_anthonystp)),
   tar_target(collaborations_cvl_corrige,fonction_collaborations_cvl(collaborations_cvl)),
-  tar_target(collaborations_dp_corrige,fonction_collaborations_dp(collaborations_dp)),
+  tar_target(collaborations_dp_corrige,fonction_collaborations_dp(collaborations_dp_col)),
   tar_target(collaborations_martineau_corrige,fonction_collaborations_martineau(collaborations_martineau)),
-  tar_target(cours_amelie_corrige,fonction_cours_amelie(cours_amelie)),
+  
   tar_target(noeuds_amelie_corrige,fonction_noeuds_amelie(noeuds_amelie)),
+  
   # Merge des donnees
-  tar_target(data_noeuds,bind_rows(noeuds_amelie_corrige,noeuds_anthonystp,noeuds_cvl,noeuds_dp,noeuds_fxc,noeuds_jbca,noeuds_martineau,noeuds_alexis,noeuds_ilmdph)),
-  tar_target(data_cours,bind_rows(cours_amelie_corrige,cours_anthonystp,cours_cvl_corrige,cours_dp,cours_fxc_corrige,cours_jbca,cours_martineau,cours_alexis,cours_ilmdph)),
-  tar_target(data_collaborations,bind_rows(collaborations_amelie_corrige,collaborations_anthonystp_corrige,collaborations_cvl_corrige,collaborations_dp_corrige,collaborations_fxc,collaborations_jbca,collaborations_martineau_corrige,collaborations_alexis,collaborations_ilmdph)),
-  
-  
+  tar_target(data_noeuds,bind_rows(noeuds_amelie_corrige,noeuds_anthonystp,noeuds_cvl_col,noeuds_dp,noeuds_fxc,noeuds_jbca,noeuds_martineau,noeuds_alexis,noeuds_ilmdph)),
+  tar_target(data_cours,bind_rows(cours_amelie_corrige,cours_anthonystp_col,cours_cvl_corrige,cours_dp,cours_fxc_corrige,cours_jbca,cours_martineau,cours_alexis,cours_ilmdph)),
+  tar_target(data_collaborations,bind_rows(collaborations_amelie_corrige,collaborations_anthonystp_corrige,collaborations_cvl_corrige,collaborations_dp_corrige,collaborations_fxc,collaborations_jbca,collaborations_martineau_corrige,collaborations_alexis,collaborations_ilmdph_col)),
   
   #Suppression des doublons
-  
   tar_target(noeuds,fonction_data_noeuds(data_noeuds)),
   tar_target(cours,fonction_data_cours(data_cours)),
   tar_target(collaborations,fonction_data_collab(data_collaborations)),
