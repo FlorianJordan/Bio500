@@ -32,7 +32,7 @@ list(
   tar_target(collaborations_anthonystp,read.table("data/collaborations_anthonystp.txt",header = T, sep=";")),
   tar_target(collaborations_cvl,read.csv("data/collaborations_cvl_jl_jl_mp_xs.csv", sep=";")),
   tar_target(collaborations_dp,read.csv("data/collaborations_DP-GL-LB-ML-VQ_txt.csv", sep=";")),
-  tar_target(collaborations_fxc,read.table("data/collaborations_FXC_MF_TC_LRT_WP..txt",header = T, sep=";")),
+  tar_target(collaborations_fxc<-read.table("data/collaborations_FXC_MF_TC_LRT_WP..txt",header = T, sep="")),
   tar_target(collaborations_jbca,read.table("data/collaborations_jbcaldlvjlgr.txt",header = T, sep=";")),
   tar_target(collaborations_martineau,read.table("data/collaborations_martineau.txt",header = T, sep=";")),
   tar_target(collaborations_alexis,read.table("data/collaboration_Alexis_Nadya_Edouard_Penelope.txt",header = T, sep=";")),
@@ -62,11 +62,11 @@ list(
   tar_target(data_noeuds,bind_rows(noeuds_amelie_corrige,noeuds_anthonystp,noeuds_cvl_col,noeuds_dp,noeuds_fxc,noeuds_jbca,noeuds_martineau,noeuds_alexis,noeuds_ilmdph)),
   tar_target(data_cours,bind_rows(cours_amelie_corrige,cours_anthonystp_col,cours_cvl_corrige,cours_dp,cours_fxc_corrige,cours_jbca,cours_martineau,cours_alexis,cours_ilmdph)),
   tar_target(data_collaborations,bind_rows(collaborations_amelie_corrige,collaborations_anthonystp_corrige,collaborations_cvl_corrige,collaborations_dp_corrige,collaborations_fxc,collaborations_jbca,collaborations_martineau_corrige,collaborations_alexis,collaborations_ilmdph_col)),
-  tar_target(data_collaborations_corrige,fonction_data_collab_colone(data_collaborations)),
+  
   #Suppression des doublons
   tar_target(noeuds,fonction_data_noeuds(data_noeuds)),
   tar_target(cours,fonction_data_cours(data_cours)),
-  tar_target(collaborations,fonction_data_collab(data_collaborations_corrige)),
+  tar_target(collaborations,fonction_data_collab(data_collaborations)),
   
   #Creation de tables  
   tar_target(con,function_connection_SQL()),

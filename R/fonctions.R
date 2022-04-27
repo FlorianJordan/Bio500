@@ -64,9 +64,12 @@ fonction_data_collab<-function(x){
   x}
 fonction_data_collab_colone<-function(x){
  
+  x<-x[,-c(5:6)]
+  x}
+fonction_data_collab_cor<-function(x){
+  
   x<-x[,-5]
   x}
-
 ####tables de base sql####
 
 function_connection_SQL <- function() {
