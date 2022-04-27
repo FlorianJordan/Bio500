@@ -220,6 +220,8 @@ ORDER BY liens
 liens_nontsb <- dbGetQuery(con,sql_requete_liens)
 liens_nontsb
 
+mean(liens_nontsb$liens)
+
 sql_requete_tsb <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle LIKE '%TSB303%'
@@ -247,8 +249,7 @@ V(adj_nontsb)$size = 50
 vertex_attr(adj_nontsb)
 adj_nontsb<-simplify(adj_nontsb)
 
-par(mfrow=c(1,2))
-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
+graph_nontsb<-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
 
 V(adj_tsb)$color = prog$color
 vertex_attr(adj_tsb)
@@ -256,7 +257,7 @@ V(adj_tsb)$size = 50
 adj_tsb<-simplify(adj_tsb)
 E(adj_tsb)$color = "black"
 
-####plot(adj_tsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_tsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), edge.width = 2)####
+graph_tsb<-plot(adj_tsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_tsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), edge.width = 2)
 
 adj3<-graph.adjacency(m_adj)
 V(adj3)$color = prog$color
@@ -303,7 +304,6 @@ adj_30_2<-simplify(adj_30)
 E(adj_30_2)$weight = sapply(E(adj_30_2), function(e) { 
   length(all_shortest_paths(adj_30, from=ends(adj_30_2, e)[1], to=ends(adj_30_2, e)[2])$res) } )
 
-par(mfrow=c(1,1))
 plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-4,4), xlim=c(-4,4), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
 
 #### nombre de collabs différentes ####
@@ -324,6 +324,7 @@ CREATE TABLE collaborations_nontsb AS
   SELECT etudiant1,etudiant2,sigle,date
   FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
 "
+
 dbExecute(con,sql_requete5_1)
 dbListTables(con)
 
@@ -333,14 +334,15 @@ CREATE TABLE collaborations_nontsb_dif AS
   SELECT DISTINCT etudiant1,etudiant2
   FROM collaborations_nontsb
 "
+
 dbExecute(con,sql_requete5_2)
 dbListTables(con)
 
 sql_requete6 <- "
 SELECT etudiant1 as etudiant, count(etudiant2) as liens_dif
-FROM collaborations_dif
-GROUP BY etudiant
-ORDER BY liens_dif
+  FROM collaborations_dif
+  GROUP BY etudiant
+  ORDER BY liens_dif
 "
 liens_dif <- dbGetQuery(con,sql_requete6)
 liens_dif
@@ -349,10 +351,11 @@ mean(liens_dif$liens_dif)
 
 sql_requete6_1 <- "
 SELECT etudiant1 as etudiant, count(etudiant2) as liens_dif
-FROM collaborations_nontsb_dif
-GROUP BY etudiant
-ORDER BY liens_dif
+  FROM collaborations_nontsb_dif
+  GROUP BY etudiant
+  ORDER BY liens_dif
 "
+
 liens_nontsb_dif <- dbGetQuery(con,sql_requete6_1)
 liens_nontsb_dif
 
@@ -368,7 +371,6 @@ sql_requete7 <- "
 SELECT etudiant1, etudiant2
 FROM collaborations_dif
 "
-
 collabs_dif<-dbGetQuery(con,sql_requete7)
 
 m_adj_dif<-table(collabs_dif$etudiant1,collabs_dif$etudiant2)
