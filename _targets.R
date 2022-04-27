@@ -72,12 +72,10 @@ list(
   tar_target(con,function_connection_SQL()),
   tar_target(tables,fonction_creation_table(con,noeuds, cours, collaborations)),
   #Creation figure1
-<<<<<<< HEAD
-  tar_target(graphique_base,graph_base(collaborations))
-  
-=======
+
   tar_target(graphique_base,graph_base(collaborations)),
+  
   #Creation figure 2,3,4,5
   tar_target(requete_tsb303,fonction_requete_tsb303())
->>>>>>> 89c772871eae185ab4631afabdebfa6baa402728
+
 )
