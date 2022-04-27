@@ -187,6 +187,7 @@ edge_attr(adj3)
 pdf(file = "results/figure4.pdf")
 plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj3), rescale=FALSE, ylim=c(-3,2), xlim=c(-5,12), asp=0.9)
 
+#### Figure 30collab et +
 liens30<-liens[liens$liens>=30,]
 sql_requete4 <- "
 SELECT etudiant1,etudiant2,sigle,date
