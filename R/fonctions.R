@@ -24,7 +24,7 @@ fonction_cours_cvl<-function(x){x<-rename(x,sigle=Sigle)
 fonction_cours_fxc<-function(x){x<-rename(x,credits=credit)
   x}
 fonction_collaborations_amelie<-function(x){
-  x<-rename(x,sigle=cours)
+  colnames(x)<-c("etudiant1","etudiant2","sigle","date")
   x}
 fonction_collaborations_anthonystp<-function(x){x<-rename(x,sigle=cours)
   x}
