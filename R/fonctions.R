@@ -62,14 +62,23 @@ fonction_data_collab<-function(x){
   x<-distinct(x)
   colnames(x)<-c("etudiant1","etudiant2","sigle","date")
   x}
-
+fonction_data_collab_colone<-function(x){
+ 
+  x<-x[,-c(5:6)]
+  x}
+fonction_data_collab_cor<-function(x){
+  
+  x<-x[,-5]
+  x}
 ####tables de base sql####
 
 function_connection_SQL <- function() {
   con <- dbConnect(SQLite(), dbname = "attributs.db")
 }
 fonction_creation_table<-function(con,noeuds,cours,collaborations){
+  
   con<-dbConnect(SQLite(), dbname = "attributs.db")
+  
   dbSendQuery(con,"DROP TABLE collaborations;")
   dbSendQuery(con,"DROP TABLE noeuds;")
   dbSendQuery(con,"DROP TABLE cours;")
