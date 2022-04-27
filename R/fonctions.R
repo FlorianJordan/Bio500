@@ -168,7 +168,6 @@ sql_requeteadj <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations 
 "
-
 collaborations_<-dbGetQuery(con,sql_requeteadj)
 
 m_adj<-table(collaborations_$etudiant1,collaborations_$etudiant2)
