@@ -249,7 +249,8 @@ V(adj_nontsb)$size = 50
 vertex_attr(adj_nontsb)
 adj_nontsb<-simplify(adj_nontsb)
 
-graph_nontsb<-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
+par(mfrow=c(1,2))
+plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
 
 V(adj_tsb)$color = prog$color
 vertex_attr(adj_tsb)
@@ -257,7 +258,7 @@ V(adj_tsb)$size = 50
 adj_tsb<-simplify(adj_tsb)
 E(adj_tsb)$color = "black"
 
-graph_tsb<-plot(adj_tsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_tsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), edge.width = 2)
+####plot(adj_tsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_tsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), edge.width = 2)####
 
 adj3<-graph.adjacency(m_adj)
 V(adj3)$color = prog$color
@@ -304,6 +305,7 @@ adj_30_2<-simplify(adj_30)
 E(adj_30_2)$weight = sapply(E(adj_30_2), function(e) { 
   length(all_shortest_paths(adj_30, from=ends(adj_30_2, e)[1], to=ends(adj_30_2, e)[2])$res) } )
 
+par(mfrow=c(1,1))
 plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-4,4), xlim=c(-4,4), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
 
 #### nombre de collabs différentes ####
