@@ -70,7 +70,7 @@ list(
   
   #Creation de tables  
   tar_target(con,function_connection_SQL()),
-  tar_target(tables,fonction_creation_table(noeuds, cours, collaborations)),
+  tar_target(tables,fonction_creation_table(con,noeuds, cours, collaborations)),
   #Creation figure1
   tar_target(graphique_base,graph_base(collaborations)),
   #Creation figure 2,3,4,5
