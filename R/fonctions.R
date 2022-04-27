@@ -97,14 +97,14 @@ CREATE TABLE noeuds (
   
   tbl_cours <- "
 CREATE TABLE cours (
-sigle   CHAR(6) NOT NULL,
-credits       INTEGER(1) ,
-obligatoire     BOOLEAN(1),
-laboratoire       BOOLEAN(1),
-distance   BOOLEAN(1),
-groupes   BOOLEAN(1),
-libre   BOOLEAN(1),
-PRIMARY KEY (sigle)
+  sigle   CHAR(6) NOT NULL,
+  credits       INTEGER(1) ,
+  obligatoire     BOOLEAN(1),
+  laboratoire       BOOLEAN(1),
+  distance   BOOLEAN(1),
+  groupes   BOOLEAN(1),
+  libre   BOOLEAN(1),
+  PRIMARY KEY (sigle)
 );"
   dbSendQuery(con, tbl_cours)
   
