@@ -81,7 +81,6 @@ fonction_creation_table<-function(con,noeuds, cours, collaborations){
 
   con<-dbConnect(SQLite(), dbname = "attributs.db")
 
-
   tbl_noeuds <- "
 CREATE TABLE noeuds (
   nom_prenom      VARCHAR(50),
