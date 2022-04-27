@@ -194,7 +194,7 @@ rk<-rank(deg)
 col.vec<-rev(heat.colors(nrow(m_adj)))
 adj<-graph.adjacency(m_adj)
 V(adj)$color = col.vec[rk]
-col.vec<-seq(10, 70, length.out = nrow(m_adj))
+col.vec<-seq(10, 80, length.out = nrow(m_adj))
 V(adj)$size = col.vec[rk]
 adj2<-simplify(adj)
 E(adj2)$weight = sapply(E(adj2), function(e) { 
@@ -245,7 +245,7 @@ adj_nontsb<-graph.adjacency(m_adj_nontsb)
 adj_tsb<-graph.adjacency(m_adj_tsb)
 
 V(adj_nontsb)$color = prog$color
-V(adj_nontsb)$size = 50
+V(adj_nontsb)$size = 40
 vertex_attr(adj_nontsb)
 adj_nontsb<-simplify(adj_nontsb)
 
@@ -254,7 +254,7 @@ plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kaw
 
 V(adj_tsb)$color = prog$color
 vertex_attr(adj_tsb)
-V(adj_tsb)$size = 50
+V(adj_tsb)$size = 40
 adj_tsb<-simplify(adj_tsb)
 E(adj_tsb)$color = "black"
 
@@ -262,7 +262,7 @@ E(adj_tsb)$color = "black"
 
 adj3<-graph.adjacency(m_adj)
 V(adj3)$color = prog$color
-V(adj3)$size = 50
+V(adj3)$size = 40
 adj3<-simplify(adj3)
 
 edge_tsb<-as.data.frame(get.edgelist(adj_tsb))

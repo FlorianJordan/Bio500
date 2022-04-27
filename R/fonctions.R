@@ -128,6 +128,8 @@ CREATE TABLE collaborations (
   
   }
 
+####foncion reseau de base####
+
 graph_base<-function(x){
 pdf(file = "results/figure1.pdf")
 m_adj<-table(x$etudiant1,x$etudiant2)
@@ -138,18 +140,19 @@ rk<-rank(deg)
 col.vec<-rev(heat.colors(nrow(m_adj)))
 adj<-graph.adjacency(m_adj)
 V(adj)$color = col.vec[rk]
-col.vec<-seq(10, 70, length.out = nrow(m_adj))
+col.vec<-seq(10, 80, length.out = nrow(m_adj))
 V(adj)$size = col.vec[rk]
 adj2<-simplify(adj)
 E(adj2)$weight = sapply(E(adj2), function(e) { 
   length(all_shortest_paths(adj, from=ends(adj2, e)[1], to=ends(adj2, e)[2])$res) } )
 
-plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-2,2), xlim=c(-5,12), edge.width=E(adj2)$weight*0.5, asp=0.9)
+plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-2,2), xlim=c(-9,12), edge.width=E(adj2)$weight*0.5, asp=0.9)
 x
 }
 
+####fonction reseasu####
 
-fonction_requete_tsb303<-function(){
+fonction_requete_reseau<-function(){
   con<-dbConnect(SQLite(),dbname="attributs.db")
 sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
@@ -191,11 +194,14 @@ adj_nontsb<-graph.adjacency(m_adj_nontsb)
 adj_tsb<-graph.adjacency(m_adj_tsb)
 
 V(adj_nontsb)$color = prog$color
-V(adj_nontsb)$size = 50
+V(adj_nontsb)$size = 40
 vertex_attr(adj_nontsb)
 adj_nontsb<-simplify(adj_nontsb)
+
+
 pdf(file = "results/figure2.pdf")
-plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-3,2), xlim=c(-5,12), asp=0.9)
+par(mfrow=c(1,2))
+plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-3,3), xlim=c(-6,8), asp=0.9)
 
 sql_requete_adj <- "
 SELECT etudiant1,etudiant2
@@ -206,7 +212,7 @@ m_adj<-table(collabs$etudiant1,collabs$etudiant2)
 
 adj3<-graph.adjacency(m_adj)
 V(adj3)$color = prog$color
-V(adj3)$size = 50
+V(adj3)$size = 40
 adj3<-simplify(adj3)
 
 edge_tsb<-as.data.frame(get.edgelist(adj_tsb))
@@ -223,8 +229,8 @@ edge_tot<-edge_tot %>% distinct(V1, V2, .keep_all = TRUE)
 E(adj3)$color = edge_tot$color
 E(adj3)$width = edge_tot$width
 edge_attr(adj3)
-pdf(file = "results/figure4.pdf")
-plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj3), rescale=FALSE, ylim=c(-3,2), xlim=c(-5,12), asp=0.9)
+
+plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj3), rescale=FALSE, ylim=c(-6,6), xlim=c(-4,10), asp=0.9)
 
 #### Figure 30collab et +
 sql_requete <- "
@@ -255,9 +261,10 @@ adj_30_2<-simplify(adj_30)
 E(adj_30_2)$weight = sapply(E(adj_30_2), function(e) { 
   length(all_shortest_paths(adj_30, from=ends(adj_30_2, e)[1], to=ends(adj_30_2, e)[2])$res) } )
 
+
+pdf(file = "results/figure3.pdf")
 par(mfrow=c(1,1))
-pdf(file = "results/figure5.pdf")
-plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-4,4), xlim=c(-4,4), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
+plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-5,5), xlim=c(-4,4), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
 
 con
 
