@@ -39,7 +39,6 @@ function_connection_SQL <- function() {
 }
 fonction_creation_table<-function(con,noeuds,cours,collaborations){
 
-  
   dbSendQuery(con,"DROP TABLE collaborations;")
   dbSendQuery(con,"DROP TABLE noeuds;")
   dbSendQuery(con,"DROP TABLE cours;")
