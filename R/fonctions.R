@@ -77,14 +77,11 @@ fonction_data_collab_cor<-function(x){
 function_connection_SQL <- function() {
   con <- dbConnect(SQLite(), dbname = "attributs.db")
 }
-fonction_creation_table<-function(noeuds, cours, collaborations){
-  
-  con<-dbConnect(SQLite(), dbname = "attributs.db")
-  dbSendQuery(con,"DROP TABLE collaborations;")
-  dbSendQuery(con,"DROP TABLE noeuds;")
-  dbSendQuery(con,"DROP TABLE cours;")
+fonction_creation_table<-function(con,noeuds, cours, collaborations){
 
-  
+  con<-dbConnect(SQLite(), dbname = "attributs.db")
+
+
   tbl_noeuds <- "
 CREATE TABLE noeuds (
   nom_prenom      VARCHAR(50),
@@ -102,8 +99,6 @@ CREATE TABLE cours (
   credits       INTEGER(1) ,
   obligatoire     BOOLEAN(1),
   laboratoire       BOOLEAN(1),
-  distance   BOOLEAN(1),
-  groupes   BOOLEAN(1),
   libre   BOOLEAN(1),
   PRIMARY KEY (sigle)
 );"
@@ -125,7 +120,7 @@ CREATE TABLE collaborations (
   dbWriteTable(con, append = TRUE, name = "noeuds", value = noeuds, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "cours", value = cours, row.names = FALSE)
   dbWriteTable(con, append = TRUE, name = "collaborations", value = collaborations, row.names = FALSE)
-  
+  con
   }
 
 graph_base<-function(x){
@@ -149,7 +144,8 @@ x
 }
 
 
-fonction_requete_tsb303<-function(){
+fonction_requete_tsb303<-function(con,tables){
+
   con<-dbConnect(SQLite(),dbname="attributs.db")
 sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
