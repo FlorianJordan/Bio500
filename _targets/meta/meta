@@ -69,7 +69,7 @@ fonction_collaborations_martineau|function|b3d1f207a143d543|||||||||||||||
 fonction_connection_SQL|function|d076a0a27af0112b|||||||||||||||
 fonction_cours_cvl|function|02e3a474c191ef4c|||||||||||||||
 fonction_cours_fxc|function|2412308ff6ff99cb|||||||||||||||
-fonction_creation_table|function|32f9c193c2863eee|||||||||||||||
+fonction_creation_table|function|0e02e18f1e602a30|||||||||||||||
 fonction_data_collab|function|1089be8247303abc|||||||||||||||
 fonction_data_cours|function|a9738a224fe861da|||||||||||||||
 fonction_data_noeuds|function|8cff30a1ab032cb1|||||||||||||||
@@ -101,10 +101,14 @@ requete_requete_prog|stem|4d139266ffd2d054|e0acb9523b57f21c|1c97a7013b5444cc|-24
 requete_requete_tsb|stem|ccd2cef0e39b32cc|a622d796c1ed4ae1|9c1e47f3e3764321|-104584169||t19107.7935730855s|0cca50742c16a705|215|rds|local|vector|||0||
 requete_tsb|stem|8941e884e9bc7b45|b4900e2989c3a776|e33424f7e925daaf|1983859436||t19107.8781878311s||385|rds|local|vector|||0.703||erreur dïvaluation de largument conn lors de la sïlection dune mïthode pour la fonction dbGetQuery  objet con introuvable
 <<<<<<< HEAD
+<<<<<<< HEAD
 requete_tsb303|stem|2ba2286ddb57a2d6|aa10e2e2ca44b82d|ced7275459828ff8|1370387128||t19108.9437785537s||44|rds|local|vector|||0.61|number of items to replace is not a multiple of replacement length. number of items to replace is not a multiple of replacement length|object collaborations not found
 =======
 requete_tsb303|stem|2ba2286ddb57a2d6|aa10e2e2ca44b82d|ced7275459828ff8|1370387128||t19108.9437785537s||44|rds|local|vector|||0.307|le nombre dobjets à remplacer nest pas multiple de la taille du remplacement. le nombre dobjets à remplacer nest pas multiple de la taille du remplacement|objet collaborations introuvable
 >>>>>>> 88fe766125c7487c5d5247e2dba4fcc12d35d804
+=======
+requete_tsb303|stem|2ba2286ddb57a2d6|aa10e2e2ca44b82d|ced7275459828ff8|1370387128||t19108.9437785537s||44|rds|local|vector|||0.917|le nombre dobjets à remplacer nest pas multiple de la taille du remplacement. le nombre dobjets à remplacer nest pas multiple de la taille du remplacement|objet collaborations introuvable
+>>>>>>> 67530b4a5d6f74ddab6a187404e8299d63996ec1
 requete1|stem|b3f2f3d7cba55c8b|23a5e38b8bf289d7|c730fc2925b35df4|378723383||t19105.0330890522s|94e1d7418d47ed10|214|rds|local|vector|||0.442||
 requete13|stem|c1d88641e4689b62|de0f13bf76094fa5|d1c4a4364dcde99f|337314471||t19105.0359005832s|4566d5bf5a60f145|413|rds|local|vector|||0.774||
 requete2|stem|5549b53c8d187b0d|ea3a3d287e1c5359|30b1a4512daa48f6|633109130||t19107.8631024524s|d34faae1f346fb15|226|rds|local|vector|||0.001||
