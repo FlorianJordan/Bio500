@@ -18,4 +18,4 @@ fonction_data_noeuds|function|8cff30a1ab032cb1|||||||||||||||
 fonction_requete_tsb303|function|94e3a1e3283d220c|||||||||||||||
 function_connection_SQL|function|d5f09ba18ce3a9a2|||||||||||||||
 graph_base|function|09ddb56b073a9c18|||||||||||||||
-requete_tsb303|stem||aa10e2e2ca44b82d|652fc5886f8072a1|1370387128||t19109.0389447322s||0|rds|local|vector|||0.329||no such table collaborations
+requete_tsb303|stem||aa10e2e2ca44b82d|652fc5886f8072a1|1370387128||t19109.0389447322s||0|rds|local|vector|||0.69||no such table collaborations
