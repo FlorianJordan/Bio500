@@ -23,10 +23,9 @@ abstract: |
   Nous avons voulu nous intérésser aux collaborations des élèves de l'Université de Sherbrooke lors de travaux d'équipe pendant leur parcours dans le baccalauréat en biologie. Pour ce faire, nous avons dressé un réseau reliant tous les étudiants qui ont suivi le cours de méthodes en écologie computationnelle (BIO500) lors de la session d'hiver 2022 et qui démontre le nombre de collaborations qui ont eu lieu entre eux tout au long de leur parcours universitaire. Nous avons comparé le nombre total de collaborations de chaque étudiant ainsi que le nombre de collaborations différentes de chaque étudiant dans le but de déterminer s'ils ont tendance à conserver les mêmes équipes ou non. Nous avons aussi observé l'impact que le cours de méthodes analytiques en biologie (TSB303) possédait sur le réseau puisque ce dernier comporte un travail d'équipe de 15 personnes. Nous avions un soupçon qu'un travail de cette ampleur modifierait beaucoup le réseau final, et à la lumière de nos résultats, cette hypothèse a été confirmée. On peut aussi facilement identifier sur le réseau les groupes de travail qui se sont maintenus à travers le baccalauréat, ce qui prouve que les étudiants n'avaient pas tendance à beaucoup diversifier leurs collaborations.
 
 keywords:
-  - collaborations
+  - Collaborations
   - Réseau écologique
   - Travaux d'équipe
-  - Optionel
 
 ## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)
 pnas_type: pnasresearcharticle
@@ -66,7 +65,7 @@ La figure 3 est le réseau des différentes collaborations depuis le début du b
 Notre quatrième et dernière figure représente le réseau des différentes collaborations des étudiants, mais sans le cours TSB303 qui semble avoir une grande influence sur le réseau. C'est donc la même figure que la 2, mais avec les liens de TSB303 en gras.
 
 
-![Réseau de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022.\label{fig::plot1}](figure1.pdf){width=50% height=40%}
+
 
 Fig. 2 : Les différentes collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022
 
