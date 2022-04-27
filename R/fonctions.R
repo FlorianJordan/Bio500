@@ -1,7 +1,19 @@
+####enlever les colonnes####
+fonction_col_cours_amelie<-function(x){x<-x[,-c(6:7)]
+}
+
+fonction_col_anthony<-function(x){x<-x[,-5]
+}
+
+fonction_col_ilmdph<-function(x){x<-x[,-5]
+}
+
 fonction_cours_cvl<-function(x){x<-rename(x,sigle=Sigle)
 x}
+
 fonction_cours_fxc<-function(x){x<-rename(x,credits=credit)
 x}
+
 fonction_data_collab<-function(x){
   x<-x[,-c(5:6)]
   x<-distinct(x)
