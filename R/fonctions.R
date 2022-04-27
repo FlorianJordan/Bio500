@@ -62,6 +62,10 @@ fonction_data_collab<-function(x){
   x<-distinct(x)
   colnames(x)<-c("etudiant1","etudiant2","sigle","date")
   x}
+fonction_data_collab_colone<-function(x){
+ 
+  x<-x[,-5]
+  x}
 
 ####tables de base sql####
 
