@@ -35,8 +35,17 @@ fonction_cours_cvl<-function(x){x<-rename(x,sigle=Sigle)
   x}
 fonction_cours_fxc<-function(x){x<-rename(x,credits=credit)
   x}
+fonction_cours_amelie<-function(x){
+
+colnames(x)<-c("sigle","credits","obligatoire","laboratoire","libre")
+x}
+fonction_noeuds_amelie<-function(x){
+
+colnames(x)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
+x}
+
 fonction_collaborations_amelie<-function(x){
-  x<-rename(x,sigle=cours)
+  colnames(x)<-c("etudiant1","etudiant2","sigle","date")
   x}
 fonction_collaborations_anthonystp<-function(x){x<-rename(x,sigle=cours)
   x}
@@ -50,7 +59,7 @@ function_connection_SQL <- function() {
   con <- dbConnect(SQLite(), dbname = "attributs.db")
 }
 fonction_creation_table<-function(con,noeuds,cours,collaborations){
-
+  con <- dbConnect(SQLite(), dbname = "attributs.db")
   dbSendQuery(con,"DROP TABLE collaborations;")
   dbSendQuery(con,"DROP TABLE noeuds;")
   dbSendQuery(con,"DROP TABLE cours;")
