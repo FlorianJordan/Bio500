@@ -164,8 +164,14 @@ E(adj_tsb)$color = "black"
 pdf(file = "results/figure3.pdf")
 plot(adj_tsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_tsb), rescale=FALSE, ylim=c(-10,2), xlim=c(-10,9), edge.width = 2)
 
+sql_requeteadj <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations 
+"
 
-m_adj<-table(collaborations$etudiant1,collaborations$etudiant2)
+collaborations_<-dbGetQuery(con,sql_requeteadj)
+
+m_adj<-table(collaborations_$etudiant1,collaborations_$etudiant2)
 m_adj
 adj3<-graph.adjacency(m_adj)
 V(adj3)$color = prog$color
