@@ -78,7 +78,22 @@ d'équipe |  Optionel  }
 \begin{abstract}
 Nous avons voulu nous intérésser aux collaborations des élèves de
 l'Université de Sherbrooke lors de travaux d'équipe pendant leur
-parcours dans le baccalauréat en biologie.
+parcours dans le baccalauréat en biologie. Pour ce faire, nous avons
+dressé un réseau reliant tous les étudiants qui ont suivi le cours de
+méthodes en écologie computationnelle (BIO500) lors de la session
+d'hiver 2022 et qui démontre le nombre de collaborations qui ont eu lieu
+entre eux tout au long de leur parcours universitaire. Nous avons
+comparé le nombre total de collaborations de chaque étudiant ainsi que
+le nombre de collaborations différentes de chaque étudiant dans le but
+de déterminer s'ils ont tendance à conserver les mêmes équipes ou non.
+Nous avons aussi observé l'impact que le cours de méthodes analytiques
+en biologie (TSB303) possédait sur le réseau puisque ce dernier comporte
+un travail d'équipe de 15 personnes. Nous avions un soupçon qu'un
+travail de cette ampleur modifierait beaucoup le réseau final, et à la
+lumière de nos résultats, cette hypothèse a été confirmée. On peut aussi
+facilement identifier sur le réseau les groupes de travail qui se sont
+maintenus à travers le baccalauréat, ce qui prouve que les étudiants
+n'avaient pas tendance à beaucoup diversifier leurs collaborations.
 \end{abstract}
 
 \dates{This manuscript was compiled on \today}
@@ -103,104 +118,105 @@ parcours dans le baccalauréat en biologie.
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-On entend souvent l'expression « ah que le monde est petit ! » lorsque
+On entend souvent l'expression « Ah que le monde est petit ! » lorsque
 deux personnes se retrouvent à avoir une connexion qu'on ne suspectait
 pas. Certaines études se sont intéressées à ce principe que par un lien
-relativement proche, tout le monde se connait à un certain niveau.
-Milgram (1967) s'est penché sur le sujet et à testé cette hypothèse que
-deux personnes pigées au hasard vont avoir un lien quelconque entre eux
-(1). Ce principe peut s'appliquer à l'écologie, car d'un point de vu de
-l'évolution, toutes les espèces sont reliées par un ancêtre commun et
-pour étudier les réseaux trophiques (2). Ce modèle de « petit monde »
-peut donc s'appliquer à grande et petite échelle. Nous avons voulu
-tester cette théorie à très petite échelle dans le baccalauréat de la
-59e cohorte d'écologie de l'Université de Sherbrooke. Dans l'idée que
-l'école forme les futurs travailleurs de demain, avoir un grand nombre
-de collaborations à l'université peut être bénéfique si on se fie aux
-recommandations de plusieurs firmes aidant les travailleurs à optimiser
-leur capacité commune au travail. Un réseau de collaboration diversifié
-en train un engagement plus élevé des employés, une meilleure rétention,
-une plus grande diversité et plus d'innovation (Holtzman and Anderberg,
-2011). Nous nous sommes donc posé la question si le réseau de
-collaborations entre les étudiants du baccalauréat en écologie
-favorisait la diversité des collaborations. Plus spécifiquement, nous
-avons étudiés si les élèves ont tendances à conserver les mêmes
-collaborateurs dans tous les travaux ou s'ils avaient plus tendance à
-diversifier leurs partenaires. En effet, il est intéressant de voir si
-les étudiants ont plusieurs groupes d'amis ou si au cours du
-baccalauréat, ils sont restés toujours avec les mêmes personnes. Pour
-les gens que l'on juge avoir un grand nombre de collaborations, est-ce
-qu'il y a un moyen de trouver ce qui leur a permis d'obtenir un grand
-nombre de collaborations en vue d'augmenter le nombre de collaboration
-des élèves? Nous avons aussi vérifier si le cours de méthode analytique
-en biologie (TSB303) a eu beaucoup d'effet dans le réseaux de
-collaboration, puisque dans ce cours, les travaux étaient en équipe de
-15. On peut donc s'imaginer qu'à lui seul, ce cours ajoute beaucoup de
-collaborations entre les étudiants. Pour aider à visulaliser le tout, le
-première figure va détailler toutes les colaborations entre tous les
-individus de la cohorte, puis plus spécifiquement ne figure qui démontre
-uniquements les liens de plus de X collaborations et ensuite cette même
-figure, mais en excluant le cours TSB303.
+relativement proche, tout le monde se connaît à un certain niveau.
+Milgram (1967) s'est penché sur le sujet et à testé cette hypothèse
+selon laquelle deux personnes pigées au hasard devraient avoir un lien
+quelconque entre eux (1). Ce principe peut s'appliquer à l'écologie, car
+d'un point de vu de l'évolution, toutes les espèces sont reliées par un
+ancêtre commun et pour étudier les réseaux trophiques (2). Ce modèle de
+« petit monde » peut donc s'appliquer à grande et petite échelle. Nous
+avons voulu tester cette théorie à très petite échelle dans le
+baccalauréat de la 59e cohorte d'écologie de l'Université de Sherbrooke.
+Dans l'idée que l'école forme les futurs travailleurs de demain, avoir
+un grand nombre de collaborations à l'université peut être bénéfique si
+on se fie aux recommandations de plusieurs firmes aidant les
+travailleurs à optimiser leurs capacités communes au travail. Un réseau
+de collaborations diversifié entraîne un engagement plus élevé des
+employés, une meilleure rétention, une plus grande diversité et plus
+d'innovation (Holtzman and Anderberg, 2011). Nous nous sommes donc posés
+la question si le réseau de collaborations entre les étudiants du
+baccalauréat en écologie favorisait la diversité des collaborations.
+Plus spécifiquement, nous avons étudié si les élèves ont tendance à
+conserver les mêmes collaborateurs dans tous les travaux ou s'ils
+avaient plus tendance à diversifier leurs partenaires. En effet, il est
+intéressant de voir si les étudiants ont plusieurs groupes d'amis ou si
+au cours du baccalauréat, ils sont restés toujours avec les mêmes
+personnes. Pour les gens pour lesquels on juge avoir un grand nombre de
+collaborations, est-ce qu'il y a un moyen de trouver ce qui leur a
+permis d'obtenir un grand nombre de collaborations en vue d'augmenter le
+nombre de collaborations des élèves? Nous avons aussi vérifié si le
+cours de méthodes analytiques en biologie (TSB303) a eu un grand effet
+dans le réseau de collaborations, puisque dans ce cours, les travaux
+étaient en équipe de 15. On peut donc s'imaginer qu'à lui seul, ce cours
+ajoute beaucoup de collaborations entre les étudiants. Pour aider à
+visualiser le tout, une première figure va détailler toutes les
+collaborations entre tous les individus de la cohorte. Puis, plus
+spécifiquement, une autre figure qui démontre uniquement les liens de
+plus de X collaborations sera présentée et ensuite cette même figure
+sera comparée, mais en excluant le cours TSB303.
 
 \hypertarget{muxe9thode}{%
 \section{Méthode}\label{muxe9thode}}
 
-La classe de BIO500 de la session d'hiver 2022 s'est divisé en 9 (à
-valider) équipes. Chaque élève de ses équipes a copilé l'ensemble des
-cours réaliser lors de leur baccalauréat ainsi que les informations
+La classe de BIO500 de la session d'hiver 2022 s'est divisée en 9 (à
+valider) équipes. Chaque élève de ces équipes a compilé l'ensemble des
+cours réalisés lors de leur baccalauréat ainsi que les informations
 considérées pertinentes reliées à ces cours dans une première table
-commune à l'équipe. Ils ont également copilé dans une seconde table le
+commune à l'équipe. Ils ont également compilé dans une seconde table le
 nom de chaque coéquipier, l'année de début de leur baccalauréat, le nom
 de leur programme ainsi que les informations considérées pertinentes
-reliées à chaque individu de l'équipe. Ils ont terminé la copilation des
-données par une troisième table. Au sein de cette dernière table, se
+reliées à chaque individu de l'équipe. Ils ont terminé la compilation
+des données par une troisième table. Au sein de cette dernière table se
 trouve l'ensemble des collaborations, c'est-à-dire l'ensemble des noms
 avec qui chaque élève a réalisé des travaux d'équipe jusqu'à présent
 lors de leur baccalauréat.
 
-Une fois la copilation des données réalisée par chaque équipe, celle-ci
-fut partagée et mise en commun. Maintenant indépendentes, les équipes
+Une fois la compilation des données réalisée par chaque équipe, celle-ci
+fut partagée et mise en commun. Maintenant indépendantes, les équipes
 avaient alors la tâche de fusionner l'ensemble des données ensemble afin
 de n'avoir que trois tables contenant l'ensemble des données de la
 classe. Au préalable, chaque équipe a dû standardiser les données de
 l'ensemble des équipes afin d'obtenir une unité structurelle au sein des
-différentes tables. Ces données ont été ensuite intégré dans le système
-de gestion de données SQLite3. Afin de répondre à la question posé, les
-données d'intérêts ont été extraites via des requêtes et finalement
-analysées.
+différentes tables. Ces données ont ensuite été intégrées dans le
+système de gestion de données SQLite3. Afin de répondre à la question
+posée, les données d'intérêt ont été extraites via des requêtes et
+finalement analysées.
 
 \hypertarget{ruxe9sultats}{%
 \section{Résultats}\label{ruxe9sultats}}
 
-Pour mieux illustrer les réponses au questions, plusieurs figures
+Pour mieux illustrer les réponses aux questions, plusieurs figures
 présenteront les liens entre les étudiants.
 
 La figure 1 représente le réseau de toutes les collaborations depuis le
-début du baccalauréat des étudiants du cours Méthode en écologie
+début du baccalauréat des étudiants du cours de méthodes en écologie
 computationnelle (BIO500) à l'hiver 2022. La grandeur des cercles est
-graduée par le nombre collaboration de chaque élève, les cercles les
-plus petits correspondent à 1 collaboration tandis que les plus grands
+déterminée par le nombre collaborations de chaque élève, les cercles les
+plus petits correspondant à une collaboration tandis que les plus grands
 correspondent à XX collaborations.
 
 La figure 2 est le réseau des différentes collaborations avec les
-collaborations issues de méthode analytique en biologie (TSB303)
-contrasté. La grandeur des cercles est graduée par le nombre
-collaboration de chaque élève, les cercles les plus petits correspondent
-à 1 collaboration tandis que les plus grands correspondent à XX
-collaborations.
+collaborations issues du cours de méthodes analytiques en biologie
+(TSB303) contrasté. La grandeur des cercles est déterminée par le nombre
+collaborations de chaque élève, les cercles les plus petits
+correspondant à une collaboration tandis que les plus grands
+correspondent à XX collaborations.
 
 La figure 3 est le réseau des différentes collaborations depuis le début
-du baccalauréat des étudiants du cours Méthode en écologie
-computationnelle (BIO500) à l'hiver 2022 possédant trente collaborations
-et plus. La grandeur des cercles est graduée par le nombre collaboration
-de chaque élève, les cercles les plus petits correspondent à XX
-collaboration tandis que les plus grands correspondent à XX
-collaborations.
+du baccalauréat des étudiants du cours de méthodes en écologie
+computationnelle (BIO500) à l'hiver 2022 possédant 30 collaborations et
+plus. La grandeur des cercles est déterminée par le nombre de
+collaborations de chaque élève, les cercles les plus petits
+correspondant à XX collaboration tandis que les plus grands
+correspondent à XX collaborations.
 
-Notre dernière figure, la quatrième, représente le réseau des
-différentes collaborations des étudiants, mais sans le cours TSB303 qui
-semble avoir une grande influence sur le réseau. C,est donc la même
-figure que la 2, mais avec les liens de TSB303 en gras.
+Notre quatrième et dernière figure représente le réseau des différentes
+collaborations des étudiants, mais sans le cours TSB303 qui semble avoir
+une grande influence sur le réseau. C'est donc la même figure que la 2,
+mais avec les liens de TSB303 en gras.
 
 Fig. 1 : Réseau de collaborations des élèves de la 59e cohorte de
 l'automne 2019 à l'hiver 2022
@@ -212,7 +228,7 @@ Fig. 3 : Réseau de collaborations des élèves de la 59e cohorte de
 l'automne 2019 à l'hiver 2022 qui ont plus de 30 collaborations
 
 Fig. 4 : Réseau de collaborations des élèves de la 59e cohorte de
-l'auotmne 2019 à l'hiver 2022 sans le cours TSB303
+l'automne 2019 à l'hiver 2022 sans le cours TSB303
 
 \textbf{Voici comment inclure une figure .pdf préalablement générée et
 la citer/référencer dans le texte, via son \texttt{label}: Figure
@@ -221,38 +237,39 @@ la citer/référencer dans le texte, via son \texttt{label}: Figure
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
 
-Rapidement, il est possible de distinguer que les élèves ont tendance à
-utiliser le même réseau. Les cercles rapprochés l'un de l'autre permet
-de distinguer les élèves qui ont formé à plusieurs occasions des groupes
-collaboratifs afin d'accomplir leurs travaux d'équipes durant leur
-baccalauréat. Une plus grande diversité de collaborations aurait été
-visible par une moins grande ségrégation de groupes de cercles. Dans un
-tel cas, la figure 1 tendrait vers une homogénéité et la grosseur des
-cercles seraient en moyennes plus gros.
+Rapidement, il est possible de remarquer que les élèves ont tendance à
+utiliser le même réseau. Les cercles rapprochés les uns des autres
+permettent de distinguer les élèves qui ont formé à plusieurs occasions
+des groupes collaboratifs avec les mêmes étudiants afin d'accomplir
+leurs travaux d'équipes durant leur baccalauréat. Une plus grande
+diversité de collaborations aurait été visible s'il y avait eu une moins
+grande ségrégation de groupes de cercles. Dans un tel cas, la figure 1
+tendrait vers une homogénéité et la grosseur des cercles serait en
+moyenne plus importante.
 
-Jugeant que trente collaborations et plus correspondaient à beaucoup de
+Jugeant que 30 collaborations et plus correspondaient à beaucoup de
 collaborations, nous avons donc porté notre réflexion à comprendre ce
-qui avait mené ces gens à obtenir autant de collaboration. Une méthode
-couramment utilisé en écologie est le calcul du coefficient de Jaccard
+qui avait mené ces gens à obtenir autant de collaborations. Une méthode
+couramment utilisée en écologie est le calcul du coefficient de Jaccard
 (3) qui nous permettrait de quantifier l'hétérogénéité des interactions
-par l'analyse des liens partagés. De cette manière il serait possible de
-distinguer des similarités dans la source du grand nombre de
-collaborations de ces étudiants (4) et ainsi pouvoir recommander
+par l'analyse des liens partagés. De cette manière, il serait possible
+de distinguer des similarités dans la source du grand nombre de
+collaborations de ces étudiants (4) et ainsi nous pourrions recommander
 certaines directives aux professeurs afin d'augmenter le nombre de
 collaborations des élèves.
 
 Lorsqu'on ajoute le cours TSB303 aux collaborations, on identifie une
-augmentation du nombre de collaboration en revanche la quantité ne
-semble pas toujours être la solution pour augmenter les biens fait de la
+augmentation du nombre de collaborations. En revanche, la quantité ne
+semble pas toujours être la solution pour augmenter les bienfaits de la
 collaboration. En effet, il faut également mentionner la qualité des
-collaborations. Un travail à quinze personnes de moins d'une dizaine de
-pages ne laisse pas beaucoup de marge pour que le travail soit réparti
-équitablement et donc la valeur du travail d'équipe peut être amoindri.
-D'autant plus que, le défi de communication entre les membres de
-l'équipe est potentiellement plus grand que l'accomplissement du travail
-lui-même. À terme, il semble donc justifié de ne pas comparer ce type de
-collaborations aux autres collaborations où les collaborations pour un
-travail tourne davantage autour de XX collaborations.
+collaborations. Un travail de moins d'une dizaine de pages réalisé par
+15 personnes ne laisse pas beaucoup de marge pour que le travail soit
+réparti équitablement et donc la valeur du travail d'équipe peut être
+amoindri. D'autant plus que, le défi de communication entre les membres
+de l'équipe est potentiellement plus grand que l'accomplissement du
+travail lui-même. À terme, il semble donc justifié de ne pas comparer ce
+type de collaboration aux autres où le nombre de collaborateurs pour un
+travail tourne davantage autour de XX.
 
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
@@ -265,24 +282,22 @@ travail tourne davantage autour de XX collaborations.
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{0}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-milgram1967small}{}}%
+\leavevmode\hypertarget{ref-milgram1967small}{}%
 \CSLLeftMargin{1. }
 \CSLRightInline{Milgram S (1967) The small world problem.
 \emph{Psychology today} 2(1):60--67.}
 
-\leavevmode\vadjust pre{\hypertarget{ref-montoya2002small}{}}%
+\leavevmode\hypertarget{ref-montoya2002small}{}%
 \CSLLeftMargin{2. }
-\CSLRightInline{Montoya JM, Solé RV (2002)
-\href{https://doi.org/10.1006/jtbi.2001.2460}{Small {World} {Patterns}
-in {Food} {Webs}}. \emph{Journal of Theoretical Biology}
-214(3):405--412.}
+\CSLRightInline{Montoya JM, Solé RV (2002) Small {World} {Patterns} in
+{Food} {Webs}. \emph{Journal of Theoretical Biology} 214(3):405--412.}
 
-\leavevmode\vadjust pre{\hypertarget{ref-legendre2012numerical}{}}%
+\leavevmode\hypertarget{ref-legendre2012numerical}{}%
 \CSLLeftMargin{3. }
 \CSLRightInline{Legendre P, Legendre L (2012) Numerical ecology, 3rd
 english edition, v. 24.}
 
-\leavevmode\vadjust pre{\hypertarget{ref-delmas2019analysing}{}}%
+\leavevmode\hypertarget{ref-delmas2019analysing}{}%
 \CSLLeftMargin{4. }
 \CSLRightInline{Delmas E, et al. (2019) Analysing ecological networks of
 species interactions. \emph{Biological Reviews} 94(1):16--36.}
