@@ -39,7 +39,6 @@ function_connection_SQL <- function() {
 }
 fonction_creation_table<-function(con,noeuds,cours,collaborations){
 
-
   dbSendQuery(con,"DROP TABLE collaborations;")
   dbSendQuery(con,"DROP TABLE noeuds;")
   dbSendQuery(con,"DROP TABLE cours;")
@@ -228,5 +227,5 @@ pdf(file = "results/figure5.pdf")
 plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-4,4), xlim=c(-4,4), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
 
 con
-dbDisconnect(con)
+
 }
