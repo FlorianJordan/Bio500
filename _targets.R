@@ -75,5 +75,4 @@ list(
   tar_target(graphique_base,graph_base(collaborations)),
   #Creation figure 2,3,4,5
   tar_target(requete_tsb303,fonction_requete_tsb303())
-  
 )
