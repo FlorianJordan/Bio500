@@ -119,7 +119,7 @@ CREATE TABLE collaborations (
 ####foncion reseau de base####
 
 graph_base<-function(x){
-pdf(file = "results/figure1.pdf")
+
 png(file = "results/figure1.png")
 m_adj<-table(x$etudiant1,x$etudiant2)
 m_adj
@@ -191,7 +191,7 @@ vertex_attr(adj_nontsb)
 adj_nontsb<-simplify(adj_nontsb)
 
 
-pdf(file = "results/figure2.pdf")
+
 png(file = "results/figure2.png")
 par(mfrow=c(1,2))
 plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-3,3), xlim=c(-6,8), asp=0.9)
@@ -256,7 +256,7 @@ E(adj_30_2)$weight = sapply(E(adj_30_2), function(e) {
   length(all_shortest_paths(adj_30, from=ends(adj_30_2, e)[1], to=ends(adj_30_2, e)[2])$res) } )
 
 
-pdf(file = "results/figure3.pdf")
+
 png(file = "results/figure3.png")
 par(mfrow=c(1,1))
 plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-5,5), xlim=c(-4,4), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
@@ -331,7 +331,7 @@ SELECT etudiant1 as etudiant, count(etudiant2) as liens_dif
 
 liens_nontsb_dif <- dbGetQuery(con,sql_requete6_1)
 
-pdf(file = "results/figure4.pdf")
+
 png(file = "results/figure4.png")
 par(mfrow=c(2,2))
 hist(liens$liens, xlab = "Collaborations par etudiant", ylab = "Nombre d'etudiants", main = "a)")
