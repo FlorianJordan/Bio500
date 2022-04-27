@@ -65,7 +65,7 @@ La figure 3 est le réseau des différentes collaborations depuis le début du b
 Notre quatrième et dernière figure représente le réseau des différentes collaborations des étudiants, mais sans le cours TSB303 qui semble avoir une grande influence sur le réseau. C'est donc la même figure que la 2, mais avec les liens de TSB303 en gras.
 
 
-
+![Réseaux de collaboration des étudiants de la 59e cohorte de l'automne 2019 à l'hiver 2022. \label{fig:plot1}](figure1,pdf){width=50% height=40%}
 
 Fig. 2 : Les différentes collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022
 
