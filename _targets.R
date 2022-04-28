@@ -68,7 +68,7 @@ list(
   tar_target(noeuds,fonction_data_noeuds(data_noeuds)),
   tar_target(cours,fonction_data_cours(data_cours)),
   tar_target(collaborations,fonction_data_collab(data_collaborations)),
-  
+  tar_target(con,fonction_connect()),
   #Creation de tables  
   tar_target(tables,fonction_creation_table(con,noeuds, cours, collaborations)),
   

@@ -67,14 +67,15 @@ fonction_data_collab<-function(x){
 
 ####tables de base sql####
 
+fonction_connect<-function(){
+  con<-dbConnect(SQLite(), dbname = "attributs.db")
+con}
+
+
 fonction_creation_table<-function(con,noeuds, cours, collaborations){
 
   con<-dbConnect(SQLite(), dbname = "attributs.db")
-
-  dbSendQuery(con,"DROP TABLE collaborations;")
-  dbSendQuery(con,"DROP TABLE noeuds;")
-  dbSendQuery(con,"DROP TABLE cours;")
-  
+ 
   tbl_noeuds <- "
 CREATE TABLE noeuds (
   nom_prenom      VARCHAR(50),
@@ -270,7 +271,6 @@ con
 fonction_requete_hist<-function(){
 
 con<-dbConnect(SQLite(),dbname="attributs.db")
-
 
 
 sql_requete <- "
