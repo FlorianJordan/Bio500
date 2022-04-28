@@ -65,13 +65,13 @@ La figure \ref{fig:plot3} est le réseau des différentes collaborations depuis 
 Notre quatrième et dernière figure (\ref{fig:plot4}) représente le nombre d'étudiants ayant un certains nombre de collaborations (a) ainsi que le nombre de collaborations différentes par étudiants (b),c'est à dire le nombre de personnes avec qui ils ont coopérés pendant le baccalauréat en écologie depuis l'automne 2019,  avec et sans le cours TSB303 (c et d).
 
 
-![Réseau de collaboration des étudiants de la 59e cohorte de l'automne 2019 à l'hiver 2022. \label{fig:plot1}]("\results\figure1.png"){width=50% height=40%}
+![Réseau de collaboration des étudiants de la 59e cohorte de l'automne 2019 à l'hiver 2022. \label{fig:plot1}]("../results/figure1.png"){width=50% height=40%}
 
-![Réseaux de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 avec et sans le cours TSB303 \label{fig:plot2}]("\results\figure2.png"){width=50% height=40%}
+![Réseaux de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 avec et sans le cours TSB303 \label{fig:plot2}]("../results/figure2.png"){width=50% height=40%}
 
-![Réseau de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 qui ont plus de 30 collaborations \label{fig:plot3}]("\results\figure3.png"){width=50% height=40%}
+![Réseau de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 qui ont plus de 30 collaborations \label{fig:plot3}]("../results/figure3.png"){width=50% height=40%}
 
-![Comparaison des collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 avec et sans le cours TSB303 \label{fig:plot4}]("results\figure4.png"){width=50% height=40%}
+![Comparaison des collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 avec et sans le cours TSB303 \label{fig:plot4}]("../results/figure4.png"){width=50% height=40%}
 
 
 # Discussion 
