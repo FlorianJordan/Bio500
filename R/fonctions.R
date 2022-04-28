@@ -70,9 +70,7 @@ fonction_data_collab<-function(x){
 fonction_creation_table<-function(con,noeuds, cours, collaborations){
 
   con<-dbConnect(SQLite(), dbname = "attributs.db")
-  dbSendQuery(con,"DROP TABLE collaborations;")
-  dbSendQuery(con,"DROP TABLE noeuds;")
-  dbSendQuery(con,"DROP TABLE cours;")
+
   
   
   tbl_noeuds <- "
@@ -271,9 +269,7 @@ fonction_requete_hist<-function(){
 
 con<-dbConnect(SQLite(),dbname="attributs.db")
 
-dbSendQuery(con,"DROP TABLE collaborations_dif;")
-dbSendQuery(con,"DROP TABLE collaborations_nontsb;")
-dbSendQuery(con,"DROP TABLE collaborations_nontsb_dif;")
+
 
 sql_requete <- "
 SELECT etudiant1 as etudiant, count(etudiant2) as liens

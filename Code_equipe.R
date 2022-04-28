@@ -5,7 +5,12 @@
 #pour flo # setwd("~/Desktop/dossier_mere/universite/Session_6/method_comp/Bio500")
 #pour frank: setwd("C:/Users/Francis/Desktop/BIO500/Bio500/donnees_BIO500")
 #pour marge : setwd("C:\Users\margu\Documents\Bio500\donnees_BIO500")
-
+dbSendQuery(con,"DROP TABLE collaborations;")
+dbSendQuery(con,"DROP TABLE noeuds;")
+dbSendQuery(con,"DROP TABLE cours;")
+dbSendQuery(con,"DROP TABLE collaborations_dif;")
+dbSendQuery(con,"DROP TABLE collaborations_nontsb;")
+dbSendQuery(con,"DROP TABLE collaborations_nontsb_dif;")
 #install.packages("dplyr")
 library(dplyr)
 #install.packages("RSQLite")
