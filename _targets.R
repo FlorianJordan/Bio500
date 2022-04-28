@@ -79,9 +79,9 @@ list(
   tar_target(requete_reseau,fonction_requete_reseau(),priority = 0.1),
   
   #Creation figure 4
-  tar_target(requete_hist,fonction_requete_hist(),priority = 0),
+  tar_target(requete_hist,fonction_requete_hist(),priority = 0.05),
   
   #Creation Markdown
-  tar_render(rapport,"rapport/rapport.Rmd" )
+  tar_render(rapport,"rapport/rapport.Rmd", priority = 0)
 
 )
