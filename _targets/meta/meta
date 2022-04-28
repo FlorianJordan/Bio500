@@ -36,7 +36,7 @@ fonction_data_cours|function|3c0251a5f02e6ef3|||||||||||||||
 fonction_data_noeuds|function|4e93d472e9b0c037|||||||||||||||
 fonction_noeuds_amelie|function|767a117badab1dd5|||||||||||||||
 fonction_requete_hist|function|ae035ce9db7d367a|||||||||||||||
-fonction_requete_reseau|function|7681ccfce50d6cd6|||||||||||||||
+fonction_requete_reseau|function|4c620d81236eb3d3|||||||||||||||
 graph_base|function|9b95028850310587|||||||||||||||
 noeuds_alexis|stem|d6786e8d7aab7821|3c95cbda66662c99|5cb42b57398551be|1559376575||t19110.7969513298s|019ac14fbe96bc4c|1259|rds|local|vector|||0.002||
 noeuds_amelie|stem|aa78a0ba0986da9b|a09531af22dc8279|cfcaebb9b7cad818|-1692454272||t19110.8045241324s|984cbd81dd27df51|440|rds|local|vector|||0.348||
@@ -49,4 +49,4 @@ noeuds_jbca|stem|5994f06a557f4052|8e042a2169b68cc4|5cb42b57398551be|292470834||t
 noeuds_martineau|stem|05634e9ccf333a92|75c3bb6b02ee0a0b|5cb42b57398551be|-1761149643||t19110.7969530097s|8c95d42e0607dc07|553|rds|local|vector|||0.005||
 rapport|stem||9b10d1efde4e6761|4745aa592080ea1d|-316371949||t19110.7969718224s||0|file|local|vector|||1.467||LaTeX failed to compile rapport.tex. See httpsyihui.orgtinytexrdebugging for debugging tips. See rapport.log for more info.
 requete_hist|stem|c8a2d92de4e03327|dddee4c99ef157b5|290d0f8cb2245e3d|1302752141||t19110.8050052513s|801cade07abe9db2|312|rds|local|vector|||0.494|Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows|
-requete_reseau|stem||f97f8be35e29a0ca|fd18735959eb33bd|-95955464||t19110.8050070421s||0|rds|local|vector|||0.137||erreur dïvaluation de largument conn lors de la sïlection dune mïthode pour la fonction dbSendQuery  objet con introuvable
+requete_reseau|stem||f97f8be35e29a0ca|2bc39e658a11b588|-95955464||t19110.8050070421s||0|rds|local|vector|||0.425|Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows|no such table collaborations

@@ -141,11 +141,11 @@ x
 ####fonction reseaux####
 
 fonction_requete_reseau<-function(){
-  dbSendQuery(con,"DROP TABLE collaborations;")
-  dbSendQuery(con,"DROP TABLE noeuds;")
-  dbSendQuery(con,"DROP TABLE cours;")
-con<-dbConnect(SQLite(),dbname="attributs.db")
 
+con<-dbConnect(SQLite(),dbname="attributs.db")
+dbSendQuery(con,"DROP TABLE collaborations;")
+dbSendQuery(con,"DROP TABLE noeuds;")
+dbSendQuery(con,"DROP TABLE cours;")
 sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
