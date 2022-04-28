@@ -141,7 +141,9 @@ x
 ####fonction reseaux####
 
 fonction_requete_reseau<-function(){
-
+  dbSendQuery(con,"DROP TABLE collaborations;")
+  dbSendQuery(con,"DROP TABLE noeuds;")
+  dbSendQuery(con,"DROP TABLE cours;")
 con<-dbConnect(SQLite(),dbname="attributs.db")
 
 sql_requete3 <- "
@@ -269,7 +271,9 @@ fonction_requete_hist<-function(){
 
 con<-dbConnect(SQLite(),dbname="attributs.db")
 
-
+dbSendQuery(con,"DROP TABLE collaborations_dif;")
+dbSendQuery(con,"DROP TABLE collaborations_nontsb;")
+dbSendQuery(con,"DROP TABLE collaborations_nontsb_dif;")
 
 sql_requete <- "
 SELECT etudiant1 as etudiant, count(etudiant2) as liens
