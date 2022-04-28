@@ -708,7 +708,9 @@ graph_base<-function(x){
 
 
 fonction_requete_tsb303<-function(){
+  
   con<-dbConnect(SQLite(),dbname="attributs.db")
+  
   sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
