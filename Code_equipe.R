@@ -82,7 +82,6 @@ collaborations_ilmdph<-collaborations_ilmdph[,-5]
 collaborations_dp<-collaborations_dp[,-5]
 noeuds_cvl<-noeuds_cvl[,-1]
 
-
 ##### Corretion des noms de colonne #####
 
 cours_cvl<-rename(cours_cvl,sigle=Sigle)
