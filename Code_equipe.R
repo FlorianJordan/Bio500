@@ -457,11 +457,11 @@ hist(liens_nontsb_dif$liens_dif, xlab = "Collaborations différentes par étudia
 
 
 #Graphique du réseau des collaborations différents #Pas utilisé
-#sql_requete7 <- "
+#sql_requete_etudiant_dif <- "
 #SELECT etudiant1, etudiant2
 #FROM collaborations_dif
 #"
-#collabs_dif<-dbGetQuery(con,sql_requete7)
+#collabs_dif<-dbGetQuery(con,sql_requete_etudiant_dif)
 
 #m_adj_dif<-table(collabs_dif$etudiant1,collabs_dif$etudiant2)
 
@@ -474,11 +474,11 @@ hist(liens_nontsb_dif$liens_dif, xlab = "Collaborations différentes par étudia
 #### 2014 ####Pas utilisé
 
 
-#sql_requete8 <- "
+#sql_requete_2014 <- "
 #SELECT etudiant1,etudiant2,sigle,date
 #FROM collaborations WHERE date LIKE '%H14%'
 #"
-#collab_14<-dbGetQuery(con,sql_requete8)
+#collab_14<-dbGetQuery(con,sql_requete_2014)
 
 #m_adj_14<-table(collab_14$etudiant1,collab_14$etudiant2)
 
@@ -490,11 +490,11 @@ hist(liens_nontsb_dif$liens_dif, xlab = "Collaborations différentes par étudia
 #### 2017 ####Pas utilisé
 
 
-#sql_requete9 <- "
+#sql_requete_2017 <- "
 #SELECT etudiant1,etudiant2,sigle,date
 #FROM collaborations WHERE date LIKE '%H14%' OR date LIKE '%H17%'
 #"
-#collab_17<-dbGetQuery(con,sql_requete9)
+#collab_17<-dbGetQuery(con,sql_requete_2017)
 
 #m_adj_17<-table(collab_17$etudiant1,collab_17$etudiant2)
 
@@ -506,11 +506,11 @@ hist(liens_nontsb_dif$liens_dif, xlab = "Collaborations différentes par étudia
 #### 2018 ####Pas utilisé
 
 
-#sql_requete10 <- "
+#sql_requete_2018 <- "
 #SELECT etudiant1,etudiant2,sigle,date
 #FROM collaborations WHERE date LIKE '%H14%' OR date LIKE '%H17%' OR date LIKE '%A17%' OR date LIKE '%E18%'
 #"
-#collab_18<-dbGetQuery(con,sql_requete10)
+#collab_18<-dbGetQuery(con,sql_requete_2018)
 
 #m_adj_18<-table(collab_18$etudiant1,collab_18$etudiant2)
 
@@ -522,11 +522,11 @@ hist(liens_nontsb_dif$liens_dif, xlab = "Collaborations différentes par étudia
 #### 2019 ####Pas utilisé
 
 
-#sql_requete11 <- "
+#sql_requete_2019 <- "
 #SELECT etudiant1,etudiant2,sigle,date
 #FROM collaborations WHERE date LIKE '%H14%' OR date LIKE '%H17%' OR date LIKE '%A17%' OR date LIKE '%E18%' OR date LIKE '%H19%'
 #"
-#collab_19<-dbGetQuery(con,sql_requete11)
+#collab_19<-dbGetQuery(con,sql_requete_2019)
 
 #m_adj_19<-table(collab_19$etudiant1,collab_19$etudiant2)
 
@@ -538,11 +538,11 @@ hist(liens_nontsb_dif$liens_dif, xlab = "Collaborations différentes par étudia
 #### 2020 ####Pas utilisé
 
 
-#sql_requete12 <- "
+#sql_requete_2020 <- "
 #SELECT etudiant1,etudiant2,sigle,date
 #FROM collaborations WHERE date LIKE '%H14%' OR date LIKE '%H17%' OR date LIKE '%A17%' OR date LIKE '%E18%' OR date LIKE '%H19%' OR date LIKE '%A19%' OR date LIKE '%H20%' OR date LIKE '%E20%'
 #"
-#collab_20<-dbGetQuery(con,sql_requete12)
+#collab_20<-dbGetQuery(con,sql_requete_2020)
 
 #m_adj_20<-table(collab_20$etudiant1,collab_20$etudiant2)
 
@@ -554,11 +554,11 @@ hist(liens_nontsb_dif$liens_dif, xlab = "Collaborations différentes par étudia
 #### 2021 ####Pas utilisé
 
 
-#sql_requete13 <- "
+#sql_requete_2021 <- "
 #SELECT etudiant1,etudiant2,sigle,date
 #FROM collaborations WHERE date LIKE '%H14%' OR date LIKE '%H17%' OR date LIKE '%A17%' OR date LIKE '%E18%' OR date LIKE '%H19%' OR date LIKE '%A19%' OR date LIKE '%H20%' OR date LIKE '%E20%' OR date LIKE '%A20%' OR date LIKE '%H21%' OR date LIKE '%E21%'
 #"
-#collab_21<-dbGetQuery(con,sql_requete13)
+#collab_21<-dbGetQuery(con,sql_requete_2021)
 
 #m_adj_21<-table(collab_21$etudiant1,collab_21$etudiant2)
 
@@ -570,12 +570,12 @@ hist(liens_nontsb_dif$liens_dif, xlab = "Collaborations différentes par étudia
 #### cours labo vs theorie ####Pas utilisé
 
 
-#sql_requete14 <- "
+#sql_requete_cours <- "
 #SELECT etudiant1,etudiant2,sigle,date,laboratoire
 #FROM collaborations
 #INNER JOIN cours USING (sigle)
 #"
-#collab_cours<-dbGetQuery(con,sql_requete14)
+#collab_cours<-dbGetQuery(con,sql_requete_cours)
 
 #collab_theo<-collab_cours[collab_cours$laboratoire==0,]
 
@@ -596,13 +596,13 @@ hist(liens_nontsb_dif$liens_dif, xlab = "Collaborations différentes par étudia
 #### collaborations ecologie ####Pas utilisé
 
 
-#sql_requete15 <- "
+#sql_requete_eco <- "
 #SELECT collaborations.etudiant1,noeuds1.programme as programme1,collaborations.etudiant2,noeuds2.programme as programme2,collaborations.sigle,collaborations.date
 #FROM collaborations
 #INNER JOIN noeuds noeuds1 ON collaborations.etudiant1=noeuds1.nom_prenom
 #INNER JOIN noeuds noeuds2 ON collaborations.etudiant2=noeuds2.nom_prenom
 #"
-#collab_prog<-dbGetQuery(con,sql_requete15)
+#collab_prog<-dbGetQuery(con,sql_requete_eco)
 
 #collab_eco<-collab_prog[collab_prog$programme1=="ecologie",]
 #collab_eco<-collab_eco[collab_eco$programme2=="ecologie",]
