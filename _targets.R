@@ -28,7 +28,6 @@ list(
   tar_target(cours_ilmdph,read.table("data/cours_IL_MDH_ASP_MB_OL.txt",header = T,sep=";"),priority = 0.6),
   
   #Donnee collaborations
-  
   tar_target(collaborations_amelie,read.csv("data/collaborations_amelie.csv", sep=";"),priority = 0.6),
   tar_target(collaborations_anthonystp,read.table("data/collaborations_anthonystp.txt",header = T, sep=";"),priority = 0.6),
   tar_target(collaborations_cvl,read.csv("data/collaborations_cvl_jl_jl_mp_xs.csv", sep=";"),priority = 0.6),
@@ -69,6 +68,7 @@ list(
   tar_target(cours,fonction_data_cours(data_cours),priority = 0.5),
   tar_target(collaborations,fonction_data_collab(data_collaborations),priority = 0.5),
   tar_target(con,fonction_connect(),priority = 0.5),
+  
   #Creation de tables  
   tar_target(tables,fonction_creation_table(con,noeuds, cours, collaborations),priority = 0.2),
   
