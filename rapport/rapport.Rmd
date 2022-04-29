@@ -56,9 +56,9 @@ Une fois la compilation des données réalisée par chaque équipe, celle-ci fut
 
 Pour mieux illustrer les réponses aux questions, plusieurs figures présenteront les liens entre les étudiants.
 
-La figure \ref{fig:plot1} représente le réseau de toutes les collaborations depuis le début du baccalauréat des étudiants du cours de méthodes en écologie computationnelle (BIO500) à l’hiver 2022. La grandeur des cercles est déterminée par le nombre collaborations de chaque élève, les cercles les plus petits correspondant à une collaboration.
+La figure \ref{fig:plot1} représente le réseau de toutes les collaborations des étudiants du cours de méthodes en écologie computationnelle (BIO500) à l’hiver 2022. La grandeur et la couleurs des noeuds sont déterminées par une comparaison relative du nombre collaborations de chaque élève, les cercles les plus petits et jaunes correspondant à une seule collaboration.La largeur des liens correspond au nombre de collaborations entre la paire d'étudiant. La moyenne de liens par étudiant est de 10.67, la distance maximale entre deux étudiant est de 5 liens et la modularité du réseau est de 0.635.
 
-La figure \ref{fig:plot2} est le réseau des différentes collaborations avec les collaborations issues du cours de méthodes analytiques en biologie (TSB303) contrasté.Les liens mis en gras représentent les liens dû à ce cours.
+La figure \ref{fig:plot2} comprend à gauche le réseau des différentes collaborations sans celles provenant du cours TSB303 et à droite le réseau de toutes les collaborations mais les liens mis en gras représentent ceux du cours TSB303. les noeuds jaunes représente des élèves n'étant pas en écologie alors que les noeuds vert sont des étudiant en écologie. Sans le cours TSB303, la moyene du nombre de collaborations par étudiant est de 11.13, la distance maximale entre deux étudiant est de 6 liens alors que la modularité du réseau est de 0.497. 
 
 ![Réseau de collaboration des étudiants de la 59e cohorte de l'automne 2019 à l'hiver 2022. \label{fig:plot1}]("../results/figure1.png"){width=50% height=40%}
 
@@ -68,9 +68,9 @@ La figure \ref{fig:plot2} est le réseau des différentes collaborations avec le
 
 ![Comparaison des collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 avec et sans le cours TSB303 \label{fig:plot4}]("../results/figure4.png"){width=50% height=40%}
 
-La figure \ref{fig:plot3} est le réseau des différentes collaborations depuis le début du baccalauréat des étudiants du cours de méthodes en écologie computationnelle (BIO500) à l’hiver 2022 possédant 30 collaborations et plus. La grandeur des cercles est proportionnelle au nombre de collaborations de chaque élève, les cercles les plus petits correspondant à 30 collaboration.
+La figure \ref{fig:plot3} est le réseau des différentes collaborations depuis le début du baccalauréat entre les étudiants du cours de méthodes en écologie computationnelle (BIO500) à l’hiver 2022 possédant 30 collaborations et plus. La grandeur et la couleur des noeuds sont proportionnelles au nombre de collaborations de chaque élève. La largeur des liens correspond au nombre de collaborations entre la paire d'étudiant. Dans cette situation, la modularité du réseau est de 0.621.
 
-Notre quatrième et dernière figure (\ref{fig:plot4}) représente le nombre d'étudiants ayant un certains nombre de collaborations (a) ainsi que le nombre de collaborations différentes par étudiants (b),c'est à dire le nombre de personnes avec qui ils ont coopérés pendant le baccalauréat en écologie depuis l'automne 2019,  avec et sans le cours TSB303 (c et d).
+Notre quatrième et dernière figure (\ref{fig:plot4}) représente le nombre d'étudiants pour différents nombres de collaborations (a) ainsi que le nombre de collaborations différentes par étudiants (b),c'est à dire le nombre de personnes distinctes avec qui ils ont coopérés pendant le baccalauréat en écologie. C'est résultats sont aussi présentés sans le cours TSB303 (c et d). La moyenne des collaborations différentes entre étudiants est de 4.88 avec le cours TSB303 et de 4.83 sans le cours TSB303.  
 
 # Discussion 
 

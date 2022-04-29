@@ -247,6 +247,10 @@ E(adj2)$weight = sapply(E(adj2), function(e) {
 #Création du graphique pour le réseau contenant tous les étudiants
 plot(adj2, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), edge.width=E(adj2)$weight*0.5, asp=0.9)
 
+max(distances(adj)) #Calcul de la distance maximum entre deux noeuds
+wtc_adj = walktrap.community(adj)
+modularity(wtc_adj) #Calcul de la modularité du réseau
+
 
 #### Enlever TSB303 ####
 
@@ -307,6 +311,10 @@ adj_nontsb<-simplify(adj_nontsb) #Enlever les liens parallèles
 par(mfrow=c(1,2))
 #Création du graphique pour le réseau sans TSB303
 plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_nontsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), asp=0.9)
+
+max(distances(adj_nontsb)) #Calcul de la distance maximum entre deux noeuds
+wtc_adj_nontsb = walktrap.community(adj_nontsb)
+modularity(wtc_adj_nontsb) #Calcul de la modularité du réseau
 
 
 #Graphique du résau du cours TSB303 #Pas utilisé
@@ -382,6 +390,9 @@ par(mfrow=c(1,1))
 #Création du graphique du réseau des étudiants ayant plus de 30 collaborations
 plot(adj_30_2, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_30), rescale=FALSE, ylim=c(-4,4), xlim=c(-4,4), edge.width=E(adj_30_2)$weight*0.5, asp=0.9)
 
+wtc_adj_30 = walktrap.community(adj_30)
+modularity(wtc_adj_30) #Calcul de la modularité du réseau
+
 
 #### nombre de collabs différentes ####
 
@@ -454,6 +465,9 @@ hist(liens$liens, xlab = "Collaborations par étudiant", ylab = "Fréquence", ma
 hist(liens_dif$liens_dif, xlab = "Collaborations différentes par étudiant", ylab = "Fréquence", main = "b)")
 hist(liens_nontsb$liens, xlab = "Collaborations par étudiant (sans TSB303)", ylab = "Fréquence", main = "c)")
 hist(liens_nontsb_dif$liens_dif, xlab = "Collaborations différentes par étudiant (sans TSB303)", ylab = "Fréquence", main = "d)")
+
+liens$liens_dif<-liens_dif$liens_dif[match(liens$etudiant, liens_dif$etudiant)] #Ajout des liens différents par étudiant dans le data frame des liens
+liens_nontsb$liens_dif<-liens_nontsb_dif$liens_dif[match(liens_nontsb$etudiant, liens_nontsb_dif$etudiant)] #Ajout des liens différents par étudiant dans le data frame des liens sans TSB303
 
 
 #Graphique du réseau des collaborations différents #Pas utilisé
