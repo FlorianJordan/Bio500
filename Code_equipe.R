@@ -113,7 +113,7 @@ cours<-data_cours[!duplicated(data_cours$sigle),] #Enlever les lignes contenant 
 cours
 
 
-collaborations<-distinct(data_collaborations) #Enlever les lignes pareilles qu'une ligne supérieure
+collaborations<-distinct(data_collaborations) #Enlever les lignes pareilles à une ligne supérieure
 collaborations
 
 data_noeuds<-data_noeuds %>% arrange(rowSums(is.na(data_noeuds))) #Placer les lignes ayant le moins de NA en haut du data frame
@@ -224,7 +224,6 @@ sql_requete3 <- "
 SELECT etudiant1,etudiant2,sigle,date
 FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
 "
-
 collab_nontsb<-dbGetQuery(con,sql_requete3)
 
 #Nombre de collaborations par étudiant sans les collaborations du cours TSB303
@@ -239,20 +238,18 @@ liens_nontsb
 
 mean(liens_nontsb$liens) #Moyenne du nombre de collaborations par étudiant sans les collaborations du cours TSB303
 
-#Données pour le cours TSB303 #Pas utilisé
-#sql_requete_tsb <- "
-#SELECT etudiant1,etudiant2,sigle,date
-#FROM collaborations WHERE sigle LIKE '%TSB303%'
-#"
-
-#collab_tsb<-dbGetQuery(con,sql_requete_tsb)
+#Collaboration du cours TSB303
+sql_requete_tsb <- "
+SELECT etudiant1,etudiant2,sigle,date
+FROM collaborations WHERE sigle LIKE '%TSB303%'
+"
+collab_tsb<-dbGetQuery(con,sql_requete_tsb)
 
 #Programme de chaque étudiant
 sql_requete_prog <- "
 SELECT nom_prenom,programme
 FROM noeuds
 "
-
 prog<-dbGetQuery(con,sql_requete_prog)
 
 #Code de couleur pour les programmes
@@ -260,10 +257,10 @@ col<-data.frame(programme=unique(prog$programme),color=c("green","yellow","yello
 prog$color<-col$color[match(prog$programme, col$programme)]
 
 m_adj_nontsb<-table(collab_nontsb$etudiant1,collab_nontsb$etudiant2) #Matrice d'adjacence pour le réseau sans TSB303
-#m_adj_tsb<-table(collab_tsb$etudiant1,collab_tsb$etudiant2)
+m_adj_tsb<-table(collab_tsb$etudiant1,collab_tsb$etudiant2) #Matrice d'adjacence pour le réseau du cours TSB303
 
 adj_nontsb<-graph.adjacency(m_adj_nontsb) #Créatiom du réseau sans TSB303 
-adj_tsb<-graph.adjacency(m_adj_tsb) #Création du réseau de TSB303
+adj_tsb<-graph.adjacency(m_adj_tsb) #Création du réseau du cours TSB303
 
 V(adj_nontsb)$color = prog$color #Ajout de la couleur des noeuds
 V(adj_nontsb)$size = 40 #Taille des noeuds
@@ -284,7 +281,7 @@ plot(adj_nontsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kaw
 #plot(adj_tsb,vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(adj_tsb), rescale=FALSE, ylim=c(-8,8), xlim=c(-8,8), edge.width = 2)
 
 #Grapique du réseau de base mettant en évidence les collaboration du cours TSB303
-adj3<-graph.adjacency(m_adj) #Copier la matrice d'adjacence de base
+adj3<-graph.adjacency(m_adj) #Création d'une copie du réseau de base
 V(adj3)$color = prog$color #Ajout de la couleur des noeuds
 V(adj3)$size = 40 #Taille des noeuds
 adj3<-simplify(adj3) #enlever les liens parallèles
@@ -296,6 +293,7 @@ edge_tsb$width<-2 #Ajout du code pour la taille des liens
 edge_nontsb<-as.data.frame(get.edgelist(adj_nontsb)) #Liste des collaborations sans TSB303
 edge_nontsb$color<- "gray" #Ajout du code de couleur pour les liens
 edge_nontsb$width<-1 #Ajout sdu code pour la taille des liens
+
 edge_tot<-as.data.frame(get.edgelist(adj3)) #Data frame des collaboration du réseau de base
 edge_tot<-bind_rows(edge_nontsb,edge_tsb) #Ajout de la couleur et la largeur des liens dans le data frame
 edge_tot<-edge_tot %>% distinct(V1, V2, .keep_all = TRUE) #Enlever les lignes dupliquées
@@ -310,6 +308,7 @@ plot(adj3, vertex.label = NA, edge.arrow.mode = 0, layout=layout.kamada.kawai(ad
 #### Réseau des étudiants ayant plus de 30 collaborations ####
 
 liens30<-liens[liens$liens>=30,] #Liste des étudiant ayant plus de 30 collaborations
+
 #Création du data frame contenant les collaborations entre les gens ayant plus de 30 collaborations
 sql_requete4 <- "
 SELECT etudiant1,etudiant2,sigle,date
@@ -317,7 +316,7 @@ FROM collaborations WHERE (etudiant1 LIKE '%robert_penelope%' OR etudiant1 LIKE 
 "
 collabs30<-dbGetQuery(con,sql_requete4)
 
-m_adj_30<-table(collabs30$etudiant1,collabs30$etudiant2) #Matrice d'ajacence pour les étudiants ayant plus de 30 collaborations
+m_adj_30<-table(collabs30$etudiant1,collabs30$etudiant2) #Matrice d'ajacence des étudiants ayant plus de 30 collaborations
 
 deg_30<-apply(m_adj_30, 2, sum) + apply(m_adj_30, 1, sum)
 rk_30<-rank(deg_30)
@@ -327,7 +326,7 @@ V(adj_30)$color = col.vec_30[rk_30] #Ajout de la couleur des noeuds
 col.vec_30<-seq(30, 50, length.out = nrow(m_adj_30)) #Création du vecteur de la taille des noeuds
 V(adj_30)$size = col.vec_30[rk_30] #Ajout de la taille des noeuds
 V(adj_30)$label.cex = 0.6 #Diminution de la taille des étiquettes
-adj_30_2<-simplify(adj_30) #Enlever les liens paires
+adj_30_2<-simplify(adj_30) #Enlever les liens parallèles
 #Fonction pour la largeur des liens
 E(adj_30_2)$weight = sapply(E(adj_30_2), function(e) { 
   length(all_shortest_paths(adj_30, from=ends(adj_30_2, e)[1], to=ends(adj_30_2, e)[2])$res) } )
@@ -343,16 +342,14 @@ dbSendQuery(con,"DROP TABLE collaborations_dif;")
 dbSendQuery(con,"DROP TABLE collaborations_nontsb_dif;")
 dbSendQuery(con,"DROP TABLE collaborations_nontsb;")
 
-#Création d'un nouveau table3au contenantr uniquement les collaborations différentes des étidiants
+#Création d'un nouveau tableau contenant uniquement les collaborations différentes des étudiants
 sql_requete5 <- "
 CREATE TABLE collaborations_dif AS 
   SELECT DISTINCT etudiant1,etudiant2
   FROM collaborations
 "
-
 dbExecute(con,sql_requete5)
-dbListTables(con)
-
+dbListTables(con) #Vérifier l'ajout des tables
 
 #Création d'un tableau contenant toutes les collaborations sauf pour le cours TSB303
 sql_requete5_1 <- "
@@ -360,22 +357,19 @@ CREATE TABLE collaborations_nontsb AS
   SELECT etudiant1,etudiant2,sigle,date
   FROM collaborations WHERE sigle NOT LIKE '%TSB303%'
 "
-
 dbExecute(con,sql_requete5_1)
-dbListTables(con)
+dbListTables(con) #Vérifier l'ajout des tables
 
-
-#CRéation d'un tableau contenant uniquement les collaborations différentes sans les collaborations de TSB303
+#Création d'un tableau contenant uniquement les collaborations différentes des étudiants sans les collaborations de TSB303
 sql_requete5_2 <- "
 CREATE TABLE collaborations_nontsb_dif AS 
   SELECT DISTINCT etudiant1,etudiant2
   FROM collaborations_nontsb
 "
-
 dbExecute(con,sql_requete5_2)
-dbListTables(con)
+dbListTables(con) #Vérifier l'ajout des tables
 
-#Data frame des collaborations différentes par étudiant
+#Création d'un data frame des collaborations différentes par étudiant
 sql_requete6 <- "
 SELECT etudiant1 as etudiant, count(etudiant2) as liens_dif
   FROM collaborations_dif
@@ -387,14 +381,13 @@ liens_dif
 
 mean(liens_dif$liens_dif) #Moyenne des collaborations différentes par étudiant
 
-#Data frame des collaborations différentes par étudiant sans TSB303
+#Création d'un data frame des collaborations différentes par étudiant sans TSB303
 sql_requete6_1 <- "
 SELECT etudiant1 as etudiant, count(etudiant2) as liens_dif
   FROM collaborations_nontsb_dif
   GROUP BY etudiant
   ORDER BY liens_dif
 "
-
 liens_nontsb_dif <- dbGetQuery(con,sql_requete6_1)
 liens_nontsb_dif
 
