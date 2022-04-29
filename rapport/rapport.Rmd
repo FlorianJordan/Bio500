@@ -60,11 +60,6 @@ La figure \ref{fig:plot1} représente le réseau de toutes les collaborations de
 
 La figure \ref{fig:plot2} est le réseau des différentes collaborations avec les collaborations issues du cours de méthodes analytiques en biologie (TSB303) contrasté.Les liens mis en gras représentent les liens dû à ce cours.
 
-La figure \ref{fig:plot3} est le réseau des différentes collaborations depuis le début du baccalauréat des étudiants du cours de méthodes en écologie computationnelle (BIO500) à l’hiver 2022 possédant 30 collaborations et plus. La grandeur des cercles est proportionnelle au nombre de collaborations de chaque élève, les cercles les plus petits correspondant à 30 collaboration.
-
-Notre quatrième et dernière figure (\ref{fig:plot4}) représente le nombre d'étudiants ayant un certains nombre de collaborations (a) ainsi que le nombre de collaborations différentes par étudiants (b),c'est à dire le nombre de personnes avec qui ils ont coopérés pendant le baccalauréat en écologie depuis l'automne 2019,  avec et sans le cours TSB303 (c et d).
-
-
 ![Réseau de collaboration des étudiants de la 59e cohorte de l'automne 2019 à l'hiver 2022. \label{fig:plot1}]("../results/figure1.png"){width=50% height=40%}
 
 ![Réseaux de collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 avec et sans le cours TSB303 \label{fig:plot2}]("../results/figure2.png"){width=50% height=40%}
@@ -73,6 +68,9 @@ Notre quatrième et dernière figure (\ref{fig:plot4}) représente le nombre d'�
 
 ![Comparaison des collaborations des élèves de la 59e cohorte de l'automne 2019 à l'hiver 2022 avec et sans le cours TSB303 \label{fig:plot4}]("../results/figure4.png"){width=50% height=40%}
 
+La figure \ref{fig:plot3} est le réseau des différentes collaborations depuis le début du baccalauréat des étudiants du cours de méthodes en écologie computationnelle (BIO500) à l’hiver 2022 possédant 30 collaborations et plus. La grandeur des cercles est proportionnelle au nombre de collaborations de chaque élève, les cercles les plus petits correspondant à 30 collaboration.
+
+Notre quatrième et dernière figure (\ref{fig:plot4}) représente le nombre d'étudiants ayant un certains nombre de collaborations (a) ainsi que le nombre de collaborations différentes par étudiants (b),c'est à dire le nombre de personnes avec qui ils ont coopérés pendant le baccalauréat en écologie depuis l'automne 2019,  avec et sans le cours TSB303 (c et d).
 
 # Discussion 
 
